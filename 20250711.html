@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Declaration of Conformity & Product Manual</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #003399, #0055cc);
+            color: white;
+            padding: 30px 40px;
+            text-align: center;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .eu-flag {
+            display: inline-block;
+            width: 40px;
+            height: 30px;
+            background: linear-gradient(to right, #003399 0%, #003399 33%, #ffcc00 33%, #ffcc00 66%, #cc0000 66%);
+            border-radius: 3px;
+        }
+
+        .main-content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .declaration-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+            border-right: 1px solid #eaeaea;
+            background: #f0f8ff;
+        }
+
+        .manual-section {
+            flex: 1;
+            min-width: 300px;
+            padding: 30px;
+            background: #fffdf5;
+        }
+
+        .section-title {
+            font-size: 22px;
+            color: #003399;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #003399;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .declaration-item {
+            margin-bottom: 15px;
+            padding: 15px;
+            background: white;
+            border-left: 4px solid #0055cc;
+            border-radius: 0 4px 4px 0;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .declaration-item strong {
+            color: #003399;
+        }
+
+        .signature-area {
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border: 1px dashed #ccc;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        .signature-line {
+            width: 300px;
+            height: 1px;
+            background: #333;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .signature-name {
+            display: inline-block;
+            padding: 0 10px;
+            background: white;
+            position: relative;
+            top: -12px;
+            font-weight: bold;
+            color: #003399;
+        }
+
+        .language-tabs {
+            display: flex;
+            gap: 10px;
+            margin-bottom: 20px;
+            flex-wrap: wrap;
+        }
+
+        .tab-btn {
+            padding: 10px 20px;
+            background: #e0e0e0;
+            border: none;
+            border-radius: 5px 5px 0 0;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s;
+        }
+
+        .tab-btn.active {
+            background: #003399;
+            color: white;
+        }
+
+        .language-content {
+            display: none;
+            padding: 20px;
+            background: white;
+            border-radius: 0 5px 5px 5px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        .language-content.active {
+            display: block;
+        }
+
+        .manual-section h3 {
+            color: #cc0000;
+            margin: 15px 0 10px;
+        }
+
+        .steps-list {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        .steps-list li {
+            margin-bottom: 8px;
+        }
+
+        .warning-box {
+            background: #fff8e1;
+            border-left: 4px solid #ffcc00;
+            padding: 15px;
+            border-radius: 0 4px 4px 0;
+            margin-top: 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #003366;
+            color: white;
+            font-size: 14px;
+        }
+
+        .compliance-badge {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin: 20px 0;
+            flex-wrap: wrap;
+        }
+
+        .badge {
+            background: #0055cc;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 20px;
+            font-size: 14px;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        @media (max-width: 768px) {
+            .main-content {
+                flex-direction: column;
+            }
+
+            .declaration-section {
+                border-right: none;
+                border-bottom: 1px solid #eaeaea;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="eu-flag"></div>
+                EU DECLARATION OF CONFORMITY
+            </div>
+            <p>Issued in accordance with Directive 2001/95/EC (General Product Safety Directive)</p>
+        </header>
+
+        <div class="main-content">
+            <section class="declaration-section">
+                <h2 class="section-title">EU Declaration of Conformity</h2>
+
+                <div class="declaration-item">
+                    <strong>1. Product Identification:</strong> 8901588502486
+                </div>
+
+                <div class="declaration-item">
+                    <strong>2. Manufacturer:</strong><br>
+                    Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.<br>
+                    Room C130, Room 504, No.1 Longkou West Road<br>
+                    Tianhe District, Guangzhou City, Guangdongshen, 510635
+                </div>
+
+                <div class="declaration-item">
+                    <strong>3. Declaration Responsibility:</strong><br>
+                    This declaration of conformity is issued under the sole responsibility of the manufacturer.
+                </div>
+
+                <div class="declaration-item">
+                    <strong>4. Product Description:</strong><br>
+                    Street View Building Blocks
+                </div>
+
+                <div class="declaration-item">
+                    <strong>5. Conformity with Legislation:</strong><br>
+                    • Directive 2001/95/EC (General Product Safety Directive - GPSD)
+                </div>
+
+                <div class="declaration-item">
+                    <strong>6. Harmonised Standards:</strong><br>
+                    • ISO 9001:2015 (Quality Management System, optional for reference)
+                </div>
+
+                <div class="declaration-item">
+                    <strong>7. Notified Body:</strong> Not applicable
+                </div>
+
+                <div class="signature-area">
+                    <strong>8. Additional Information:</strong>
+                    <p>Place and Date of Issue: Germany, 2025-05-01</p>
+
+                    <div class="signature-line">
+                        <span class="signature-name">Lucas</span>
+                    </div>
+
+                    <p>Name: Lucas<br>
+                        Function: Compliance Officer</p>
+
+                    <p>Signed for and on behalf of: Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</p>
+                </div>
+
+                <div class="compliance-badge">
+                    <div class="badge">✓ GPSD Compliant</div>
+                    <div class="badge">✓ ISO 9001:2015</div>
+                    <div class="badge">✓ EU Safety Standards</div>
+                </div>
+            </section>
+
+            <section class="manual-section">
+                <h2 class="section-title">USER INSTRUCTION MANUAL</h2>
+
+                <div class="language-tabs">
+                    <button class="tab-btn active" data-language="english">English</button>
+                    <button class="tab-btn" data-language="romanian">Romanian</button>
+                    <button class="tab-btn" data-language="bulgarian">Bulgarian</button>
+                    <button class="tab-btn" data-language="hungarian">Hungarian</button>
+                </div>
+
+                <div id="english" class="language-content active">
+                    <h3>Purchase this product only from the official TruOrigin store to ensure authenticity and quality!
+                        Other stores cannot guarantee the product's authenticity and quality.</h3>
+
+                    <h3>How to Use the Product</h3>
+                    <ol class="steps-list">
+                        <li>Follow the manual to assemble the base framework, then layer pieces step-by-step to
+                            construct a 3D store structure.</li>
+                        <li>Use transparent covers, rotating shafts, and other components to create movable details
+                            (e.g., door handles, drink towers).</li>
+                        <li>Supports free scene expansion; combine with included themed accessories like Sprite and Coke
+                            bottles to build a mini commercial street.</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <h3>Precautions</h3>
+                        <p>Recommended for children aged 6+ under adult supervision. Contains small parts – do not
+                            swallow.</p>
+                    </div>
+                </div>
+
+                <div id="romanian" class="language-content">
+                    <h3>Achiziționați acest produs numai din magazinul oficial TruOrigin pentru a vă asigura
+                        autenticitatea și calitatea! Alte magazine nu pot garanta autenticitatea și calitatea
+                        produsului.</h3>
+
+                    <h3>Cum să utilizați produsul</h3>
+                    <ol class="steps-list">
+                        <li>Asamblați cadrul de bază conform instrucțiunilor, apoi adăugați treptat granule pentru a
+                            construi structura tridimensională a magazinului.</li>
+                        <li>Folosiți componente precum capacul transparent, axa de rotire etc. pentru a realiza detalii
+                            mobile (cum ar fi mânerul ușii sau turnul de băuturi).</li>
+                        <li>Sistemul suportă extinderea liberă a scenei – combinați-l cu accesoriile tematice incluse
+                            (precum Sprite, Coca-Cola etc.) pentru a crea o mini stradă comercială.</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <h3>Precauții</h3>
+                        <p>Potrivit pentru copii de peste 6 ani, de utilizat sub supravegherea unui adult. Conține
+                            particule mici – evitați înghițirea.</p>
+                    </div>
+                </div>
+
+                <div id="bulgarian" class="language-content">
+                    <h3>Закупете този продукт само от официалния магазин на TruOrigin, за да гарантирате автентичност и
+                        качество! Други магазини не могат да гарантират автентичността и качеството на продукта.</h3>
+
+                    <h3>Как да използвате продукта</h3>
+                    <ol class="steps-list">
+                        <li>Сглобявайте основната рамка според инструкциите стъпка по стъпка, след което добавяйте
+                            постепенно гранули, за да изградите обемната структура на магазина.</li>
+                        <li>Използвайте компоненти като прозрачен капак, въртяща ос и др., за да създадете подвижни
+                            детайли (като дръжка на вратата или кула с напитки).</li>
+                        <li>Системата поддържа свободно разширяване на сцената – комбинирайте я с включените тематични
+                            аксесоари (като Sprite, Coca-Cola и др.), за да създадете мини търговска улица.</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <h3>Предпазни мерки</h3>
+                        <p>Подходящ за деца над 6-годишна възраст, да се използва под надзора на възрастен. Съдържа
+                            малки частици - не глътвайте.</p>
+                    </div>
+                </div>
+
+                <div id="hungarian" class="language-content">
+                    <h3>Csak a TruOrigin hivatalos boltjából vásárolja meg ezt a terméket, hogy biztosítsa a
+                        hitelességet és a minőséget! Más boltok nem garantálják a termék hitelességét és minőségét.</h3>
+
+                    <h3>Hogyan használjuk a terméket</h3>
+                    <ol class="steps-list">
+                        <li>Az alapvázat az útmutató lépései szerint szerelje össze, majd lépésről lépésre építse fel a
+                            háromdimenziós üzlet struktúráját a granulátumok hozzáadásával.</li>
+                        <li>Az átlátszó kupak, forgótengely és egyéb komponensek segítségével mozgatható részleteket
+                            hozhat létre (például ajtókilincset, ital tornyot).</li>
+                        <li>A rendszer bővíthető – az mellékelt témájú kiegészítőkkel (pl. Sprite, Coca-Cola stb.)
+                            egyedi kis bevásárlóutcát teremthet.</li>
+                    </ol>
+
+                    <div class="warning-box">
+                        <h3>Óvintézkedések</h3>
+                        <p>6 éven felüli gyermekek számára ajánlott, felügyelet mellett használandó. Apró szemcséket
+                            tartalmaz - ne nyelje le!</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | EU Declaration of Conformity</p>
+            <p>© 2025 All Rights Reserved | Product: Street View Building Blocks | ID: 8901588502486</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabBtns = document.querySelectorAll('.tab-btn');
+
+            tabBtns.forEach(btn => {
+                btn.addEventListener('click', function () {
+                    // Remove active class from all buttons and content
+                    tabBtns.forEach(b => b.classList.remove('active'));
+                    document.querySelectorAll('.language-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Show corresponding content
+                    const language = this.getAttribute('data-language');
+                    document.getElementById(language).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
