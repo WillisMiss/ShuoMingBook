@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Declaration of Conformity & Product Manual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --eu-blue: #0057b8;
+            --eu-yellow: #ffcc00;
+            --light-bg: #f8f9fa;
+            --card-bg: #ffffff;
+            --text-dark: #212529;
+            --text-light: #6c757d;
+            --success: #28a745;
+            --warning: #ffc107;
+            --danger: #dc3545;
+            --border-radius: 10px;
+            --box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e9f2 100%);
+            color: var(--text-dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding: 30px 20px;
+            background: linear-gradient(135deg, var(--eu-blue) 0%, #003b80 100%);
+            color: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--eu-yellow);
+        }
+
+        .eu-flag {
+            display: inline-flex;
+            margin-bottom: 15px;
+        }
+
+        .eu-star {
+            width: 24px;
+            height: 24px;
+            background: var(--eu-yellow);
+            clip-path: polygon(50% 0%,
+                    61% 35%,
+                    98% 35%,
+                    68% 57%,
+                    79% 91%,
+                    50% 70%,
+                    21% 91%,
+                    32% 57%,
+                    2% 35%,
+                    39% 35%);
+            margin: 0 2px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            font-weight: 300;
+            max-width: 700px;
+            margin: 0 auto;
+            opacity: 0.9;
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        @media (min-width: 992px) {
+            .content-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            transition: var(--transition);
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .card-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--eu-yellow);
+        }
+
+        .card-title {
+            font-size: 1.8rem;
+            color: var(--eu-blue);
+            font-weight: 600;
+        }
+
+        .card-icon {
+            margin-right: 15px;
+            color: var(--eu-blue);
+            font-size: 1.8rem;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+
+        .declaration-item:last-child {
+            border-bottom: none;
+            margin-bottom: 0;
+            padding-bottom: 0;
+        }
+
+        .declaration-label {
+            font-weight: 600;
+            color: var(--eu-blue);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+        }
+
+        .declaration-label i {
+            margin-right: 10px;
+        }
+
+        .declaration-value {
+            padding-left: 30px;
+            color: var(--text-dark);
+        }
+
+        .compliance-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: rgba(40, 167, 69, 0.1);
+            padding: 10px 15px;
+            border-radius: 30px;
+            margin: 8px 0;
+            font-size: 0.95rem;
+        }
+
+        .compliance-badge i {
+            color: var(--success);
+        }
+
+        .signature-box {
+            background: rgba(0, 87, 184, 0.05);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 15px;
+            border-left: 4px solid var(--eu-blue);
+        }
+
+        .signature-box p {
+            margin-bottom: 8px;
+        }
+
+        .signature {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.8rem;
+            color: var(--eu-blue);
+            margin-top: 10px;
+        }
+
+        .language-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+            background: rgba(0, 87, 184, 0.05);
+            padding: 15px;
+            border-radius: var(--border-radius);
+        }
+
+        .tab-btn {
+            background: #e9ecef;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 30px;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab-btn:hover {
+            background: #d8e2ed;
+        }
+
+        .tab-btn.active {
+            background: var(--eu-blue);
+            color: white;
+        }
+
+        .flag-icon {
+            font-size: 1.2rem;
+        }
+
+        .language-content {
+            display: none;
+            animation: fadeIn 0.5s ease;
+        }
+
+        .language-content.active {
+            display: block;
+        }
+
+        .manual-section {
+            margin-bottom: 25px;
+        }
+
+        .manual-section h3 {
+            color: var(--eu-blue);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .manual-section h3 i {
+            color: var(--eu-blue);
+        }
+
+        .steps-list {
+            padding-left: 25px;
+            margin-bottom: 15px;
+        }
+
+        .steps-list li {
+            margin-bottom: 12px;
+            position: relative;
+        }
+
+        .steps-list li::before {
+            content: "•";
+            color: var(--eu-blue);
+            font-weight: bold;
+            position: absolute;
+            left: -15px;
+            font-size: 1.2rem;
+        }
+
+        .warning-box {
+            background: #fff3cd;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+            margin-top: 20px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .warning-icon {
+            color: var(--warning);
+            font-size: 1.8rem;
+            flex-shrink: 0;
+        }
+
+        .warning-content {
+            flex-grow: 1;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            margin-right: 10px;
+        }
+
+        .badge-warning {
+            background: var(--warning);
+            color: var(--text-dark);
+        }
+
+        .product-box {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+
+        .product-image {
+            width: 180px;
+            height: 180px;
+            background: linear-gradient(45deg, #e0f7fa, #bbdefb);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 25px;
+            font-size: 4rem;
+            color: var(--eu-blue);
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-id {
+            background: rgba(0, 87, 184, 0.1);
+            padding: 8px 20px;
+            border-radius: 30px;
+            font-weight: 600;
+            color: var(--eu-blue);
+            margin: 15px 0;
+        }
+
+        .manufacturer-info {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+            width: 100%;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--text-light);
+            font-size: 0.95rem;
+            border-top: 1px solid #dee2e6;
+            margin-top: 20px;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .product-name {
+            font-size: 1.8rem;
+            color: var(--eu-blue);
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="eu-flag">
+                <div class="eu-star"></div>
+                <div class="eu-star"></div>
+                <div class="eu-star"></div>
+                <div class="eu-star"></div>
+                <div class="eu-star"></div>
+            </div>
+            <h1>EU Declaration of Conformity</h1>
+            <p class="subtitle">For Street View Building Blocks - Product ID: 8901588502493</p>
+        </header>
+
+        <div class="product-box">
+            <div class="product-image">
+                <i class="fas fa-cubes"></i>
+            </div>
+            <h2 class="product-name">Street View Building Blocks</h2>
+            <div class="product-id">Product ID: 8901588502493</div>
+            <p>High-quality building blocks set for creating detailed street scenes</p>
+
+            <div class="manufacturer-info">
+                <p><i class="fas fa-industry"></i> <strong>Manufacturer:</strong> Guangzhou Tuoyuan Cross-border
+                    E-Commerce Co., Ltd.</p>
+                <p><i class="fas fa-map-marker-alt"></i> <strong>Address:</strong> Room C130, Room 504, No.1 Longkou
+                    West Road, Tianhe District, Guangzhou Guangzhou City Guangdongshen, 510635</p>
+            </div>
+        </div>
+
+        <div class="content-grid">
+            <div class="card">
+                <div class="card-header">
+                    <i class="card-icon fas fa-file-contract"></i>
+                    <h2 class="card-title">Declaration of Conformity</h2>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label"><i class="fas fa-barcode"></i> 1. Unique identification of the
+                        product</div>
+                    <div class="declaration-value">8901588502493</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label"><i class="fas fa-industry"></i> 2. Name and Address of the
+                        Manufacturer</div>
+                    <div class="declaration-value">Room C130, Room 504, No.1 Longkou West Road, Tianhe District,
+                        Guangzhou Guangzhou City Guangdongshen, 510635</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label"><i class="fas fa-balance-scale"></i> 3. Declaration issued under sole
+                        responsibility</div>
+                    <div class="declaration-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label"><i class="fas fa-cube"></i> 4. Object of the Declaration</div>
+                    <div class="declaration-value">Street View Building Blocks</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label"><i class="fas fa-check-circle"></i> 5. Conformity with relevant
+                        legislation</div>
+                    <div class="declaration-value">
+                        <div class="compliance-badge">
+                            <i class="fas fa-certificate"></i> Directive 2001/95/EC (General Product Safety Directive -
+                            GPSD)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label"><i class="fas fa-book"></i> 6. References to Harmonised Standards
+                    </div>
+                    <div class="declaration-value">
+                        <div class="compliance-badge">
+                            <i class="fas fa-certificate"></i> ISO 9001:2015 (Quality Management System, optional for
+                            reference)
+                        </div>
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label"><i class="fas fa-building"></i> 7. Notified Body</div>
+                    <div class="declaration-value">Not applicable</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label"><i class="fas fa-info-circle"></i> 8. Additional Information</div>
+                    <div class="declaration-value">
+                        <p><strong>Place and Date of Issue:</strong> Germany, 2025-05-01</p>
+
+                        <div class="signature-box">
+                            <p><i class="fas fa-user"></i> <strong>Name:</strong> Lucas</p>
+                            <p><i class="fas fa-briefcase"></i> <strong>Function:</strong> Compliance Officer</p>
+                            <div class="signature">_Lucas</div>
+                            <p><i class="fas fa-pen"></i> <strong>Signed for and on behalf of:</strong> Lucas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header">
+                    <i class="card-icon fas fa-book-open"></i>
+                    <h2 class="card-title">User Instruction Manual</h2>
+                </div>
+
+                <div class="language-tabs">
+                    <button class="tab-btn active" data-language="english">
+                        <i class="flag-icon fas fa-flag-usa"></i> English
+                    </button>
+                    <button class="tab-btn" data-language="romanian">
+                        <i class="flag-icon fas fa-flag"></i> Romanian
+                    </button>
+                    <button class="tab-btn" data-language="bulgarian">
+                        <i class="flag-icon fas fa-flag"></i> Bulgarian
+                    </button>
+                    <button class="tab-btn" data-language="hungarian">
+                        <i class="flag-icon fas fa-flag"></i> Hungarian
+                    </button>
+                </div>
+
+                <div class="language-content active" id="english-content">
+                    <div class="manual-section">
+                        <h3><i class="fas fa-shopping-cart"></i> Purchase Information</h3>
+                        <p>Purchase this product only from the official TruOrigin store to ensure authenticity and
+                            quality! Other stores cannot guarantee the product's authenticity and quality.</p>
+                    </div>
+
+                    <div class="manual-section">
+                        <h3><i class="fas fa-cogs"></i> How to Use the Product</h3>
+                        <ol class="steps-list">
+                            <li>Follow the manual to assemble the base framework, then layer pieces step-by-step to
+                                construct a 3D store structure.</li>
+                            <li>Use transparent covers, rotating shafts, and other components to create movable details
+                                (e.g., door handles, drink towers).</li>
+                            <li>Supports free scene expansion; combine with included themed accessories like Sprite and
+                                Coke bottles to build a mini commercial street.</li>
+                        </ol>
+                    </div>
+
+                    <div class="manual-section">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Precautions</h3>
+                        <div class="warning-box">
+                            <div class="warning-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="warning-content">
+                                <span class="badge badge-warning">WARNING</span>
+                                Recommended for children aged 6+ under adult supervision. Contains small parts - do not
+                                swallow.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="language-content" id="romanian-content">
+                    <div class="manual-section">
+                        <h3><i class="fas fa-shopping-cart"></i> Informații de cumpărare</h3>
+                        <p>Achizitionați acest produs numai din magazinul oficial TruOrigin pentru a vǎ asigura
+                            autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si calitatea
+                            produsului.</p>
+                    </div>
+
+                    <div class="manual-section">
+                        <h3><i class="fas fa-cogs"></i> Cum să utilizați produsul</h3>
+                        <ol class="steps-list">
+                            <li>Asamblați cadrul de bază conform instrucțiunilor, apoi adăugați treptat granule pentru a
+                                construi structura tridimensională a magazinului;</li>
+                            <li>Folosiți componente precum capacul transparent, axa de rotație etc. pentru a realiza
+                                detalii mobile (cum ar fi mânerul ușii sau turnul de băuturi);</li>
+                            <li>Sistemul suportă extinderea liberă a scenei - combinați-l cu accesoriile tematice
+                                incluse (precum Sprite, Coca-Cola etc.) pentru a crea o mini stradă comercială.</li>
+                        </ol>
+                    </div>
+
+                    <div class="manual-section">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Precauții</h3>
+                        <div class="warning-box">
+                            <div class="warning-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="warning-content">
+                                <span class="badge badge-warning">ATENȚIE</span>
+                                Potrivit pentru copii de peste 6 ani, de utilizat sub supravegherea unui adult. Conține
+                                particule mici - evitați înghițirea.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="language-content" id="bulgarian-content">
+                    <div class="manual-section">
+                        <h3><i class="fas fa-shopping-cart"></i> Информация за покупка</h3>
+                        <p>Закупувайте този продукт само от официалния магазин на TruOrigin, за да гарантирате
+                            автентичността и качеството! Други магазини не могат да гарантират автентичността и
+                            качеството на продукта.</p>
+                    </div>
+
+                    <div class="manual-section">
+                        <h3><i class="fas fa-cogs"></i> Как да използвате продукта</h3>
+                        <ol class="steps-list">
+                            <li>Сглобете основната рамка според инструкциите, след което добавете постепенно гранули, за
+                                да изградите триизмерната структура на магазина;</li>
+                            <li>Използвайте компоненти като прозрачен капак, въртяща се ос и др., за да създадете
+                                подвижни детайли (като дръжка на вратата или кула за напитки);</li>
+                            <li>Системата поддържа свободно разширяване на сцената - комбинирайте я с включените
+                                тематични аксесоари (като Sprite, Coca-Cola и др.), за да създадете мини търговска
+                                улица.</li>
+                        </ol>
+                    </div>
+
+                    <div class="manual-section">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Мерки за предпазване</h3>
+                        <div class="warning-box">
+                            <div class="warning-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="warning-content">
+                                <span class="badge badge-warning">ПРЕДУПРЕЖДЕНИЕ</span>
+                                Подходящо за деца над 6 години, да се използва под надзор на възрастен. Съдържа малки
+                                частици - избягвайте поглъщането.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="language-content" id="hungarian-content">
+                    <div class="manual-section">
+                        <h3><i class="fas fa-shopping-cart"></i> Vásárlási információk</h3>
+                        <p>Csak a TruOrigin hivatalos boltjából vásárolja meg ezt a terméket, hogy biztosítsa a
+                            hitelességet és a minőséget! Más boltok nem garantálják a termék hitelességét és minőségét.
+                        </p>
+                    </div>
+
+                    <div class="manual-section">
+                        <h3><i class="fas fa-cogs"></i> Hogyan használjuk a terméket</h3>
+                        <ol class="steps-list">
+                            <li>Az alapvázat az útmutató lépései szerint szerelje össze, majd lépésről lépésre építse
+                                fel a háromdimenziós üzlet struktúráját a granulátumok hozzáadásával.</li>
+                            <li>Az átlátsó kupak, forgótengely és egyéb komponensek segítségével mozgatható részleteket
+                                hozhat létre (például ajtókilincset, ital tornyot).</li>
+                            <li>A rendszer bővíthető - a mellékelt témájú kiegészítőkkel (pl. Sprite, Coca-Cola stb.)
+                                egyedi kis bevásárlóutcát teremthet.</li>
+                        </ol>
+                    </div>
+
+                    <div class="manual-section">
+                        <h3><i class="fas fa-exclamation-triangle"></i> Óvintézkedések</h3>
+                        <div class="warning-box">
+                            <div class="warning-icon">
+                                <i class="fas fa-exclamation-circle"></i>
+                            </div>
+                            <div class="warning-content">
+                                <span class="badge badge-warning">FIGYELMEZTETÉS</span>
+                                6 éven felüli gyermekek számára ajánlott, felügyelet mellett használandó. Apró
+                                szemcséket tartalmaz - ne nyelje le!
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>EU Declaration of Conformity & Product Manual | Issued: May 1, 2025</p>
+            <p>Compliance Officer: Lucas | Product: Street View Building Blocks (ID: 8901588502493)</p>
+            <p>Manufacturer: Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabButtons = document.querySelectorAll('.tab-btn');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', function () {
+                    // Remove active class from all buttons
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+
+                    // Add active class to clicked button
+                    this.classList.add('active');
+
+                    // Get target language content ID
+                    const language = this.getAttribute('data-language');
+                    const contentId = `${language}-content`;
+
+                    // Hide all content
+                    document.querySelectorAll('.language-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show target content
+                    document.getElementById(contentId).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

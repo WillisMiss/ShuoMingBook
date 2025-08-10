@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruOrigin Street View Building Blocks - Declaration & Instructions</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px 0;
+            border-bottom: 2px solid #2c3e50;
+        }
+
+        h1 {
+            color: #2c3e50;
+            margin-bottom: 5px;
+        }
+
+        h2 {
+            color: #3498db;
+            border-left: 4px solid #3498db;
+            padding-left: 10px;
+            margin-top: 30px;
+        }
+
+        .compliance-card {
+            background: #f8f9fa;
+            border-radius: 8px;
+            padding: 25px;
+            margin: 25px 0;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 15px 0;
+        }
+
+        td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #e0e0e0;
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        .lang-tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin: 20px 0;
+        }
+
+        .lang-tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-bottom: none;
+            margin-bottom: -1px;
+        }
+
+        .lang-tab.active {
+            border-color: #ddd;
+            border-radius: 5px 5px 0 0;
+            background: white;
+            font-weight: bold;
+        }
+
+        .lang-content {
+            display: none;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-top: none;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .signature-block {
+            text-align: right;
+            margin-top: 40px;
+            font-style: italic;
+        }
+
+        .warning {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            color: #7f8c8d;
+            font-size: 0.9em;
+        }
+
+        @media print {
+
+            .lang-tabs,
+            .lang-tab {
+                display: none;
+            }
+
+            .lang-content {
+                display: block !important;
+                border: none;
+                padding: 5px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>TruOrigin Street View Building Blocks</h1>
+        <p>EU Declaration of Conformity & Instruction Manual</p>
+    </header>
+
+    <main>
+        <!-- EU Declaration of Conformity -->
+        <section class="compliance-card">
+            <h2>EU DECLARATION OF CONFORMITY</h2>
+            <table>
+                <tr>
+                    <td><strong>1. No … (unique identification of the product)</strong></td>
+                    <td>8901588502547</td>
+                </tr>
+                <tr>
+                    <td><strong>2. Name and Address of the Manufacturer:</strong></td>
+                    <td>Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou<br>Guangzhou City
+                        Guangdongshen, 510635</td>
+                </tr>
+                <tr>
+                    <td><strong>3. This declaration of conformity is issued under the sole responsibility of the
+                            manufacturer:</strong></td>
+                    <td>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</td>
+                </tr>
+                <tr>
+                    <td><strong>4. Object of the Declaration:</strong></td>
+                    <td>Product Name: Street View Building Blocks</td>
+                </tr>
+                <tr>
+                    <td><strong>5. The object of the declaration described in point 4 is in conformity with the relevant
+                            Union harmonisation legislation:</strong></td>
+                    <td>• Directive 2001/95/EC (General Product Safety Directive - GPSD)</td>
+                </tr>
+                <tr>
+                    <td><strong>6. References to Harmonised Standards:</strong></td>
+                    <td>• ISO 9001:2015 (Quality Management System, optional for reference)</td>
+                </tr>
+                <tr>
+                    <td><strong>7. Notified Body (if applicable):</strong></td>
+                    <td>Not applicable</td>
+                </tr>
+            </table>
+
+            <div class="signature-block">
+                <p>Place and Date of Issue: Germany, 2025-05-01</p>
+                <p>Name: Lucas</p>
+                <p>Function: Compliance Officer</p>
+                <p>Signature: <u>Lucas</u></p>
+                <p>Signed for and on behalf of: Lucas</p>
+            </div>
+        </section>
+
+        <!-- Multilingual Instructions -->
+        <section>
+            <h2>USER INSTRUCTION MANUAL</h2>
+            <div class="warning">
+                ⚠️ Precautions: Recommended for children aged 6+ under adult supervision. Contains small parts - do not
+                swallow.
+            </div>
+
+            <!-- Language tabs -->
+            <div class="lang-tabs">
+                <div class="lang-tab active" data-lang="ro">Română</div>
+                <div class="lang-tab" data-lang="bg">Български</div>
+                <div class="lang-tab" data-lang="hu">Magyar</div>
+                <div class="lang-tab" data-lang="en">English</div>
+            </div>
+
+            <!-- Romanian -->
+            <div class="lang-content active" id="ro">
+                <h3>Instrucțiuni de utilizare</h3>
+                <p><strong>Achiziționați acest produs numai din magazinul oficial TruOrigin pentru a vă asigura
+                        autenticitatea și calitatea!</strong> Alte magazine nu pot garanta autenticitatea și calitatea
+                    produsului.</p>
+
+                <h4>Cum să utilizați produsul</h4>
+                <ol>
+                    <li>Asamblați cadrul de bază conform instrucțiunilor, apoi adăugați treptat granule pentru a
+                        construi structura tridimensională a magazinului;</li>
+                    <li>Folosiți componente precum capacul transparent, axa de rotire etc. pentru a realiza detalii
+                        mobile (cum ar fi mânerul ușii sau turnul de băuturi);</li>
+                    <li>Sistemul suportă extinderea liberă a scenei – combinați-l cu accesoriile tematice incluse
+                        (precum Sprite, Coca-Cola etc.) pentru a crea o mini stradă comercială.</li>
+                </ol>
+
+                <h4>Precauții</h4>
+                <p>Potrivit pentru copii de peste 6 ani, de utilizat sub supravegherea unui adult. Conține particule
+                    mici – evitați înghițirea.</p>
+            </div>
+
+            <!-- Bulgarian -->
+            <div class="lang-content" id="bg">
+                <h3>Инструкции за употреба</h3>
+                <p><strong>Закупете този продукт само от официалния магазин на TruOrigin, за да гарантирате автентичност
+                        и качество!</strong> Други магазини не могат да гарантират автентичността и качеството на
+                    продукта.</p>
+
+                <h4>Как да използвате продукта</h4>
+                <ol>
+                    <li>Сглобявайте основната рамка според инструкциите стъпка по стъпка, след което добавяйте
+                        постепенно гранули, за да изградите обемната структура на магазина;</li>
+                    <li>Използвайте компоненти като прозрачен капак, въртяща ос и др., за да създадете подвижни детайли
+                        (като дръжка на вратата или кула с напитки);</li>
+                    <li>Системата поддържа свободно разширяване на сцената – комбинирайте я с включените тематични
+                        аксесоари (като Sprite, Coca-Cola и др.), за да създадете мини търговска улица.</li>
+                </ol>
+
+                <h4>Предпазни мерки</h4>
+                <p>Подходящ за деца над 6-годишна възраст, да се използва под надзора на възрастен. Съдържа малки
+                    частици - не глътвайте.</p>
+            </div>
+
+            <!-- Hungarian -->
+            <div class="lang-content" id="hu">
+                <h3>Használati utasítások</h3>
+                <p><strong>Csak a TruOrigin hivatalos boltjából vásárolja meg ezt a terméket, hogy biztosítsa a
+                        hitelességet és a minőséget!</strong> Más boltok nem garantálják a termék hitelességét és
+                    minőségét.</p>
+
+                <h4>Hogyan használjuk a terméket</h4>
+                <ol>
+                    <li>Az alapvázat az útmutató lépései szerint szerelje össze, majd lépésről lépésre építse fel a
+                        háromdimenziós üzlet struktúráját a granulátumok hozzáadásával;</li>
+                    <li>Az átlátsó kupak, forgótengely és egyéb komponensek segítségével mozgatható részleteket hozhat
+                        létre (például ajtókilincset, ital tornyot);</li>
+                    <li>A rendszer bővíthető – az mellékelt témájú kiegészítőkkel (pl. Sprite, Coca-Cola stb.) egyedi
+                        kis bevásárlóutcát teremthet.</li>
+                </ol>
+
+                <h4>Óvintézkedések</h4>
+                <p>6 éven felüli gyermekek számára ajánlott, felügyelet mellett használandó. Apró szemcséket tartalmaz -
+                    ne nyelje le!</p>
+            </div>
+
+            <!-- English -->
+            <div class="lang-content" id="en">
+                <h3>Instructions for Use</h3>
+                <p><strong>Purchase this product only from the official TruOrigin store to ensure authenticity and
+                        quality!</strong> Other stores cannot guarantee the product's authenticity and quality.</p>
+
+                <h4>How to Use the Product</h4>
+                <ol>
+                    <li>Follow the manual to assemble the base framework, then layer pieces step-by-step to construct a
+                        3D store structure;</li>
+                    <li>Use transparent covers, rotating shafts, and other components to create movable details (e.g.,
+                        door handles, drink towers);</li>
+                    <li>Supports free scene expansion; combine with included themed accessories like Sprite and Coke
+                        bottles to build a mini commercial street.</li>
+                </ol>
+
+                <h4>Precautions</h4>
+                <p>Recommended for children aged 6+ under adult supervision. Contains small parts - do not swallow.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 TruOrigin. All rights reserved. Product specifications subject to change without notice.</p>
+    </footer>
+
+    <script>
+        // Language switch functionality
+        document.querySelectorAll('.lang-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active status from all
+                document.querySelectorAll('.lang-tab, .lang-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+                // Activate current tab and content
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.lang).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,760 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruOrigin LCD Writing Tablet - Compliance & Instructions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #1e88e5;
+            --secondary: #0d47a1;
+            --accent: #ff6d00;
+            --light: #e3f2fd;
+            --dark: #0d47a1;
+            --gray: #546e7a;
+            --border: #bbdefb;
+            --warning: #fff8e1;
+        }
+
+        body {
+            background: linear-gradient(135deg, #e3f2fd 0%, #bbdefb 100%);
+            color: #333;
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Header Styles */
+        .document-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
+            color: white;
+            padding: 30px 40px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="rgba(255,255,255,0.05)"/><rect x="10" y="10" width="80" height="60" rx="5" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.2;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        /* Product Visual */
+        .product-visual {
+            background: linear-gradient(135deg, #bbdefb 0%, #90caf9 100%);
+            padding: 30px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .tablet-demo {
+            position: relative;
+            width: 260px;
+            height: 180px;
+            background: #f5f5f5;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        .tablet-screen {
+            width: 220px;
+            height: 140px;
+            background: linear-gradient(135deg, #cfd8dc 0%, #b0bec5 100%);
+            border-radius: 6px;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .tablet-content {
+            color: #37474f;
+            text-align: center;
+            font-size: 1.1rem;
+            padding: 10px;
+        }
+
+        .tablet-buttons {
+            position: absolute;
+            bottom: 15px;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .tablet-button {
+            width: 30px;
+            height: 30px;
+            background: var(--primary);
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 0.8rem;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .stylus {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 8px;
+            height: 100px;
+            background: #bdbdbd;
+            border-radius: 10px;
+            transform: rotate(15deg);
+        }
+
+        .stylus-tip {
+            position: absolute;
+            bottom: 0;
+            width: 10px;
+            height: 10px;
+            background: #616161;
+            border-radius: 50%;
+        }
+
+        .visual-text {
+            color: var(--dark);
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .visual-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+            color: var(--secondary);
+        }
+
+        .visual-text p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        .visual-features {
+            margin-top: 15px;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .feature {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .feature i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        /* Compliance Section */
+        .compliance-section {
+            padding: 30px 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--accent);
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            color: var(--accent);
+            font-size: 1.8rem;
+        }
+
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 12px;
+        }
+
+        .compliance-item {
+            padding: 15px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .compliance-item:last-child {
+            border-bottom: none;
+        }
+
+        .compliance-label {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.05rem;
+        }
+
+        .compliance-value {
+            color: var(--dark);
+            line-height: 1.5;
+        }
+
+        .signature-block {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+
+        .signature-line {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border);
+        }
+
+        /* Instructions Section */
+        .instructions-section {
+            padding: 30px 40px;
+            background: #f8f9fa;
+        }
+
+        .warning-box {
+            background: var(--warning);
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 4px 4px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .warning-box i {
+            font-size: 1.8rem;
+            color: var(--accent);
+            margin-right: 15px;
+        }
+
+        .warning-content {
+            flex: 1;
+        }
+
+        .warning-content strong {
+            color: var(--accent);
+        }
+
+        /* Language Tabs */
+        .lang-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            border-bottom: 1px solid var(--border);
+            margin: 20px 0;
+        }
+
+        .lang-tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .lang-tab.active {
+            background: var(--primary);
+            color: white;
+            border-color: var(--primary);
+            font-weight: 600;
+        }
+
+        .lang-content {
+            display: none;
+            padding: 25px 0;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .lang-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .lang-subtitle {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            font-size: 1.25rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .usage-steps {
+            margin: 20px 0;
+            counter-reset: step;
+        }
+
+        .step {
+            margin-bottom: 25px;
+            padding-left: 45px;
+            position: relative;
+        }
+
+        .step:before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--primary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: bold;
+        }
+
+        .precaution {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--accent);
+        }
+
+        .precaution i {
+            color: var(--accent);
+            font-size: 1.4rem;
+            min-width: 30px;
+            margin-top: 3px;
+        }
+
+        .precaution-content h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 40px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        .company-info {
+            margin-top: 15px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .compliance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-header,
+            .compliance-section,
+            .instructions-section {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .lang-tab {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .tablet-demo {
+                width: 220px;
+                height: 160px;
+            }
+
+            .tablet-screen {
+                width: 180px;
+                height: 120px;
+            }
+
+            .product-visual {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .visual-text {
+                text-align: center;
+            }
+
+            .visual-features {
+                grid-template-columns: 1fr;
+            }
+
+            .step {
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Document Header -->
+        <header class="document-header">
+            <div class="header-pattern"></div>
+            <div>
+                <h1>TruOrigin LCD Writing Tablet</h1>
+                <p class="subtitle">EU Declaration of Conformity & Instruction Manual</p>
+                <div class="product-id">Product ID: 8901606911290</div>
+            </div>
+        </header>
+
+        <!-- Product Visual -->
+        <div class="product-visual">
+            <div class="tablet-demo">
+                <div class="stylus">
+                    <div class="stylus-tip"></div>
+                </div>
+                <div class="tablet-screen">
+                    <div class="tablet-content">
+                        <p>TruOrigin LCD Tablet</p>
+                        <p>Write & Draw Freely</p>
+                    </div>
+                </div>
+                <div class="tablet-buttons">
+                    <div class="tablet-button">L</div>
+                    <div class="tablet-button">E</div>
+                </div>
+            </div>
+            <div class="visual-text">
+                <h2>Digital Writing Experience</h2>
+                <p>Environmentally friendly LCD writing tablet with pressure-sensitive screen</p>
+
+                <div class="visual-features">
+                    <div class="feature">
+                        <i class="fas fa-pen"></i>
+                        <span>Natural writing feel</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-trash-alt"></i>
+                        <span>One-touch erasure</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-battery-full"></i>
+                        <span>Long battery life</span>
+                    </div>
+                    <div class="feature">
+                        <i class="fas fa-child"></i>
+                        <span>Perfect for kids & adults</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- EU Declaration of Conformity -->
+        <section class="compliance-section">
+            <h2 class="section-title">
+                <i class="fas fa-file-contract"></i>
+                EU DECLARATION OF CONFORMITY
+            </h2>
+
+            <div class="compliance-grid">
+                <div class="compliance-item">
+                    <div class="compliance-label">1. Product Unique Identification</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">8901606911290</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">2. Manufacturer Name and Address</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">
+                        Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou<br>
+                        Guangzhou City Guangdongshen,510635
+                    </div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">3. Declaration Responsibility</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">4. Object of Declaration</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Product Name: LCD Writing Tablet</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">5. Conformity with EU Legislation</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">• Directive 2001/95/EC (General Product Safety Directive - GPSD)</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">6. Harmonised Standards</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">• ISO 9001:2015 (Quality Management System, optional for reference)
+                    </div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">7. Notified Body</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Not applicable</div>
+                </div>
+            </div>
+
+            <div class="signature-block">
+                <div class="compliance-grid">
+                    <div class="compliance-item">
+                        <div class="compliance-label">Place and Date of Issue:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Germany, 2025-05-01</div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-label">Name:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Lucas</div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-label">Function:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Compliance Officer</div>
+                    </div>
+                </div>
+
+                <div class="signature-line">
+                    <div class="compliance-grid">
+                        <div class="compliance-item">
+                            <div class="compliance-label">Signature:</div>
+                        </div>
+                        <div class="compliance-item">
+                            <div class="compliance-value"
+                                style="font-family: 'Brush Script MT', cursive; font-size: 1.6rem;">Lucas</div>
+                        </div>
+
+                        <div class="compliance-item">
+                            <div class="compliance-label">Signed for and on behalf of:</div>
+                        </div>
+                        <div class="compliance-item">
+                            <div class="compliance-value">Lucas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Instruction Manual -->
+        <section class="instructions-section">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                USER INSTRUCTION MANUAL
+            </h2>
+
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="warning-content">
+                    <strong>Important Safety Precautions:</strong>
+                    Avoid high temperatures and direct sunlight exposure.
+                    Do not immerse in water.
+                    Children under 6 years must use under adult supervision.
+                </div>
+            </div>
+
+            <!-- Language Tabs -->
+            <div class="lang-tabs">
+                <div class="lang-tab active" data-lang="ro">Română</div>
+                <div class="lang-tab" data-lang="bg">Български</div>
+                <div class="lang-tab" data-lang="hu">Magyar</div>
+                <div class="lang-tab" data-lang="en">English</div>
+            </div>
+
+            <!-- Romanian Instructions -->
+            <div class="lang-content active" id="ro">
+                <h3 class="lang-title">Instructiuni de utilizare</h3>
+
+                <p><strong>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                        autenticitatea si calitatea!</strong> Alte magazine nu pot garanta autenticitatea si calitatea
+                    produsului.</p>
+
+                <h4 class="lang-subtitle">Cum s utilizati produsul</h4>
+                <div class="usage-steps">
+                    <div class="step">Scriere: Scoateti stiloul alb inclus din partea superiora si scrieti usor pe ecran
+                        pentru a lasa urme colorate. Ideal pentru notite, desen sau inregistrari temporare.</div>
+                    <div class="step">Stergere: Apasati scurt butonul de pe partea frontalǎ inferiora a dispositiviului
+                        pentru a sterge imediat continutul ecranului.</div>
+                    <div class="step">Blocare si deblocare: Pe spatele dispositivului se afla un buton de blocare
+                        impotriva stergerii accidentale. Setat pe"blocat", butonul frontal nu va sterge continutul;
+                        setat pe"deblocat", stergerea functioneaz normal.</div>
+                </div>
+
+                <h4 class="lang-subtitle">Precautii</h4>
+                <div class="precaution">
+                    <i class="fas fa-temperature-high"></i>
+                    <div class="precaution-content">
+                        <h4>Protecție termică</h4>
+                        <p>Produsul trebuie evitat la temperaturi inalte, expunere directa la soare si scufundare in apa
+                            pentru a prelungi durata de viaţă.</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-redo"></i>
+                    <div class="precaution-content">
+                        <h4>Resetare ecran</h4>
+                        <p>Daca ecranul prezinta urme de presiune la despachetare, setati butonul anti-stergere
+                            accidentala pe"deblocare" si apăsaţi butonul de stergere frontal pentru a restabili starea
+                            curata.</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div class="precaution-content">
+                        <h4>Supraveghere copii</h4>
+                        <p>Copiii sub sase ani trebuie sa utilizeze produsul sub supravegherea unui adult.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bulgarian Instructions -->
+            <div class="lang-content" id="bg">
+                <h3 class="lang-title">MHCTpyKuNN 3a ynoTpe6a</h3>
+
+                <p><strong>3akyneTe TO3N npoAyKT CaMO OT ONNANHA Mara3NH Ha TruOrigin, 3a Aa rapaHTNpaTe aBTeHTNHOCT n
+                        KayecTBo!</strong> Apyrn Mara3NHn He MOraT Aa rapaHTNpaT aBTeHTNHOCTTa n KayeCTBOTO Ha nPOAyKTa.
+                </p>
+
+                <h4 class="lang-subtitle">Kak Aa N3non3BaTe npoAyKTa</h4>
+                <div class="usage-steps">
+                    <div class="step">6ana canka oT ropHaa acT n nweTe neko,.,BPemeHHN 3anncn.</div>
+                    <div class="step">HaTncHeTe KpaTKO 6yToHa Ha npeAHaTa AOnHa 4acT Ha ycTponCTBOTO,3a Aa N3TpneTe
+                        He3a6aBHO CbAbpHaHNeTo Ha ekpaHa.</div>
+                    <div class="step">Ha aacT Ha ycTpoCTBOTO Ma KnO4 3a 3aNTa OT CnyaHO 3TpBaHe. NpeBKNOyeTe
+                        Ha"3aKNOyeHO", 3a Aa AeaKTNBNPaTe 6yTOHa 3a 3TpNBaHe; npeBKnIOyeTe Ha"OTKNIOyeHO" 3a HOPMaJIHa
+                        pa6oTa.</div>
+                </div>
+
+                <h4 class="lang-subtitle"></h4>
+                <div class="precaution">
+                    <i class="fas fa-temperature-high"></i>
+                    <div class="precaution-content">
+                        <h4>Термична защита</h4>
+                        <p>,,,CBeTNNHa NOTONABaHe BbB BOAa, 3a Aa ce yAbJnKn ekcnnoaTaUNOHHNa My XNBOT.</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-redo"></i>
+                    <div class="precaution-content">
+                        <h4>Нулиране на екрана</h4>
+                        <p>Ako ekpaHbT nMa cneAn OT HaTNCK npn OTBapaHe Ha OnaKOBKaTa, 3aTe Knoya npoTNB Cny4aHO
+                            N3TpnBaHe Ha"oTKHaHe" n HaTNCHeTe 6yTOHa 3a N34NCTBaHe oTnpeA, 3a Aa Bb3cTaHOBNTe 4NCTOTO
+                            CbCTOAHNe.</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div class="precaution-content">
+                        <h4>Надзор над децата</h4>
+                        <p>Aeua noA wecTroANwHa Bb3pacT Tpa6Ba Aa non3BaT npoAyKTa noA HaA3opa Ha Bb3pacTeH.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hungarian Instructions -->
+            <div class="lang-content" id="hu">
+                <h3 class="lang-title">Hasznalati utasitasok</h3>
+
+                <p><strong>Csak a TruOrigin hivatalos boltjabol vasarolija meg

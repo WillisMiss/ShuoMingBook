@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruOrigin Mini Metal Trolley - EU Compliance & Instructions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #343a40;
+            --gray: #6c757d;
+            --border: #dee2e6;
+            --warning: #fff8e1;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            text-align: center;
+            padding: 30px 0;
+            margin-bottom: 30px;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-info {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-image {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(45deg, #e0e0e0, #f5f5f5);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 48px;
+            color: var(--gray);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .product-details {
+            text-align: left;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        h2 {
+            color: var(--secondary);
+            border-left: 4px solid var(--secondary);
+            padding-left: 12px;
+            margin: 30px 0 20px;
+        }
+
+        .section-card {
+            background: white;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            border: 1px solid var(--border);
+        }
+
+        .compliance-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+
+        .compliance-table td {
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border);
+            vertical-align: top;
+        }
+
+        .compliance-table tr:last-child td {
+            border-bottom: none;
+        }
+
+        .compliance-table td:first-child {
+            font-weight: 600;
+            color: var(--primary);
+            width: 35%;
+        }
+
+        .signature-block {
+            text-align: right;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed var(--border);
+            font-style: italic;
+            color: var(--gray);
+        }
+
+        .lang-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            border-bottom: 1px solid var(--border);
+            margin: 20px 0;
+        }
+
+        .lang-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.3s ease;
+        }
+
+        .lang-tab.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .lang-content {
+            display: none;
+            padding: 20px 0;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .warning-box {
+            background: var(--warning);
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 20px 0;
+            border-radius: 0 4px 4px 0;
+        }
+
+        .usage-steps {
+            margin: 20px 0;
+            counter-reset: step-counter;
+        }
+
+        .step {
+            margin-bottom: 20px;
+            padding-left: 35px;
+            position: relative;
+        }
+
+        .step:before {
+            counter-increment: step-counter;
+            content: counter(step-counter);
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 26px;
+            height: 26px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .precaution {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 12px;
+        }
+
+        .precaution i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            margin-top: 3px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 30px 0;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            margin-top: 30px;
+        }
+
+        .product-id {
+            /**background: var(--light);
+            padding: 5px 10px;
+            border-radius: 4px;
+            font-family: monospace;
+            margin-top: 5px;**/
+            display: inline-block;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .product-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-details {
+                text-align: center;
+            }
+
+            .compliance-table td:first-child {
+                width: 40%;
+            }
+
+            h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="product-info">
+                <div class="product-image">
+                    <i class="fas fa-box-open"></i>
+                </div>
+                <div class="product-details">
+                    <h1>TruOrigin Mini Metal Trolley</h1>
+                    <p>EU Declaration of Conformity & User Instructions</p>
+                    <div class="product-id">Product ID: 8901588502561</div>
+                </div>
+            </div>
+        </header>
+
+        <!-- EU Declaration of Conformity Section -->
+        <section class="section-card">
+            <h2>EU DECLARATION OF CONFORMITY</h2>
+
+            <table class="compliance-table">
+                <tr>
+                    <td>1. Product Unique Identification</td>
+                    <td>8901588502561</td>
+                </tr>
+                <tr>
+                    <td>2. Manufacturer Name and Address</td>
+                    <td>
+                        Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou<br>
+                        Guangzhou City Guangdongshen, 510635
+                    </td>
+                </tr>
+                <tr>
+                    <td>3. Declaration Responsibility</td>
+                    <td>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</td>
+                </tr>
+                <tr>
+                    <td>4. Object of Declaration</td>
+                    <td>Product Name: Mini metal trolley</td>
+                </tr>
+                <tr>
+                    <td>5. Conformity with EU Legislation</td>
+                    <td>• Directive 2001/95/EC (General Product Safety Directive - GPSD)</td>
+                </tr>
+                <tr>
+                    <td>6. Harmonised Standards</td>
+                    <td>• ISO 9001:2015 (Quality Management System, optional for reference)</td>
+                </tr>
+                <tr>
+                    <td>7. Notified Body</td>
+                    <td>Not applicable</td>
+                </tr>
+            </table>
+
+            <div class="signature-block">
+                <p>Place and Date of Issue: Germany, 2025-05-01</p>
+                <p>Name: Lucas</p>
+                <p>Function: Compliance Officer</p>
+                <p>Signature: <u>Lucas</u></p>
+                <p>Signed for and on behalf of: Lucas</p>
+            </div>
+        </section>
+
+        <!-- User Instruction Manual Section -->
+        <section class="section-card">
+            <h2>USER INSTRUCTION MANUAL</h2>
+
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i> Precautions: Children under 6 years should use under adult
+                supervision. Store in dry environment to prevent rust. Do not place excessively heavy items.
+            </div>
+
+            <!-- Language tabs -->
+            <div class="lang-tabs">
+                <div class="lang-tab active" data-lang="ro">Română</div>
+                <div class="lang-tab" data-lang="bg">Български</div>
+                <div class="lang-tab" data-lang="hu">Magyar</div>
+                <div class="lang-tab" data-lang="en">English</div>
+            </div>
+
+            <!-- Romanian Instructions -->
+            <div class="lang-content active" id="ro">
+                <h3>Instrucțiuni de utilizare</h3>
+                <p><strong>Achiziționați acest produs numai din magazinul oficial TruOrigin pentru a vă asigura
+                        autenticitatea și calitatea!</strong> Alte magazine nu pot garanta autenticitatea și calitatea
+                    produsului.</p>
+
+                <h4>Cum să utilizați produsul</h4>
+                <div class="usage-steps">
+                    <div class="step">Poate fi plasat pe birou, în living, bucătărie sau alte spații ca obiect
+                        decorativ, pentru a îmbunătăți estetica încăperii.</div>
+                    <div class="step">Ideal pentru afișarea accesoriilor mici, brelocurilor, monedelor, timbrelor și
+                        altor obiecte de colecție.</div>
+                    <div class="step">Perfectă pentru organizarea articolelor mici precum agrafe, ace de siguranță, ace
+                        de hârtie și alte rechizite de birou.</div>
+                </div>
+
+                <h4>Precauții</h4>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div>Copiii sub 6 ani trebuie să utilizeze produsul doar sub supravegherea unui adult - respectați
+                        regulile de siguranță!</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-tint-slash"></i>
+                    <div>Păstrați în mediu uscat - evitați umezeala pentru a preveni formarea ruginii!</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-weight-hanging"></i>
+                    <div>Nu depozitați obiecte excesiv de grele - pentru a evita deformarea!</div>
+                </div>
+            </div>
+
+            <!-- Bulgarian Instructions -->
+            <div class="lang-content" id="bg">
+                <h3>Инструкции за употреба</h3>
+                <p><strong>Закупете този продукт само от официалния магазин на TruOrigin, за да гарантирате автентичност
+                        и качество!</strong> Други магазини не могат да гарантират автентичността и качеството на
+                    продукта.</p>
+
+                <h4>Как да използвате продукта</h4>
+                <div class="usage-steps">
+                    <div class="step">Може да се постави на бюро, в хола, кухнята или други места като декоративен
+                        елемент, за да подобри естетиката на пространството.</div>
+                    <div class="step">Подходящ за показване на малки аксесоари, ключодържатели, монети, марки и други
+                        дребни предмети.</div>
+                    <div class="step">Идеална за организиране на малки предмети като кламери, иглички, карфици и други
+                        канцеларски материали.</div>
+                </div>
+
+                <h4>Предпазни мерки</h4>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div>Деца под 6 години да използват само под надзор на възрастни - моля, спазвайте мерките за
+                        безопасност!</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-tint-slash"></i>
+                    <div>Да се съхранява на сухо място - избягвайте влагата, за да не се появи ръжда!</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-weight-hanging"></i>
+                    <div>Не поставяйте прекалено тежки предмети - за да се избегне деформация!</div>
+                </div>
+            </div>
+
+            <!-- Hungarian Instructions -->
+            <div class="lang-content" id="hu">
+                <h3>Használati utasítások</h3>
+                <p><strong>Csak a TruOrigin hivatalos boltjából vásárolja meg ezt a terméket, hogy biztosítsa a
+                        hitelességet és a minőséget!</strong> Más boltok nem garantálják a termék hitelességét és
+                    minőségét.</p>
+
+                <h4>Hogyan használjuk a terméket</h4>
+                <div class="usage-steps">
+                    <div class="step">Az íróasztalon, nappaliban, konyhában vagy más helyeken is elhelyezhető
+                        díszítőtárgyként, hogy fokozza a tér esztétikáját.</div>
+                    <div class="step">Kiválóan alkalmas apró ékszerek, kulcstartók, érmék, bélyegek és egyéb kis tárgyak
+                        kiállítására.</div>
+                    <div class="step">Ideális kis tárgyak, például gemkapocs, rajzszegecskék, gombostűk és egyéb irodai
+                        szerek rendezésére.</div>
+                </div>
+
+                <h4>Óvintézkedések</h4>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div>A 6 év alatti gyermekek csak felnőtt felügyelete mellett használják – kérjük, ügyeljenek a
+                        biztonságos használatra!</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-tint-slash"></i>
+                    <div>Száraz helyen tárolandó – a nedvességet kerüljük, mert rozsdásodást okozhat!</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-weight-hanging"></i>
+                    <div>Ne helyezzen túl nehéz tárgyakat a termékre – az alakváltozás elkerülése érdekében!</div>
+                </div>
+            </div>
+
+            <!-- English Instructions -->
+            <div class="lang-content" id="en">
+                <h3>Instructions for Use</h3>
+                <p><strong>Purchase this product only from the official TruOrigin store to ensure authenticity and
+                        quality!</strong> Other stores cannot guarantee the product's authenticity and quality.</p>
+
+                <h4>How to Use the Product</h4>
+                <div class="usage-steps">
+                    <div class="step">Can be placed on desks, in living rooms, kitchens, and other spaces as a
+                        decorative piece to enhance the aesthetic appeal of the area.</div>
+                    <div class="step">Ideal for showcasing small collectibles, keychains, coins, stamps, and other tiny
+                        items.</div>
+                    <div class="step">Perfect for organizing small objects such as paper clips, thumbtacks, pins, and
+                        other office supplies.</div>
+                </div>
+
+                <h4>Precautions</h4>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div>Children under 6 years old should use under adult supervision; please pay attention to safety
+                        precautions.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-tint-slash"></i>
+                    <div>Store in a dry environment to avoid rust caused by humidity.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-weight-hanging"></i>
+                    <div>Do not place excessively heavy items to prevent deformation.</div>
+                </div>
+            </div>
+        </section>
+
+        <footer>
+            <p>© 2025 TruOrigin. All rights reserved. Product specifications subject to change without notice.</p>
+            <p>Manufacturer: Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Language switch functionality
+        document.querySelectorAll('.lang-tab').forEach(tab => {
+            tab.addEventListener('click', () => {
+                // Remove active status from all
+                document.querySelectorAll('.lang-tab, .lang-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+                // Activate current tab and content
+                tab.classList.add('active');
+                document.getElementById(tab.dataset.lang).classList.add('active');
+            });
+        });
+    </script>
+</body>
+
+</html>

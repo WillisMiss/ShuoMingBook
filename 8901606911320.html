@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Declaration of Conformity and Balloon Kit Instructions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding: 20px;
+            background: linear-gradient(120deg, #8e44ad, #3498db);
+            color: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+            margin-bottom: 30px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-header {
+            background: linear-gradient(120deg, #3498db, #9b59b6);
+            color: white;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .card-header i {
+            font-size: 1.8rem;
+        }
+
+        .card-content {
+            padding: 30px;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: max-content 1fr;
+            gap: 15px 20px;
+        }
+
+        .declaration-grid strong {
+            color: #8e44ad;
+        }
+
+        .tabs {
+            display: flex;
+            background: #f8f9fa;
+            border-bottom: 2px solid #e0e0e0;
+        }
+
+        .tab {
+            padding: 15px 25px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #555;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tab.active {
+            color: #3498db;
+            border-bottom: 3px solid #3498db;
+            background: white;
+        }
+
+        .tab:hover {
+            background: #e3f2fd;
+        }
+
+        .tab-content {
+            display: none;
+            padding: 25px;
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .language-icon {
+            font-size: 1.2rem;
+        }
+
+        h3 {
+            color: #3498db;
+            margin: 20px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid #f0f0f0;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        ul {
+            padding-left: 25px;
+            margin-bottom: 20px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .warning {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .precautions {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 15px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .precautions h3 {
+            color: #f44336;
+            border-bottom: none;
+        }
+
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 2px dashed #e0e0e0;
+        }
+
+        .signature div {
+            text-align: right;
+        }
+
+        .signature strong {
+            display: block;
+            margin-top: 10px;
+            font-size: 1.1rem;
+        }
+
+        .product-info {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            background: #e3f2fd;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .product-info img {
+            width: 120px;
+            height: 120px;
+            object-fit: contain;
+            background: white;
+            border-radius: 10px;
+            padding: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .product-details h2 {
+            color: #8e44ad;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 768px) {
+            .declaration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tabs {
+                flex-direction: column;
+            }
+
+            .product-info {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .product-info img {
+                width: 100px;
+                height: 100px;
+            }
+
+            .signature {
+                justify-content: center;
+            }
+
+            .signature div {
+                text-align: center;
+            }
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #777;
+            font-size: 0.9rem;
+        }
+
+        .highlight {
+            background: linear-gradient(120deg, #3498db33, #9b59b633);
+            padding: 3px 8px;
+            border-radius: 5px;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><i class="fas fa-file-contract"></i> EU Declaration of Conformity and Product Information</h1>
+            <p>Balloon Kit - TruOrigin Brand</p>
+        </header>
+
+        <div class="product-info">
+
+            <div class="product-details">
+                <h2>Balloon Kit</h2>
+                <p><strong>Product ID:</strong> 8901606911320</p>
+                <p><strong>Manufacturer:</strong> Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</p>
+                <p><strong>Origin:</strong> Guangzhou, China</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-gavel"></i>
+                <h2>EU Declaration of Conformity</h2>
+            </div>
+            <div class="card-content">
+                <div class="declaration-grid">
+                    <strong>1. Unique product identifier:</strong>
+                    <div>8901606911320</div>
+
+                    <strong>2. Manufacturer name and address:</strong>
+                    <div>Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou Guangzhou City
+                        Guangdongshen,510635</div>
+
+                    <strong>3. Party responsible for the declaration:</strong>
+                    <div>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+
+                    <strong>4. Object of the declaration:</strong>
+                    <div>Balloon Kit</div>
+
+                    <strong>5. Harmonized standards and specifications:</strong>
+                    <div>● Directive 2001/95/EC (General Product Safety Directive - GPSD)</div>
+
+                    <strong>6. Reference to harmonized standards:</strong>
+                    <div>● ISO 9001:2015 (Quality Management System, optional for reference)</div>
+
+                    <strong>7. Notified body:</strong>
+                    <div>Not applicable</div>
+
+                    <strong>8. Additional information:</strong>
+                    <div>
+                        <p><strong>Issued at and on:</strong> Germany, May 1, 2025</p>
+                        <p><strong>Name:</strong> Lucas</p>
+                        <p><strong>Position:</strong> Compliance Officer</p>
+                    </div>
+                </div>
+
+                <div class="signature">
+                    <div>
+                        <p>Signature: _________________________</p>
+                        <strong>Lucas</strong>
+                        <p>Represented by: Lucas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-book"></i>
+                <h2>User Instructions</h2>
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-lang="en">
+                    <i class="fas fa-language language-icon"></i> English
+                </div>
+                <div class="tab" data-lang="ro">
+                    <i class="fas fa-language language-icon"></i> Romanian
+                </div>
+                <div class="tab" data-lang="bg">
+                    <i class="fas fa-language language-icon"></i> Bulgarian
+                </div>
+                <div class="tab" data-lang="hu">
+                    <i class="fas fa-language language-icon"></i> Hungarian
+                </div>
+            </div>
+
+            <div class="tab-content active" id="en-content">
+                <div class="warning">
+                    <i class="fas fa-store"></i> Please only purchase this product from official TruOrigin stores to
+                    ensure authenticity and quality! Other stores cannot guarantee the authenticity and quality of the
+                    product.
+                </div>
+
+                <h3><i class="fas fa-wind"></i> Product Usage Method</h3>
+                <ul>
+                    <li>Inflate the balloons using the included hand pump to the indicated sizes.</li>
+                    <li>Do not overinflate large balloons (18 inches, 12 inches, etc.) - inflate to about 80% capacity,
+                        while small 5-inch balloons can be fully inflated until they feel slightly firm to the touch.
+                    </li>
+                    <li>According to personal preference, you can fix the balloon arrangement with ribbons or glue dots,
+                        or lay the balloons flat on the ground.</li>
+                    <li>After fixing the balloon arrangement, you can attach metal butterfly decorations to the balloon
+                        surface using glue dots.</li>
+                </ul>
+
+                <div class="precautions">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Precautions</h3>
+                    <ul>
+                        <li>Do not overinflate balloons. Avoid direct sunlight or proximity to heat sources (such as
+                            radiators, hair dryers on hot settings) to prevent explosion.</li>
+                        <li>Do not store unused inflated balloons for long periods. It is recommended to deflate and
+                            store flat to extend their life.</li>
+                        <li>The kit contains metal butterfly decorations - be careful as metal parts may puncture the
+                            balloon.</li>
+                        <li>Adult supervision is recommended when used by children. The edges of the metal butterflies
+                            are smooth, but do not let young children chew on them.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content" id="ro-content">
+                <div class="warning">
+                    <i class="fas fa-store"></i> Achizitionati acest produs numai din magazineul oficial TruOrigin
+                    pentru a vǎ asigura autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si
+                    calitatea produsului.
+                </div>
+
+                <h3><i class="fas fa-wind"></i> Cum s utilizati produsul</h3>
+                <ul>
+                    <li>Folositi pompa manuala inclusa pentru a umfla baloanele conform dimensiuni indicate.</li>
+                    <li>Baloanele mari(18 toli, 12 toli etc.) nu trebuie umflate excesiv(umflati pan la 80% din
+                        capacitate), iar baloanele mici de 5 toli pot fi umflate complet, opriti cand devin usor tari la
+                        atingere.</li>
+                    <li>Dupa preferinta, puteti folosi panglici sau banda adeziva pentru a fixa aranjamentul debaloane
+                        sau puteti aseza baloanele pe o suprafata plana.</li>
+                    <li>Dupa fixarea aranjentului debaloane,puteti utiliza banda adeziva pentru a atasa decoraunile cu
+                        fluturi metalici pe suprafa tabaloanelor.</li>
+                </ul>
+
+                <div class="precautions">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Precautii</h3>
+                    <ul>
+                        <li>Nu umflati excesivbaloanele. Evitati expunerea la soare direct sau apropierea de surse de
+                            caldura(ex: calorifere, uscator de par pe functie calda) pentru a preveni explozia.</li>
+                        <li>Baloanele nefolosite nu trebuie depozitate umflate pe termen lung. Se recomand dezumflarea
+                            si pastrarea lor intinse pentru a prelungi durata de viaa.</li>
+                        <li>Setul include decoruri cu fluturi metalici- aveti grija la marginile metalice care pot taia
+                            baloanele.</li>
+                        <li>Copiii trebuie supravegheati de adulti cand folosesc produsul. Marginile fluturilor metalici
+                            sunt netede, dar nu lasati copiii mici s-i muste.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bg-content">
+                <div class="warning">
+                    <i class="fas fa-store"></i> 3akyneTe TO3N npoAyKT CaMO OT ONNANHA Mara3NH Ha TruOrigin, 3a Aa
+                    rapaHTNpaTe aBTeHTNHOCT n KayecTBo! Apyrn Mara3nHN He MOraT Aa rapaHTNpaT aBTeHTNHOCTTa n KayeCTBOTO
+                    Ha npoAyKTa.
+                </div>
+
+                <h3><i class="fas fa-wind"></i> Kak Aa N3non3BaTe npoAyKTa</h3>
+                <ul>
+                    <li>Banona, aa HaAyeTe 6anoHNTe cnopen nocoueHNTe pa3mepn.</li>
+                    <li>FoneMnTe 6anoHn(18 nH4a,12 nH4a n T.H.) He Tpa6Ba Aa ce HaAAyBaT(HanbnHeTe Ao 80%), AoKaTo
+                        ManKnTe 5-H4O 6anoHn MoraT Aa ce HanbIHAT HanbIHO- cnpeTe, KoraTo CTaHaT neKO TVbDAN Ha nnnaHe.
+                    </li>
+                    <li>CnopeA npeAnounaHnaT cN MOKeTe Aa N3non3BaTe naHAenKN NNN nennno 3a,a,noBbpxHOCT.</li>
+                    <li>CneA KaTo apaHknpoBkaTa e OkcnpaHa, MoxeTe Aa non3BaTe nenuno 3a,a ae Aeno C nenepyAN Bbpxy
+                        6anoHNTe.</li>
+                </ul>
+
+                <div class="precautions">
+                    <h3><i class="fas fa-exclamation-triangle"></i> NpeAna3HN MepKN</h3>
+                    <ul>
+                        <li>He AyBaTe 6anoHNTe npekaneHo. 36ArBaTe npaka cnbHeBa CBeTNHa(Hanp. paAnaTopn, eH Ha TONbJ
+                            Bb3AyX), 3a Aa npeAOTBpaTNTe ekcnno3NA.</li>
+                        <li>He cbxpaHaBanTe Hen3non3BaHn 6anoHn HaAyTKn 3a Abnro Bpeme. npenopyBa ce n3nyckaHe Ha
+                            Bb3Ayxa n CbxpaHeHNe B nnocko CbCTOAHNe 3a no-AbJnbr XNBOT.</li>
+                        <li>KoMneKTbT BKNIO4Ba MeTanHN Aekopaunn c nenepyAn- BHNMaBaTe C,Aa npo6.</li>
+                        <li>AeuaT Tpa6Ba Aa n3non3BaT npoAyKTa noA HaA3op Ha Bb3pacTHN. MeTanHNTe nenepyAN NMaT rnaAKN
+                            pb6oBe, HO He no3BonaBaTe Ha ManKn AeLa Aa rn ABB4aT.</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="tab-content" id="hu-content">
+                <div class="warning">
+                    <i class="fas fa-store"></i> Csak a TruOrigin hivatalos boltjabol vasarolja meg ezt a terméket, hogy
+                    biztositsa a hitelességetés a minoséget! Mas boltok nem garantaljak a termék hitelességétés
+                    minoségét.
+                </div>
+
+                <h3><i class="fas fa-wind"></i> Hogyan hasznaljuk a terméket</h3>
+                <ul>
+                    <li>Hasznalja a mellékelt kézi pumpat a lufikak feltoltéséhez a megjelolt meretek szerint.</li>
+                    <li>A nagy lufikskat(18 hüvelyk, 12 hüvelyk stb.) ne fuija tul(80%-ig toltse), mig az 5 huvelyk kis
+                        lufikskat teljesen feltoltheti- alljon meg, amikor kissé keménynek erzodik.</li>
+                    <li>zlése szerint hasznalhat scalagokat vagy pontragasztót a lufikompozicio rogzitéséhez, vagy a
+                        lufikát elhelyezheti a foldon is.</li>
+                    <li>A lufikompozício rogzítése után pontragasztóval rogzítheti a fémpillér diszeket a lufikak
+                        felületere.</li>
+                </ul>
+
+                <div class="precautions">
+                    <h3><i class="fas fa-exclamation-triangle"></i> Ovintézkedések</h3>
+                    <ul>
+                        <li>Ne fujja tul a lufikat. Kerülje a kozvetlen napfénytés a hoforrásokat(pl.
+                            radiator,hajszárito meleg levegovel), hogy elkerülje a kidurranast.</li>
+                        <li>A fel nem hasznalt lufikdat ne tarolja felfújva hosszú ideig. Ajanlott a leeresztése des
+                            lapos tarolasa az elettartam novelese erdekében.</li>
+                        <li>A készlet tartalmaz fémpillér diszeket- vigyázzon, hogy a fémes részek ne szurjanak at a
+                            lufikon.</li>
+                        <li>Gyermekek hasznalata esetén felnott felügyelet ajanlott. A fémpillérélei simak, de ne
+                            engedje, hogy a kisgyermekek ráharapjanak.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. All rights reserved</p>
+            <p>This document was last updated on: May 1, 2025</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', () => {
+                    // Remove active classes from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+
+                    // Add active class to clicked tab and corresponding content
+                    tab.classList.add('active');
+                    const lang = tab.getAttribute('data-lang');
+                    document.getElementById(`${lang}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

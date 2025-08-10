@@ -1,0 +1,654 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruOrigin Stress Relief Toy - Compliance & Instructions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        :root {
+            --primary: #4a6572;
+            --secondary: #f9a825;
+            --accent: #e64a19;
+            --light: #f8f9fa;
+            --dark: #263238;
+            --gray: #78909c;
+            --border: #e0e0e0;
+            --warning: #fff8e1;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Header Styles */
+        .document-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #30475e 100%);
+            color: white;
+            padding: 30px 40px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        .header-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="rgba(255,255,255,0.05)"/><circle cx="30" cy="30" r="5" fill="rgba(255,255,255,0.1)"/><circle cx="70" cy="70" r="5" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="20" r="5" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 5px 12px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-top: 5px;
+            font-family: monospace;
+        }
+
+        h1 {
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+        }
+
+        /* Compliance Section */
+        .compliance-section {
+            padding: 30px 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            color: var(--secondary);
+            font-size: 1.8rem;
+        }
+
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+        }
+
+        .compliance-item {
+            padding: 15px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .compliance-item:last-child {
+            border-bottom: none;
+        }
+
+        .compliance-label {
+            font-weight: 600;
+            color: var(--primary);
+        }
+
+        .compliance-value {
+            color: var(--dark);
+        }
+
+        .signature-block {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+            text-align: right;
+        }
+
+        .signature-line {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border);
+        }
+
+        /* Instructions Section */
+        .instructions-section {
+            padding: 30px 40px;
+        }
+
+        .warning-box {
+            background: var(--warning);
+            border-left: 4px solid var(--secondary);
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 4px 4px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .warning-box i {
+            font-size: 1.8rem;
+            color: var(--secondary);
+            margin-right: 15px;
+        }
+
+        .warning-content strong {
+            color: var(--accent);
+        }
+
+        /* Language Tabs */
+        .lang-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            border-bottom: 1px solid var(--border);
+            margin: 20px 0;
+        }
+
+        .lang-tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .lang-tab.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .lang-content {
+            display: none;
+            padding: 25px 0;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .lang-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.4rem;
+        }
+
+        .lang-subtitle {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            font-size: 1.2rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .usage-steps {
+            margin: 20px 0;
+        }
+
+        .step {
+            margin-bottom: 20px;
+            padding-left: 35px;
+            position: relative;
+        }
+
+        .step:before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 26px;
+            height: 26px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.9rem;
+            font-weight: bold;
+        }
+
+        .precaution {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            margin-bottom: 15px;
+            padding: 10px;
+            background: rgba(231, 76, 60, 0.05);
+            border-radius: 6px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .precaution i {
+            color: var(--accent);
+            font-size: 1.2rem;
+            min-width: 24px;
+            margin-top: 3px;
+        }
+
+        /* Product Image */
+        .product-visual {
+            text-align: center;
+            margin: 20px 0;
+            padding: 15px;
+            background: var(--light);
+            border-radius: 8px;
+        }
+
+        .toy-demo {
+            width: 150px;
+            height: 150px;
+            background: linear-gradient(45deg, #ff7043, #ffab40);
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: white;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 40px;
+            color: var(--gray);
+            font-size: 0.9rem;
+            border-top: 1px solid var(--border);
+            background: var(--light);
+        }
+
+        .company-info {
+            margin-top: 10px;
+            font-weight: 500;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .compliance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-header,
+            .compliance-section,
+            .instructions-section {
+                padding: 25px;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .lang-tab {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .toy-demo {
+                width: 120px;
+                height: 120px;
+                font-size: 3rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Document Header -->
+        <header class="document-header">
+            <div class="header-pattern"></div>
+            <div class="header-content">
+                <h1>TruOrigin Stress Relief Toy</h1>
+                <p class="subtitle">EU Declaration of Conformity & User Instruction Manual</p>
+                <div class="product-id">Product ID: 8901606135917</div>
+            </div>
+        </header>
+
+        <!-- Product Visual -->
+        <div class="product-visual">
+            <div class="toy-demo">
+                <i class="fas fa-hand-spock"></i>
+            </div>
+            <p>Relieve stress anytime, anywhere</p>
+        </div>
+
+        <!-- EU Declaration of Conformity -->
+        <section class="compliance-section">
+            <h2 class="section-title">
+                <i class="fas fa-file-contract"></i>
+                EU DECLARATION OF CONFORMITY
+            </h2>
+
+            <div class="compliance-grid">
+                <div class="compliance-item">
+                    <div class="compliance-label">1. Product Unique Identification</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">8901606135917</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">2. Manufacturer Name and Address</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">
+                        Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou<br>
+                        Guangzhou City Guangdongshen,510635
+                    </div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">3. Declaration Responsibility</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">4. Object of Declaration</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Product Name: Stress Relief Toy</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">5. Conformity with EU Legislation</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">• Directive 2001/95/EC (General Product Safety Directive - GPSD)</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">6. Harmonised Standards</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">• ISO 9001:2015 (Quality Management System, optional for reference)
+                    </div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">7. Notified Body</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Not applicable</div>
+                </div>
+            </div>
+
+            <div class="signature-block">
+                <div class="compliance-grid">
+                    <div class="compliance-item">
+                        <div class="compliance-label">Place and Date of Issue:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Germany, 2025-05-01</div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-label">Name:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Lucas</div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-label">Function:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Compliance Officer</div>
+                    </div>
+                </div>
+
+                <div class="signature-line">
+                    <div class="compliance-grid">
+                        <div class="compliance-item">
+                            <div class="compliance-label">Signature:</div>
+                        </div>
+                        <div class="compliance-item">
+                            <div class="compliance-value"
+                                style="font-family: 'Brush Script MT', cursive; font-size: 1.4rem;">Lucas</div>
+                        </div>
+
+                        <div class="compliance-item">
+                            <div class="compliance-label">Signed for and on behalf of:</div>
+                        </div>
+                        <div class="compliance-item">
+                            <div class="compliance-value">Lucas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Instruction Manual -->
+        <section class="instructions-section">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                USER INSTRUCTION MANUAL
+            </h2>
+
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="warning-content">
+                    <strong>Important Safety Precautions:</strong>
+                    This product is not edible - avoid mouth contact.
+                    Clean after use with sweaty hands to prevent stains.
+                    Adult supervision required for children under 3 years.
+                </div>
+            </div>
+
+            <!-- Language Tabs -->
+            <div class="lang-tabs">
+                <div class="lang-tab active" data-lang="ro">Română</div>
+                <div class="lang-tab" data-lang="bg">Български</div>
+                <div class="lang-tab" data-lang="hu">Magyar</div>
+                <div class="lang-tab" data-lang="en">English</div>
+            </div>
+
+            <!-- Romanian Instructions -->
+            <div class="lang-content active" id="ro">
+                <h3 class="lang-title">Instructiuni de utilizare</h3>
+
+                <p><strong>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                        autenticitatea si calitatea!</strong> Alte magazine nu pot garanta autenticitatea si calitatea
+                    produsului.</p>
+
+                <h4 class="lang-subtitle">Cum s utilizati produsul</h4>
+                <div class="usage-steps">
+                    <div class="step">Relaxare instantanee: Strangeti, framantati sau aruncati pentru a elibera
+                        tensiunea.</div>
+                    <div class="step">Intretinere: Curatati suprafata cu un carpa umeda; pastrati intr-un loc uscat si
+                        racoros.</div>
+                </div>
+
+                <h4 class="lang-subtitle">Precautii</h4>
+                <div class="precaution">
+                    <i class="fas fa-ban"></i>
+                    <div>Necomestibil: Nu este aliment - evitati contactul cu gura.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-hands-wash"></i>
+                    <div>Sfat de igienǎ: Stergeti dupa utilizare cu maini transpirate pentru a preveni pata.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div>Varsta 3+: Copiii mici necesita supraveghere adulta.</div>
+                </div>
+            </div>
+
+            <!-- Bulgarian Instructions -->
+            <div class="lang-content" id="bg">
+                <h3 class="lang-title">Инструкции за употреба</h3>
+
+                <p><strong>3akyneTe TO3N npoAyKT CaMO OT ONNANHA Mara3NH Ha TruOrigin, 3a Aa rapaHTNPaTe aBTeHTNHHOCT n
+                        KayeCTBO!</strong> Apyrn Mara3NHn He MOraT Aa rapaHTNPaT aBTeHTNHOCTTa n KayeCTBOTO Ha npoAyKTa.
+                </p>
+
+                <h4 class="lang-subtitle">Kak Aa N3non3BaTe npoAyKTa</h4>
+                <div class="usage-steps">
+                    <div class="step">MoMeHTanHO oTcna6BaHe Ha HanpekeHneTo: CTuckante, MauKaTe nnn xBbpnaTe, 3a Aa
+                        ocBo6oANTe HanpeneHne.</div>
+                    <div class="step">Поддръжка: Почиствайте повърхността с влажна кърпа; съхранявайте на хладно и сухо
+                        място.</div>
+                </div>
+
+                <h4 class="lang-subtitle">npeAna3HN mepkn</h4>
+                <div class="precaution">
+                    <i class="fas fa-ban"></i>
+                    <div>HecbAo6Ho: He e xpaHa - N36ArBaTe KoHTaKT CycTaTa.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-hands-wash"></i>
+                    <div>CbBeT 3a xnrneHa: nounctBaTe cneA ynoTpe6a c n3noTeHn pbLe, 3a Aa n36erHeTe neTHa.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div>HaA 3 roANHN: Heo6xoANM e HaA3op Ha Bb3pacTHN 3a ManKn Aeua.</div>
+                </div>
+            </div>
+
+            <!-- Hungarian Instructions -->
+            <div class="lang-content" id="hu">
+                <h3 class="lang-title">Használati utasitasok</h3>
+
+                <p><strong>Csak a TruOrigin hivatalos boltjabol vasarolija meg ezt a terméket, hogy biztositsa a
+                        hitelességet es a minoséget!</strong> Mas boltok nem garantaljak a termék hitelességét es
+                    minoségét.</p>
+
+                <h4 class="lang-subtitle">Hogyan hasznaljuk a terméket</h4>
+                <div class="usage-steps">
+                    <div class="step">Azonnali stresszoldas: Nyomja ossze, gyurjon vagy dobalja a festzültség
+                        elengedéséhez.</div>
+                    <div class="step">Karbantartás: Tisztítsa felületet nedves ruhával; tárolja hűvös, száraz helyen.
+                    </div>
+                </div>
+
+                <h4 class="lang-subtitle">Ovintézkedések</h4>
+                <div class="precaution">
+                    <i class="fas fa-ban"></i>
+                    <div>Nem ehetó: Nemétel - kerülje a szajkontaktust.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-hands-wash"></i>
+                    <div>Higieniai tipp: Torolje le izzadt kézérintés után a folgt ekerüléseérdekében.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div>3 eves kortól: Kisgyermekeknél felnotti felügylet szükséges.</div>
+                </div>
+            </div>
+
+            <!-- English Instructions -->
+            <div class="lang-content" id="en">
+                <h3 class="lang-title">Instructions for Use</h3>
+
+                <p><strong>Purchase this product only from the official TruOrigin store to ensure authenticity and
+                        quality!</strong> Other stores cannot guarantee the product's authenticity and quality.</p>
+
+                <h4 class="lang-subtitle">How to Use the Product</h4>
+                <div class="usage-steps">
+                    <div class="step">Instant Stress Relief: Squeeze, knead, or toss to release tension.</div>
+                    <div class="step">Maintenance: Clean surface with a damp cloth; store in a cool, dry place.</div>
+                </div>
+
+                <h4 class="lang-subtitle">Precautions</h4>
+                <div class="precaution">
+                    <i class="fas fa-ban"></i>
+                    <div>Non-Edible: Not food - avoid mouth contact.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-hands-wash"></i>
+                    <div>Hygiene Tip: Wipe after sweaty hands to prevent stains.</div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div>Age 3+: Adult supervision required for toddlers.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer>
+            <p>© 2025 TruOrigin. All rights reserved. Product specifications subject to change without notice.</p>
+            <p class="company-info">Manufacturer: Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</p>
+        </footer>
+    </div>
+
+    <script>
+        // Language switch functionality
+        document.querySelectorAll('.lang-tab').forEach(tab => {
+            tab.addEventListener('click', function () {
+                // Remove active status from all tabs and content
+                document.querySelectorAll('.lang-tab, .lang-content').forEach(el => {
+                    el.classList.remove('active');
+                });
+
+                // Add active class to clicked tab
+                this.classList.add('active');
+
+                // Show corresponding content
+                const lang = this.getAttribute('data-lang');
+                document.getElementById(lang).classList.add('active');
+            });
+        });
+
+        // Initialize step counters for each language section
+        document.querySelectorAll('.usage-steps').forEach(steps => {
+            steps.style.counterReset = 'step';
+        });
+
+        // Set Romanian as active by default
+        document.querySelector('.lang-tab[data-lang="ro"]').classList.add('active');
+        document.getElementById('ro').classList.add('active');
+    </script>
+</body>
+
+</html>

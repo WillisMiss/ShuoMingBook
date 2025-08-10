@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TruOrigin Snack Truck Building Kit - Compliance & Instructions</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Open+Sans:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #e74c3c;
+            --secondary: #3498db;
+            --accent: #f39c12;
+            --light: #f8f9fa;
+            --dark: #2c3e50;
+            --gray: #7f8c8d;
+            --border: #e0e0e0;
+            --warning: #fff8e1;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e8ecf1 100%);
+            color: var(--dark);
+            line-height: 1.6;
+            min-height: 100vh;
+            padding: 20px;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+
+        /* Header Styles */
+        .document-header {
+            background: linear-gradient(135deg, var(--primary) 0%, #c0392b 100%);
+            color: white;
+            padding: 30px 40px;
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .header-pattern {
+            position: absolute;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            width: 40%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="rgba(255,255,255,0.05)"/><rect x="20" y="20" width="60" height="20" rx="3" fill="rgba(255,255,255,0.1)"/><rect x="30" y="50" width="40" height="20" rx="3" fill="rgba(255,255,255,0.1)"/></svg>');
+            opacity: 0.2;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 8px 15px;
+            border-radius: 20px;
+            display: inline-block;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            font-family: monospace;
+            letter-spacing: 1px;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 15px;
+            font-weight: 300;
+        }
+
+        /* Product Visual */
+        .product-visual {
+            background: linear-gradient(135deg, #3498db 0%, #2c3e50 100%);
+            padding: 20px;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .truck-demo {
+            width: 180px;
+            height: 120px;
+            background: linear-gradient(45deg, #e74c3c, #f39c12);
+            border-radius: 12px 12px 4px 4px;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .truck-window {
+            position: absolute;
+            top: 20px;
+            left: 15px;
+            width: 40px;
+            height: 30px;
+            background: #aed6f1;
+            border-radius: 3px;
+        }
+
+        .truck-cabin {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            width: 60px;
+            height: 35px;
+            background: #ecf0f1;
+            border-radius: 3px;
+        }
+
+        .truck-body {
+            position: absolute;
+            bottom: 15px;
+            left: 15px;
+            right: 15px;
+            height: 35px;
+            background: #ecf0f1;
+            border-radius: 3px;
+        }
+
+        .truck-wheel {
+            position: absolute;
+            bottom: 5px;
+            width: 25px;
+            height: 25px;
+            background: #2c3e50;
+            border-radius: 50%;
+        }
+
+        .wheel-left {
+            left: 25px;
+        }
+
+        .wheel-right {
+            right: 25px;
+        }
+
+        .visual-text {
+            color: white;
+            max-width: 400px;
+            text-align: left;
+        }
+
+        .visual-text h2 {
+            font-size: 1.8rem;
+            margin-bottom: 15px;
+        }
+
+        .visual-text p {
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+        }
+
+        /* Compliance Section */
+        .compliance-section {
+            padding: 30px 40px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-title {
+            color: var(--primary);
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            font-weight: 600;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            color: var(--secondary);
+            font-size: 1.8rem;
+        }
+
+        .compliance-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 12px;
+        }
+
+        .compliance-item {
+            padding: 15px 0;
+            border-bottom: 1px dashed var(--border);
+        }
+
+        .compliance-item:last-child {
+            border-bottom: none;
+        }
+
+        .compliance-label {
+            font-weight: 600;
+            color: var(--dark);
+            font-size: 1.05rem;
+        }
+
+        .compliance-value {
+            color: var(--dark);
+            line-height: 1.5;
+        }
+
+        .signature-block {
+            background: var(--light);
+            padding: 20px;
+            border-radius: 8px;
+            margin-top: 25px;
+        }
+
+        .signature-line {
+            margin-top: 15px;
+            padding-top: 15px;
+            border-top: 1px dashed var(--border);
+        }
+
+        /* Instructions Section */
+        .instructions-section {
+            padding: 30px 40px;
+            background: #f8f9fa;
+        }
+
+        .warning-box {
+            background: var(--warning);
+            border-left: 4px solid #f39c12;
+            padding: 20px;
+            margin-bottom: 25px;
+            border-radius: 0 4px 4px 0;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .warning-box i {
+            font-size: 1.8rem;
+            color: #f39c12;
+            margin-right: 15px;
+        }
+
+        .warning-content {
+            flex: 1;
+        }
+
+        .warning-content strong {
+            color: var(--accent);
+        }
+
+        /* Language Tabs */
+        .lang-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            border-bottom: 1px solid var(--border);
+            margin: 20px 0;
+        }
+
+        .lang-tab {
+            padding: 12px 20px;
+            cursor: pointer;
+            background: var(--light);
+            border: 1px solid var(--border);
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            transition: all 0.3s ease;
+            font-weight: 500;
+            font-size: 0.95rem;
+        }
+
+        .lang-tab.active {
+            background: var(--secondary);
+            color: white;
+            border-color: var(--secondary);
+            font-weight: 600;
+        }
+
+        .lang-content {
+            display: none;
+            padding: 25px 0;
+        }
+
+        .lang-content.active {
+            display: block;
+        }
+
+        .lang-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.5rem;
+        }
+
+        .lang-subtitle {
+            color: var(--secondary);
+            margin: 25px 0 15px;
+            font-size: 1.25rem;
+            padding-bottom: 8px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .usage-steps {
+            margin: 20px 0;
+            counter-reset: step;
+        }
+
+        .step {
+            margin-bottom: 25px;
+            padding-left: 45px;
+            position: relative;
+        }
+
+        .step:before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 32px;
+            height: 32px;
+            background: var(--secondary);
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1rem;
+            font-weight: bold;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .precaution {
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+            margin-bottom: 20px;
+            padding: 15px;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            border-left: 4px solid var(--accent);
+        }
+
+        .precaution i {
+            color: var(--accent);
+            font-size: 1.4rem;
+            min-width: 30px;
+            margin-top: 3px;
+        }
+
+        .precaution-content h4 {
+            font-weight: 600;
+            margin-bottom: 5px;
+            color: var(--dark);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 30px 40px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            border-top: 1px solid var(--border);
+            background: white;
+        }
+
+        .company-info {
+            margin-top: 15px;
+            font-weight: 500;
+            color: var(--dark);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .compliance-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .document-header,
+            .compliance-section,
+            .instructions-section {
+                padding: 20px;
+            }
+
+            h1 {
+                font-size: 1.9rem;
+            }
+
+            .section-title {
+                font-size: 1.4rem;
+            }
+
+            .lang-tab {
+                padding: 10px 15px;
+                font-size: 0.9rem;
+            }
+
+            .truck-demo {
+                width: 140px;
+                height: 100px;
+            }
+
+            .product-visual {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .visual-text {
+                text-align: center;
+            }
+
+            .step {
+                padding-left: 40px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Document Header -->
+        <header class="document-header">
+            <div class="header-pattern"></div>
+            <div>
+                <h1>TruOrigin Snack Truck Building Kit</h1>
+                <p class="subtitle">EU Declaration of Conformity & Instruction Manual</p>
+                <div class="product-id">Product ID: 8901606136105</div>
+            </div>
+        </header>
+
+        <!-- Product Visual -->
+        <div class="product-visual">
+            <div class="truck-demo">
+                <div class="truck-window"></div>
+                <div class="truck-cabin"></div>
+                <div class="truck-body"></div>
+                <div class="truck-wheel wheel-left"></div>
+                <div class="truck-wheel wheel-right"></div>
+            </div>
+            <div class="visual-text">
+                <h2>Build Your Own Snack Truck</h2>
+                <p>Creative building kit for children 6+</p>
+                <p>Includes detailed instruction manual</p>
+                <p>Develops spatial thinking and creativity</p>
+            </div>
+        </div>
+
+        <!-- EU Declaration of Conformity -->
+        <section class="compliance-section">
+            <h2 class="section-title">
+                <i class="fas fa-file-contract"></i>
+                EU DECLARATION OF CONFORMITY
+            </h2>
+
+            <div class="compliance-grid">
+                <div class="compliance-item">
+                    <div class="compliance-label">1. Product Unique Identification</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">8901606136105</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">2. Manufacturer Name and Address</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">
+                        Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou<br>
+                        Guangzhou City Guangdongshen,510635
+                    </div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">3. Declaration Responsibility</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">4. Object of Declaration</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Product Name: Snack Truck Building Kit</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">5. Conformity with EU Legislation</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">• Directive 2001/95/EC (General Product Safety Directive - GPSD)</div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">6. Harmonised Standards</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">• ISO 9001:2015 (Quality Management System, optional for reference)
+                    </div>
+                </div>
+
+                <div class="compliance-item">
+                    <div class="compliance-label">7. Notified Body</div>
+                </div>
+                <div class="compliance-item">
+                    <div class="compliance-value">Not applicable</div>
+                </div>
+            </div>
+
+            <div class="signature-block">
+                <div class="compliance-grid">
+                    <div class="compliance-item">
+                        <div class="compliance-label">Place and Date of Issue:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Germany, 2025-05-01</div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-label">Name:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Lucas</div>
+                    </div>
+
+                    <div class="compliance-item">
+                        <div class="compliance-label">Function:</div>
+                    </div>
+                    <div class="compliance-item">
+                        <div class="compliance-value">Compliance Officer</div>
+                    </div>
+                </div>
+
+                <div class="signature-line">
+                    <div class="compliance-grid">
+                        <div class="compliance-item">
+                            <div class="compliance-label">Signature:</div>
+                        </div>
+                        <div class="compliance-item">
+                            <div class="compliance-value"
+                                style="font-family: 'Brush Script MT', cursive; font-size: 1.6rem;">Lucas</div>
+                        </div>
+
+                        <div class="compliance-item">
+                            <div class="compliance-label">Signed for and on behalf of:</div>
+                        </div>
+                        <div class="compliance-item">
+                            <div class="compliance-value">Lucas</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Instruction Manual -->
+        <section class="instructions-section">
+            <h2 class="section-title">
+                <i class="fas fa-book-open"></i>
+                USER INSTRUCTION MANUAL
+            </h2>
+
+            <div class="warning-box">
+                <i class="fas fa-exclamation-triangle"></i>
+                <div class="warning-content">
+                    <strong>Important Safety Precautions:</strong>
+                    Contains small parts - not suitable for children under 3 years.
+                    Adult supervision required for children under 6 years.
+                    Store in a cool place to prevent deformation.
+                </div>
+            </div>
+
+            <!-- Language Tabs -->
+            <div class="lang-tabs">
+                <div class="lang-tab active" data-lang="ro">Română</div>
+                <div class="lang-tab" data-lang="bg">Български</div>
+                <div class="lang-tab" data-lang="hu">Magyar</div>
+                <div class="lang-tab" data-lang="en">English</div>
+            </div>
+
+            <!-- Romanian Instructions -->
+            <div class="lang-content active" id="ro">
+                <h3 class="lang-title">Instructiuni de utilizare</h3>
+
+                <p><strong>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vafigura
+                        autenticitatea si calitatea!</strong> Alte magazine nu pot garanta autenticitatea si calitatea
+                    produsului.</p>
+
+                <h4 class="lang-subtitle">Cum s utilizati produsul</h4>
+                <div class="usage-steps">
+                    <div class="step">Alegeti o zona curata, plana si bine luminata pentru asamblare</div>
+                    <div class="step">Scoateti piesele initiale in ordinea numerată din manual, aliniati-le cu
+                        canelurile sau punctele de conectare si apasati usor - consultati instructiumile detaliate din
+                        manualul din cutie</div>
+                    <div class="step">Dupa asamblare, agitati usor produsul final pentru a testa stabilitatea</div>
+                </div>
+
+                <h4 class="lang-subtitle">Precautii</h4>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div class="precaution-content">
+                        <h4>Age Restriction</h4>
+                        <p>Potrivit pentru copii de peste 6 ani, de utilizat sub supravegherea unui adult. Contine
+                            particule mici - evitati inghitirea.</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <div class="precaution-content">
+                        <h4>Assembly Assistance</h4>
+                        <p>Daca intampinati dificultati in asamblarea pieselor, verificati mai intai daca sunt conectate
+                            correct, apoi incercati sǎ apasati usor.</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-temperature-low"></i>
+                    <div class="precaution-content">
+                        <h4>Storage Condition</h4>
+                        <p>Vǎ rugam sǎ pastrati blocurile de constructie intr-un loc racoros, deoarece temperaturile
+                            ridicate pot provoca deformarea acestora, afectand aspectul si functionalitatea.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bulgarian Instructions -->
+            <div class="lang-content" id="bg">
+                <h3 class="lang-title">MHCTpyKuNN 3a ynoTpe6a</h3>
+
+                <p><strong>3akyneTe TO3N npoAyKT caMO OT ONHNA MaraNH Ha TruOrigin, 3a Aa rapaHTNpaTe aBTeHTNHOCT n
+                        KayeCTBO!</strong> Apyrn Mara3nHN He MOraT Aa rapaHTNpaT aBTeHTNHOCTTa n KayeCTBOTO Ha nPOAyKTa.
+                </p>
+
+                <h4 class="lang-subtitle">Kak Aa N3non3BaTe npoAyKTa</h4>
+                <div class="usage-steps">
+                    <div class="step">M36epeTe uCTa, paBHa n Ao6pe ocBeTeHa 3oHa 3a crno6aBaHe</div>
+                    <div class="step">-BNXTe HHCTpyKuNATa B KyTHATa</div>
+                    <div class="step">CneA crno6aBaHe, pa3knaTeTe neko rotoBna npoAyKT, 3a Aa npoBepnte cTa6unHOcTTa my
+                    </div>
+                </div>
+
+                <h4 class="lang-subtitle">peAna3Hn mepkn</h4>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div class="precaution-content">
+                        <h4>Възрастова група</h4>
+                        <p>Aa Aea A 6-roa, Aa ce Aa noA HaA3opa Ha-</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <div class="precaution-content">
+                        <h4>Събиране</h4>
+                        <p>AKO cpeuHeTe TpyAHOCTN npN crno6aBaHeTO Ha qCTNTe, nbpBO npoBepete Ann ca cBbp3aHN npaBNHN0,
+                            cneA KoeTo onNTaTe Aa HaTNCHeTe neKO.</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-temperature-low"></i>
+                    <div class="precaution-content">
+                        <h4>Съхранение</h4>
+                        <p>Mona, cbxpaHaBaTe rpaAnBHTe 6nokoBe Ha xnaAHO MACTO, Tb KaTO BNCOKNTe,BNAN ynoTpe6a.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Hungarian Instructions -->
+            <div class="lang-content" id="hu">
+                <h3 class="lang-title">Hasznalati utasitasok</h3>
+
+                <p><strong>Csak a TruOrigin hivatalos boltjabol vásárolja meg ezt a terméket, hogy biztositsa a
+                        hitelességetés a minoséget!</strong> Mas boltok nem garantáljak a termék hitelességétés
+                    minoségét.</p>
+
+                <h4 class="lang-subtitle">Hogyan hasznaljuk a terméket</h4>
+                <div class="usage-steps">
+                    <div class="step">Válasszon tiszta, sikés jó megvilagitasú területet az építéshez</div>
+                    <div class="step">Vegye ki a kezdó alkatrészeket a kézikonyvben megadott számozás szerit, illesztse
+                        a hornyokhoz vagy csatlakozási pontokhoz, majd nyomjon ovatosan - részletes lépésekért tekintse
+                        meg a dobozban található utmutatot</div>
+                    <div class="step">Az osszeszerelés után enyhén megrazza a kész terméket a stabilitas teszteléséhez
+                    </div>
+                </div>
+
+                <h4 class="lang-subtitle">Ovintézkedések</h4>
+                <div class="precaution">
+                    <i class="fas fa-child"></i>
+                    <div class="precaution-content">
+                        <h4>Korhatár</h4>
+                        <p>6 éven felili gyermekek számára ajánlott, felügyelet mellett hasznalandó. Aproc szemcséket
+                            tartalmaz - ne nyelje le!</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-puzzle-piece"></i>
+                    <div class="precaution-content">
+                        <h4>Összeszerelés</h4>
+                        <p>Ha nehézséget okoz az alkatrészek osszeszerelése, eloszor ellenorizze, hogy helyesen
+                            csatlakoznak-e, majd probaljon meg finoman nyomni.</p>
+                    </div>
+                </div>
+                <div class="precaution">
+                    <i class="fas fa-temperature-low"></i>
