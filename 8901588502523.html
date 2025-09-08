@@ -1,0 +1,655 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Street View Building Blocks - Product Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #ecf0f1;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --gray: #95a5a6;
+            --border-radius: 10px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e7eb 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--dark) 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            background: rgba(231, 76, 60, 0.1);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-family: monospace;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            backdrop-filter: blur(5px);
+        }
+
+        .section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            color: var(--secondary);
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+        }
+
+        .declaration-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .declaration-label i {
+            margin-right: 8px;
+            color: var(--secondary);
+        }
+
+        .declaration-value {
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 20px;
+        }
+
+        .tab {
+            padding: 14px 28px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--gray);
+            transition: all 0.3s;
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .tab i {
+            margin-right: 8px;
+        }
+
+        .tab.active {
+            color: var(--secondary);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--secondary);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .warning-box {
+            background-color: #fef9e7;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+        }
+
+        .warning-title {
+            font-weight: 700;
+            color: var(--warning);
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            font-size: 1.2rem;
+        }
+
+        .warning-title i {
+            margin-right: 10px;
+        }
+
+        .instructions-list {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+
+        .instructions-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        .instructions-list li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            top: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding-bottom: 25px;
+            border-bottom: 1px dashed var(--gray);
+        }
+
+        .language-section:last-child {
+            border-bottom: none;
+        }
+
+        .language-title {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            margin-bottom: 18px;
+            font-size: 1.4rem;
+        }
+
+        .language-title::before {
+            content: '';
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            margin-right: 12px;
+            background-color: var(--secondary);
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 10 12H3v2h8v5H5v2h14v-2h-6v-5h1.56c.15-.64.32-1.28.56-1.88l-.05.05 2.47 2.45 1.42-1.41L19 13l.01.01 1.42-1.41-3.82-3.8 1.42-1.41 4.78 4.76-1.42 1.41-1.75-1.73-1.46 1.44zM18.5 9c-.83 0-1.5-.67-1.5-1.5S17.67 6 18.5 6s1.5.67 1.5 1.5S19.33 9 18.5 9z"/></svg>');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+        }
+
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            font-style: italic;
+            border-top: 1px dashed var(--gray);
+            padding-top: 20px;
+        }
+
+        .signature div {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            font-size: 1.3rem;
+            margin-top: 10px;
+            color: var(--primary);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+        }
+
+        .brand-highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+
+        .logo-circle {
+            width: 100px;
+            height: 100px;
+            background: var(--secondary);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2rem;
+            font-weight: bold;
+            box-shadow: 0 5px 15px rgba(52, 152, 219, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+
+            .section {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-circle">TB</div>
+            </div>
+            <div class="header-content">
+                <h1>Street View Building Blocks</h1>
+                <p class="subtitle">EU Declaration of Conformity & User Instructions</p>
+                <div class="product-id">Product ID: 8901588502523</div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-file-contract"></i> EU Declaration of Conformity
+            </div>
+
+            <div class="declaration-grid">
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-barcode"></i> Product Unique Identification
+                    </div>
+                    <div class="declaration-value">8901588502523</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-industry"></i> Manufacturer Name and Address
+                    </div>
+                    <div class="declaration-value">
+                        Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.<br>
+                        Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou Guangzhou City
+                        Guangdongshen,510635
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-file-signature"></i> Declaration Issued By
+                    </div>
+                    <div class="declaration-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-cube"></i> Product Name
+                    </div>
+                    <div class="declaration-value">Street View Building Blocks</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-check-circle"></i> Compliant EU Legislation
+                    </div>
+                    <div class="declaration-value">● Directive 2001/95/EC (General Product Safety Directive - GPSD)
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-book"></i> Harmonised Standards
+                    </div>
+                    <div class="declaration-value">● ISO 9001:2015 (Quality Management System, optional for reference)
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-building"></i> Notified Body
+                    </div>
+                    <div class="declaration-value">Not applicable</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-calendar-alt"></i> Place and Date of Issue
+                    </div>
+                    <div class="declaration-value">Germany, 2025-05-01</div>
+                </div>
+            </div>
+
+            <div class="signature">
+                <div>
+                    <div>Signature:</div>
+                    <div class="signature-name">Lucas</div>
+                    <div>Function: Compliance Officer</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i> User Instruction Manual
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="english">
+                    <i class="fas fa-language"></i> English
+                </div>
+                <div class="tab" data-tab="romanian">
+                    <i class="fas fa-language"></i> Romanian
+                </div>
+                <div class="tab" data-tab="bulgarian">
+                    <i class="fas fa-language"></i> Bulgarian
+                </div>
+                <div class="tab" data-tab="hungarian">
+                    <i class="fas fa-language"></i> Hungarian
+                </div>
+            </div>
+
+            <div class="tab-content active" id="english-content">
+                <div class="language-section">
+                    <div class="language-title">Purchase Information</div>
+                    <p>Purchase this product only from the official <span class="brand-highlight">TruOrigin</span> store
+                        to ensure authenticity and quality! Other stores cannot guarantee the product's authenticity and
+                        quality.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">How to Use the Product</div>
+                    <ol class="instructions-list">
+                        <li>Follow the manual to assemble the base framework, then layer pieces step-by-step to
+                            construct a 3D store structure.</li>
+                        <li>Use transparent covers, rotating shafts, and other components to create movable details
+                            (e.g., door handles, drink towers).</li>
+                        <li>Supports free scene expansion; combine with included themed accessories like Sprite and Coke
+                            bottles to build a mini commercial street.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Precautions</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Important Safety Information
+                        </div>
+                        <p>Recommended for children aged 6+ under adult supervision. Contains small parts - do not
+                            swallow.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="romanian-content">
+                <div class="language-section">
+                    <div class="language-title">Informații de cumpărare</div>
+                    <p>Achizitionati acest produs numai din magazineul oficial <span
+                            class="brand-highlight">TruOrigin</span> pentru a vǎ asigura autenticitatea si calitatea!
+                        Alte magazine nu pot garanta autenticitatea si calitatea produsului.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Cum s utilizati produsul</div>
+                    <ol class="instructions-list">
+                        <li>Asamblati cadrul de baza conform instructiunilor, apoi adaugati treptat granule pentru a
+                            construi structura tridimensional a magazinelui;</li>
+                        <li>Folositi componente precum capacul transparent, axa de rotire etc. pentru a realiza detaili
+                            mobile (cum ar fi manerul usii sau turnul de bauturi);</li>
+                        <li>Sistemul supporta extinderea libera a scenei- combinati-l cu accesoriile tematica incluse
+                            (precum Sprite, Coca-Cola etc.) pentru a crea o mini strada comerciala.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Precautii</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Informații importante de siguranță
+                        </div>
+                        <p>Potrivit pentru copii de peste 6 ani, de utilizat sub supravegherea unui adult. Contine
+                            particule mici - evitati inghitirea.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bulgarian-content">
+                <div class="language-section">
+                    <div class="language-title">Информация за покупка</div>
+                    <p>3akyneTe TO3N npoAyKT CaMO OT ONHNA Mara3NH Ha <span class="brand-highlight">TruOrigin</span>, 3a
+                        Aa rapaHTNpaTe aBTeHTNHOCT n KayeCTBO! Apyrn Mara3nHN He MOraT Aa rapaHTNpaT aBTeHTuHOCTTa n
+                        KayeCTBOTO Ha npoAyKTa.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Kak Aa N3non3BaTe npoAyKTa</div>
+                    <ol class="instructions-list">
+                        <li>Crno6aBaTe ocHoBHaT paMka cnopeA nHCTpyKuNTe cTbnka no cTbnka, cneA KoeTo A06aTe nocreneHHo
+                            rpanynn, 3a Aa n3rpANTe o6emHaTa cTpyKTypa Ha Mara3nHa;</li>
+                        <li>M3non3BaTe KoMnoHeHTN KaTO npo3payeH Kanak, Bbptawa oc n Ap., 3a Aa;</li>
+                        <li>CncTemata noAAbpa cBo6oAHO pa3wnpaBaHe Ha cueHaTa- KoM6nHpaTe a c (KaTo Sprite, Coca-Cola n
+                            Ap.), 3a Aa Cb3AaAeTe MMN TbproBcka yNNua.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">NpeAna3HN MepKN</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Важна информация за безопасност
+                        </div>
+                        <p>A A 6-, Aa ce A A Aa.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="hungarian-content">
+                <div class="language-section">
+                    <div class="language-title">Vásárlási információk</div>
+                    <p>Csak a <span class="brand-highlight">TruOrigin</span> hivatalos boltjabol vasarolja meg ezt a
+                        terméket, hogy biztositsa a hitelesseget es a minoséget! Mas boltok nem garantaljak a termék
+                        hitelessegetés minoséget.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Hogyan hasznaljuk a terméket</div>
+                    <ol class="instructions-list">
+                        <li>Az alapvazat az utmutató lepései szerint szerelje ossze, majd lepésrol lepésre epitse fel a
+                            haromdimenzios uzlet struktúrajat a granulatumok hozzaadasaval.</li>
+                        <li>Az atlatsó kupak, forgotengely es egyéb komponensek segitségével mozgathatórészleteket
+                            hozhat letre (példaul ajtokilincset, ital tornyot).</li>
+                        <li>A rendszer bovitheto - az mellekelt témajü kiegészitókkel (pl. Sprite, Coca-Cola stb.)
+                            egyedi kis bevasarloutcat teremthet.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Ovintézkedések</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Fontos biztonsági információk
+                        </div>
+                        <p>6 even felili gyermekek számara ajanlott, felügyelet mellett hasznaland6. Aprod szemcséket
+                            tartalmaz - ne nyelje le!</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | All rights reserved</p>
+            <p>This documentation is provided for informational purposes only.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

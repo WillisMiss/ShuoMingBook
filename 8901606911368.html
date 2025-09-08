@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>False Eyelashes Set - Declaration of Conformity & User Manual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #9c27b0;
+            --secondary: #ff9800;
+            --accent: #e91e63;
+            --light: #f3e5f5;
+            --dark: #4a148c;
+            --success: #4caf50;
+            --warning: #ffc107;
+            --gray: #7e57c2;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8eaf6 100%);
+            color: #311b92;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(236, 240, 241, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-family: monospace;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "•";
+            margin-right: 12px;
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+        }
+
+        .declaration-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .declaration-value {
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 25px;
+        }
+
+        .tab {
+            padding: 14px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s;
+            position: relative;
+            background: #f1f8ff;
+        }
+
+        .tab:hover {
+            background-color: #e3f2fd;
+        }
+
+        .tab.active {
+            color: var(--primary);
+            background: #d1e7ff;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .warning-box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+        }
+
+        .warning-title {
+            font-weight: 600;
+            color: #e65100;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-title::before {
+            content: "⚠️";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .instructions-list {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+
+        .instructions-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .instructions-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--gray);
+        }
+
+        .language-section:last-child {
+            border-bottom: none;
+        }
+
+        .language-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .signature div {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .brand-highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .compliance-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--success);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .compliance-badge::before {
+            content: "✓";
+            font-size: 1.2rem;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature::before {
+            content: "★";
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .product-image {
+            max-width: 250px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .product-image {
+                max-width: 100%;
+            }
+        }
+
+        .product-showcase {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-demo {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .demo-image {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .demo-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--dark);
+        }
+
+        .eye-illustration {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .eye-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);
+        }
+
+        .eye {
+            width: 120px;
+            height: 80px;
+            background: white;
+            border-radius: 50%;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .eyelash-top {
+            position: absolute;
+            top: -25px;
+            width: 100%;
+            height: 30px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        .lash {
+            width: 2px;
+            height: 15px;
+            background: #333;
+            border-radius: 50% 50% 0 0;
+            transform-origin: bottom;
+            animation: blink 5s infinite;
+        }
+
+        .lash:nth-child(odd) {
+            height: 20px;
+        }
+
+        .lash:nth-child(3n+1) {
+            transform: rotate(-10deg);
+        }
+
+        .lash:nth-child(3n+2) {
+            transform: rotate(0deg);
+        }
+
+        .lash:nth-child(3n+3) {
+            transform: rotate(10deg);
+        }
+
+        .pupil {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 40px;
+            height: 40px;
+            background: #311b92;
+            border-radius: 50%;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+        }
+
+        .reflection {
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            width: 10px;
+            height: 10px;
+            background: white;
+            border-radius: 50%;
+        }
+
+        .sticker {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #e91e63;
+            border-radius: 50%;
+            bottom: 15px;
+            right: 30px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        @keyframes blink {
+
+            0%,
+            90%,
+            92%,
+            94%,
+            96%,
+            98%,
+            100% {
+                height: 80px;
+            }
+
+            91%,
+            93%,
+            95%,
+            97%,
+            99% {
+                height: 75px;
+            }
+        }
+
+        .language-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="compliance-badge">
+                EU Conformity Certified
+            </div>
+            <h1>False Eyelashes Set</h1>
+            <p class="subtitle">EU Declaration of Conformity & User Manual</p>
+            <div class="product-id">Product ID: 8901606911368</div>
+
+            <div class="eye-illustration">
+                <div class="eye-container">
+                    <div class="eye">
+                        <div class="eyelash-top">
+                            <div class="lash"></div>
+                            <div class="lash"></div>
+                            <div class="lash"></div>
+                            <div class="lash"></div>
+                            <div class="lash"></div>
+                            <div class="lash"></div>
+                            <div class="lash"></div>
+                            <div class="lash"></div>
+                        </div>
+                        <div class="pupil">
+                            <div class="reflection"></div>
+                        </div>
+                    </div>
+                    <div class="sticker">
+                        <i class="fas fa-eye"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-file-contract"></i> EU Declaration of Conformity
+            </div>
+
+            <div class="declaration-grid">
+                <div class="declaration-item">
+                    <div class="declaration-label">Product Unique Identification</div>
+                    <div class="declaration-value">8901606911368</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Manufacturer Name and Address</div>
+                    <div class="declaration-value">
+                        Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.<br>
+                        Room C130, Room 504, No.1 Longkou West Road,<br>
+                        Tianhe District, Guangzhou Guangzhou City,<br>
+                        Guangdongshen, 510635
+                    </div>
+                </div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Declaration Issued By</div>
+                <div class="declaration-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Product Name</div>
+                <div class="declaration-value">False Eyelashes Set</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Compliant EU Legislation</div>
+                <div class="declaration-value">● Directive 2001/95/EC (General Product Safety Directive - GPSD)</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Harmonised Standards</div>
+                <div class="declaration-value">● ISO 9001:2015 (Quality Management System, optional for reference)</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Notified Body</div>
+                <div class="declaration-value">Not applicable</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Place and Date of Issue</div>
+                <div class="declaration-value">Germany, 2025-05-01</div>
+            </div>
+
+            <div class="signature">
+                <div>
+                    <div>Signature:</div>
+                    <div class="signature-name">Lucas</div>
+                    <div>Position: Compliance Officer</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i> User Manual
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="english"><i class="fas fa-language language-icon"></i> English</div>
+                <div class="tab" data-tab="romanian"><i class="fas fa-language language-icon"></i> Romanian</div>
+                <div class="tab" data-tab="bulgarian"><i class="fas fa-language language-icon"></i> Bulgarian</div>
+                <div class="tab" data-tab="hungarian"><i class="fas fa-language language-icon"></i> Hungarian</div>
+            </div>
+
+            <div class="tab-content active" id="english-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Purchase Information</div>
+                    <p>Purchase this product only from the official <span class="brand-highlight">TruOrigin</span> store
+                        to ensure authenticity and quality! Other stores cannot guarantee the product's authenticity and
+                        quality.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> How to Use the Product</div>
+                    <ol class="instructions-list">
+                        <li>Use tweezers to pick up false eyelashes and apply the accompanying glue along the lash line.
+                        </li>
+                        <li>Wait until the glue becomes tacky (semi-dry state), then align and gently press onto the
+                            eyelid base, starting from the outer eye corner.</li>
+                        <li>Secure by pressing the inner corner and middle section for instant voluminous and curled
+                            lashes.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Precautions</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Important Safety Information
+                        </div>
+                        <ol class="instructions-list">
+                            <li>The glue is mild and low-irritation; sensitive eyes may test on a small area first.
+                                Discontinue use immediately if allergic reaction occurs.</li>
+                            <li>If glue gets into eyes, rinse immediately with clean water. Seek medical attention if
+                                discomfort persists.</li>
+                            <li>Children must use the product under adult supervision and assistance.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="romanian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Informații de cumpărare</div>
+                    <p>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                        autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si calitatea
+                        produsului.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Cum s utilizati produsul</div>
+                    <ol class="instructions-list">
+                        <li>Folositi penseta pentru a prinde genele false si aplicati adezivul special pe baza.</li>
+                        <li>Asteptati panǎ cand adezivul este semi-uscat(usor lipicios), apoi aliniati si presati usor
+                            la radacina pleoapei, incepand de la coltul exterior al ochiului.</li>
+                        <li>Consolidati apasand la coltul interior si mijloc,pentru gene voluminoase si indoite
+                            instantaneu.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Precautii</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Informații importante de siguranță
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Adezivul este bland si cu iritare redusa; persoanele sensible pot testa mai intai pe o
+                                zona mica.In caz de reactie alergenǎ,incetati utilizarea imediat.</li>
+                            <li>Daca adezivul intra in contact cu ochii, clatiti imediat cu apa curata. Dac simplernele
+                                persista, consultati un medic.</li>
+                            <li>Copiii trebuie s utilizeze produsul sub supravegherea si asistenta unui adult.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bulgarian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Информация за покупка</div>
+                    <p>3akyneTe TO3N npoAyKT CaMO OT ONANHNA Mara3NH Ha TruOrigin, 3a Aa rapaHTNpaTe aBTeHTNHOCT n
+                        KayeCTBO! Apyrn MaraNn He MOraT Aa rapaHTNpaT aBTeHTNHOCTTa n KayeCTBOTO Ha npoAyKTa.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Kak Aa N3non3BaTe npoAyKTa</div>
+                    <ol class="instructions-list">
+                        <li>B3emeTe M3KYCTBeHNTe MNRAM C NHHCET H HaHeCeTe CbnpoBoXAaWOTO neNNno no OCHOBaTa.</li>
+                        <li>(AO neKO nenkaBo CbCTOaHNe), cneA KopeTo noApaBHeTe n neko HaTncHeTe B ocHoBaTa Ha Knenaya,
+                            3anoyBankN OT BbHWHNA brbJI Ha OKOTO.</li>
+                        <li>3aTbbpaete c AonbIHTeIHO HaTnCKaHe BbB BbTpeWHA brbn n cpeAaTa, 3a.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Предпазни мерки</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Важна информация за безопасност
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Bbpxy Manka o6nacT. npn noaba Ha aneprn4Ha peaKuNa, He3a6aBHO cnpeTe ynoTpe6aTa.</li>
+                            <li>Npn nonaeHNe B O4N,He3a6aBHO N3nJIaKHeTe C 4NCTa BOAa.Npn npoAbJnKaBaHe Ha HenPNATHNTE
+                                ycewaHNA,noTbpceTe MeANLNHcka nomow.</li>
+                            <li>AeuaTa Tpa6Ba Aa n3non3BaT npoAyKTa noA HaA3opa n c nomouTa Ha Bb3pacTeH.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="hungarian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Vásárlási információk</div>
+                    <p>Csak a TruOrigin hivatalos boltjabol vasarolja meg ezt a terméket, hogy biztositsa a hitelesseget
+                        es a minoséget! Mas boltok nem garantaljak a termék hitelesseget es minoségét.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Hogyan hasznaljuk a terméket</div>
+                    <ol class="instructions-list">
+                        <li>Fogia meg a múszempillát csipesznel,és kenje fel a mellékelt ragasztót a tovére.</li>
+                        <li>Varja meg, míg a ragasztó felszáraz(enyhén ragados) allapotba kerül, majd igazitsa es nyomja
+                            ovatosan a szempilla tovéhez, kezdve a szem kulsó sarkatól.</li>
+                        <li>Erositse meg a belso sarokés a kozépsó rész lenyomasával, azonnali dusés gondor
+                            szempillakert.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Ovintézkedések</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Fontos biztonsági információk
+                        </div>
+                        <ol class="instructions-list">
+                            <li>A ragasztó enyhe es alacsony irritalo hatasú;érzékeny szemel esetén eloszor teszteljen
+                                kis felületen. Ha allergias reakcio lep fel, azonnal hagyja abba a hasznalatot.</li>
+                            <li>Ha a ragasztó a szembe kerül, azonnal oblitse ki tiszta vizzel. Ha a panaszok
+                                fennallnak, keressen fel orvosi segitséget.</li>
+                            <li>Gyermeekek csak felnott felügyelete es segitsége mellett hasznaljak a terméket.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-star"></i> Product Features
+            </div>
+
+            <div class="product-features">
+                <div class="feature">
+                    <h3>Natural Look</h3>
+                    <p>Premium synthetic fibers create a natural, voluminous appearance</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Easy Application</h3>
+                    <p>Specially designed tweezers and mild glue for comfortable application</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Long-Lasting Wear</h3>
+                    <p>Comfortable for all-day wear with proper application</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Reusable</h3>
+                    <p>Designed for multiple uses when cared for properly</p>
+                </div>
+            </div>
+
+            <div class="product-showcase">
+                <div class="product-demo">
+                    <div class="eye-illustration" style="width: 200px; height: 200px;">
+                        <div class="eye-container"
+                            style="background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);">
+                            <div class="eye">
+                                <div class="eyelash-top">
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                </div>
+                                <div class="pupil"></div>
+                            </div>
+                        </div>
+                        <div class="demo-caption">Natural Volume Effect</div>
+                    </div>
+                </div>
+
+                <div class="product-demo">
+                    <div class="eye-illustration" style="width: 200px; height: 200px;">
+                        <div class="eye-container"
+                            style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
+                            <div class="eye">
+                                <div class="eyelash-top">
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                    <div class="lash"></div>
+                                </div>
+                                <div class="pupil"></div>
+                            </div>
+                        </div>
+                        <div class="demo-caption">Easy Application Tools</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | All rights reserved</p>
+            <p>Declaration issued in Germany on 2025-05-01 | Compliance Officer: Lucas</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Notebook - Product Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #3498db;
+            --accent: #e74c3c;
+            --light: #f8f9fa;
+            --dark: #1a2530;
+            --success: #27ae60;
+            --warning: #f39c12;
+            --gray: #7f8c8d;
+            --border-radius: 10px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
+            color: #2d3748;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a2530 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(52, 152, 219, 0.1);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(231, 76, 60, 0.1);
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-family: monospace;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            backdrop-filter: blur(5px);
+            font-size: 1.2rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title i {
+            margin-right: 12px;
+            color: var(--secondary);
+            font-size: 1.5rem;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+        }
+
+        .declaration-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .declaration-value {
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 25px;
+        }
+
+        .tab {
+            padding: 14px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s;
+            position: relative;
+        }
+
+        .tab:hover {
+            background-color: #f8f9fa;
+        }
+
+        .tab.active {
+            color: var(--primary);
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .warning-box {
+            background-color: #fff3cd;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+        }
+
+        .warning-title {
+            font-weight: 600;
+            color: #856404;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-title i {
+            margin-right: 10px;
+        }
+
+        .instructions-list {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+
+        .instructions-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .instructions-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--gray);
+        }
+
+        .language-section:last-child {
+            border-bottom: none;
+        }
+
+        .language-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .language-title::before {
+            content: '';
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
+            background-color: var(--accent);
+            -webkit-mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 10 12H3v2h8v5H5v2h14v-2h-6v-5h1.56c.15-.64.32-1.28.56-1.88l-.05.05 2.47 2.45 1.42-1.41L19 13l.01.01 1.42-1.41-3.82-3.8 1.42-1.41 4.78 4.76-1.42 1.41-1.75-1.73-1.46 1.44zM18.5 9c-.83 0-1.5-.67-1.5-1.5S17.67 6 18.5 6s1.5.67 1.5 1.5S19.33 9 18.5 9z"/></svg>');
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 10 12H3v2h8v5H5v2h14v-2h-6v-5h1.56c.15-.64.32-1.28.56-1.88l-.05.05 2.47 2.45 1.42-1.41L19 13l.01.01 1.42-1.41-3.82-3.8 1.42-1.41 4.78 4.76-1.42 1.41-1.75-1.73-1.46 1.44zM18.5 9c-.83 0-1.5-.67-1.5-1.5S17.67 6 18.5 6s1.5.67 1.5 1.5S19.33 9 18.5 9z"/></svg>');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+        }
+
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .signature div {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.95rem;
+        }
+
+        .brand-highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .notebook-image {
+            max-width: 300px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .compliance-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--success);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .compliance-badge i {
+            font-size: 1.2rem;
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .notebook-image {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="compliance-badge">
+                <i class="fas fa-check-circle"></i>
+                EU Conformity Certified
+            </div>
+            <h1>Premium Notebook</h1>
+            <p class="subtitle">EU Declaration of Conformity & User Instructions</p>
+            <div class="product-id">Product ID: 8901606048101</div>
+        </header>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-file-contract"></i> EU Declaration of Conformity
+            </div>
+
+            <div class="declaration-grid">
+                <div class="declaration-item">
+                    <div class="declaration-label">Product Unique Identification</div>
+                    <div class="declaration-value">8901606048101</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Manufacturer Name and Address</div>
+                    <div class="declaration-value">
+                        Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.<br>
+                        Room C130, Room 504, No.1 Longkou West Road,<br>
+                        Tianhe District, Guangzhou Guangzhou City,<br>
+                        Guangdongshen, 510635
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Declaration Issued By</div>
+                    <div class="declaration-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Product Name</div>
+                    <div class="declaration-value">Notebook</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Compliant EU Legislation</div>
+                    <div class="declaration-value">● Directive 2001/95/EC (General Product Safety Directive - GPSD)
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Harmonised Standards</div>
+                    <div class="declaration-value">● ISO 9001:2015 (Quality Management System, optional for reference)
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Notified Body</div>
+                    <div class="declaration-value">Not applicable</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Place and Date of Issue</div>
+                    <div class="declaration-value">Germany, 2025-05-01</div>
+                </div>
+            </div>
+
+            <div class="signature">
+                <div>
+                    <div>Signature:</div>
+                    <div class="signature-name">Lucas</div>
+                    <div>Function: Compliance Officer</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i> User Instruction Manual
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="english">English</div>
+                <div class="tab" data-tab="romanian">Romanian</div>
+                <div class="tab" data-tab="bulgarian">Bulgarian</div>
+                <div class="tab" data-tab="hungarian">Hungarian</div>
+            </div>
+
+            <div class="tab-content active" id="english-content">
+                <div class="language-section">
+                    <div class="language-title">Purchase Information</div>
+                    <p>Purchase this product only from the official <span class="brand-highlight">TruOrigin</span> store
+                        to ensure authenticity and quality! Other stores cannot guarantee the product's authenticity and
+                        quality.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">How to Use the Product</div>
+                    <ol class="instructions-list">
+                        <li>Study and office: Class notes or work schedules</li>
+                        <li>Journaling: DIY sections, artwork, photo collages</li>
+                        <li>Storage: Photo albums, diaries, craft sorting</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Precautions</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Important Safety Information
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Avoid water/moisture; keep sharp objects away</li>
+                            <li>Tear dividers gently along dotted lines</li>
+                            <li>Stack horizontally when storing long-term</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="romanian-content">
+                <div class="language-section">
+                    <div class="language-title">Informații de cumpărare</div>
+                    <p>Achizitionati acest produs numai din magazinele oficiale <span
+                            class="brand-highlight">TruOrigin</span> pentru a vǎ asigura autenticitatea si calitatea!
+                        Alte magazine nu pot garanta autenticitatea si calitatea produsului.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Cum să utilizați produsul</div>
+                    <ol class="instructions-list">
+                        <li>Studiu si birou: Note de curs sau programme de lucru</li>
+                        <li>Jurnal personal: Sectiuni DIY, opere de arta, colaje foto</li>
+                        <li>Depozitate: Albume foto, jurnale, sortare mestesuguri</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Precauții</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Informații importante de siguranță
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Evitați apa și umezeala; țineți obiecte ascuțite la distanță</li>
+                            <li>Desprindeți separatorii ușor de-a lungul liniilor punctate</li>
+                            <li>Stivuiți orizontal pentru depozitare pe termen lung</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bulgarian-content">
+                <div class="language-section">
+                    <div class="language-title">Информация за покупка</div>
+                    <p>Закупете този продукт само от официалния магазин <span class="brand-highlight">TruOrigin</span>,
+                        за да гарантирате автентичност и качество! Други магазини не могат да гарантират автентичността
+                        и качеството на продукта.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Как да използвате продукта</div>
+                    <ol class="instructions-list">
+                        <li>Учене и офис: Бележки от часове или работни графици</li>
+                        <li>Водене на дневник: DIY секции, художествени творби, фото колажи</li>
+                        <li>Съхранение: Фотоалбуми, дневници, подреждане на занаяти</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Предпазни мерки</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Важна информация за безопасност
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Избягвайте вода и влага; пазете остри предмети далеч</li>
+                            <li>Разделителите се отварят леко по пунктираните линии</li>
+                            <li>Съхранявайте хоризонтално при дългосрочно съхранение</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="hungarian-content">
+                <div class="language-section">
+                    <div class="language-title">Vásárlási információk</div>
+                    <p>Vásárolja meg ezt a terméket kizárólag a hivatalos <span class="brand-highlight">TruOrigin</span>
+                        boltból, hogy biztosítsa a hitelességet és minőséget! Más boltok nem garantálják a termék
+                        hitelességét és minőségét.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Termék használata</div>
+                    <ol class="instructions-list">
+                        <li>Tanulás és iroda: Órai jegyzetek vagy munkabeosztások</li>
+                        <li>Naplózás: DIY részek, művészeti alkotások, fotó kollázsok</li>
+                        <li>Tárolás: Fotóalbumok, naplók, kézműves rendszerezés</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Óvintézkedések</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Fontos biztonsági információk
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Kerülje a vizet és nedvességet; tartson távol éles tárgyakat</li>
+                            <li>A válaszvonalakat óvatosan szakítsa szét a pontozott vonalak mentén</li>
+                            <li>Vízszintesen tároljon hosszú távú tárolás esetén</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | All rights reserved</p>
+            <p>Declaration issued in Germany on 2025-05-01 | Compliance Officer: Lucas</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

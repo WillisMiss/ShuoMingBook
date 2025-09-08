@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Headphones - Declaration of Conformity & User Manual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2196f3;
+            --secondary: #4caf50;
+            --accent: #ff9800;
+            --light: #e3f2fd;
+            --dark: #0d47a1;
+            --success: #4caf50;
+            --warning: #ffc107;
+            --gray: #78909c;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e3f2fd 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(236, 240, 241, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-family: monospace;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "•";
+            margin-right: 12px;
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+        }
+
+        .declaration-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .declaration-value {
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 25px;
+        }
+
+        .tab {
+            padding: 14px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s;
+            position: relative;
+            background: #f1f8ff;
+        }
+
+        .tab:hover {
+            background-color: #e3f2fd;
+        }
+
+        .tab.active {
+            color: var(--primary);
+            background: #d1e7ff;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .warning-box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+        }
+
+        .warning-title {
+            font-weight: 600;
+            color: #e65100;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-title::before {
+            content: "⚠️";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .instructions-list {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+
+        .instructions-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .instructions-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--gray);
+        }
+
+        .language-section:last-child {
+            border-bottom: none;
+        }
+
+        .language-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .signature div {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .brand-highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .compliance-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--success);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .compliance-badge::before {
+            content: "✓";
+            font-size: 1.2rem;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature::before {
+            content: "★";
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .product-image {
+            max-width: 250px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .product-image {
+                max-width: 100%;
+            }
+        }
+
+        .headphone-illustration {
+            width: 300px;
+            height: 180px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .headphone-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .headband {
+            width: 200px;
+            height: 20px;
+            background: #333;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .earcup-left,
+        .earcup-right {
+            width: 100px;
+            height: 100px;
+            background: #555;
+            border-radius: 50%;
+            position: absolute;
+            top: 20px;
+            border: 15px solid #333;
+        }
+
+        .earcup-left {
+            left: 20px;
+        }
+
+        .earcup-right {
+            right: 20px;
+        }
+
+        .earcup-inner {
+            width: 70px;
+            height: 70px;
+            background: #777;
+            border-radius: 50%;
+            position: absolute;
+            top: 15px;
+            left: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .earcup-detail {
+            width: 40px;
+            height: 40px;
+            background: #999;
+            border-radius: 50%;
+            position: absolute;
+        }
+
+        .bluetooth-pulse {
+            position: absolute;
+            bottom: 40px;
+            right: 50px;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--accent);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.2rem;
+            box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7);
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 152, 0, 0.7);
+            }
+
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 152, 0, 0);
+            }
+
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 152, 0, 0);
+            }
+        }
+
+        .language-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .safety-icon {
+            display: inline-block;
+            width: 30px;
+            height: 30px;
+            background-color: var(--warning);
+            color: white;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 30px;
+            margin-right: 10px;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(33, 150, 243, 0.1) 0%, rgba(76, 175, 80, 0.1) 100%);
+            border-left: 4px solid var(--primary);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin: 20px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="compliance-badge">
+                EU Conformity Certified
+            </div>
+            <h1>Premium Headphones</h1>
+            <p class="subtitle">EU Declaration of Conformity & User Manual</p>
+            <div class="product-id">Product ID: 8901647948729</div>
+
+            <div class="headphone-illustration">
+                <div class="headphone-container">
+                    <div class="headband"></div>
+                    <div class="earcup-left">
+                        <div class="earcup-inner">
+                            <div class="earcup-detail"></div>
+                        </div>
+                    </div>
+                    <div class="earcup-right">
+                        <div class="earcup-inner">
+                            <div class="earcup-detail"></div>
+                        </div>
+                    </div>
+                    <div class="bluetooth-pulse">
+                        <i class="fas fa-bluetooth"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-file-contract"></i> EU Declaration of Conformity
+            </div>
+
+            <div class="highlight-box">
+                <i class="fas fa-info-circle"></i> This declaration of conformity is issued under the sole
+                responsibility of the manufacturer: Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.
+            </div>
+
+            <div class="declaration-grid">
+                <div class="declaration-item">
+                    <div class="declaration-label">Product Unique Identification</div>
+                    <div class="declaration-value">8901647948729</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Manufacturer Name and Address</div>
+                    <div class="declaration-value">
+                        Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.<br>
+                        Room C130, Room 504, No.1 Longkou West Road,<br>
+                        Tianhe District, Guangzhou Guangzhou City,<br>
+                        Guangdongshen, 510635
+                    </div>
+                </div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Object of the Declaration</div>
+                <div class="declaration-value">Headphones</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Conformity with EU Legislation</div>
+                <div class="declaration-value">● Directive 2001/95/EC (General Product Safety Directive - GPSD)</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">References to Harmonised Standards</div>
+                <div class="declaration-value">● ISO 9001:2015 (Quality Management System, optional for reference)</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Notified Body</div>
+                <div class="declaration-value">Not applicable</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Place and Date of Issue</div>
+                <div class="declaration-value">Germany, 2025-05-01</div>
+            </div>
+
+            <div class="signature">
+                <div>
+                    <div>Signature:</div>
+                    <div class="signature-name">Lucas</div>
+                    <div>Function: Compliance Officer</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i> User Manual
+            </div>
+
+            <div class="highlight-box">
+                <i class="fas fa-exclamation-triangle safety-icon"></i> Important: Purchase this product only from the
+                official TruOrigin store to ensure authenticity and quality! Other stores cannot guarantee the product's
+                authenticity and quality.
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="english"><i class="fas fa-language language-icon"></i> English</div>
+                <div class="tab" data-tab="romanian"><i class="fas fa-language language-icon"></i> Romanian</div>
+                <div class="tab" data-tab="bulgarian"><i class="fas fa-language language-icon"></i> Bulgarian</div>
+                <div class="tab" data-tab="hungarian"><i class="fas fa-language language-icon"></i> Hungarian</div>
+            </div>
+
+            <div class="tab-content active" id="english-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> How to Use the Product</div>
+                    <ol class="instructions-list">
+                        <li>Check the external packaging for any damage.</li>
+                        <li>Open the packaging and check if all accessories are present and if the headphone buttons are
+                            intact.</li>
+                        <li>For first use, please fully charge before use. After fully charged, enjoy the beauty of
+                            music.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Precautions</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Important Safety Information
+                        </div>
+                        <ol class="instructions-list">
+                            <li>For adult use. Keep away from children.</li>
+                            <li>Do not forcefully tear off the ear cushion foam, as it cannot be restored.</li>
+                            <li>Charge only at the required voltage to avoid the risk of fire due to overvoltage.</li>
+                            <li>Discontinue use immediately if discomfort occurs during use.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="romanian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Cum s utilizati produsul</div>
+                    <ol class="instructions-list">
+                        <li>Verificati ambalajul extern pentru eventuale deteriorari.</li>
+                        <li>Deschideti ambalajul si verificati daca toate componentele sunt prezente si daca butoanele
+                            castii sunt intacte.</li>
+                        <li>La prima utilizare, vǎ rugam sa incarcati complet bateria inainte de utilizare. Dupa incarce
+                            completa, bucurati-va de frumusetea muzicii.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Precautii</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Informații importante de siguranță
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Pentru adulti. Tineti departe de copii.</li>
+                            <li>Nu trageti cu forta de buretele de pe casturi, deoarece acesta nu mai poate fi refacut.
+                            </li>
+                            <li>Incarcati produsul doar la tensiunea recomandat pentru a evita riscul de incendiu
+                                datorat supravoltarii.</li>
+                            <li>Dac apar disconfort in timpul utilizarii, intrerupeti imediat utilizarea.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bulgarian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Kak Aa N3non3BaTe npoAyKTa</div>
+                    <ol class="instructions-list">
+                        <li>NpoBepeTe BbHWHaTa onakoBKa 3a noBpeAn.</li>
+                        <li>OTBOpeTe OnakoBKaTa n npoBepeTe Ann BCN4KN aKcecoapn ca HannyHN n Ann 6yTOHNTe Ha cnywanknTe
+                            ca uennMkn.</li>
+                        <li>npn nbpBa ynOTpe6a, Mona, 3apeAeTe HanbnHO before n3non3BaHe. CneA nbnHO 3apeAaHe, HacnaAeTe
+                            ce Ha My3nkaTa.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Предпазни мерки</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Важна информация за безопасност
+                        </div>
+                        <ol class="instructions-list">
+                            <li>3a Bb3pacTHN.AbpKeTe Aane4 OT Aeua.</li>
+                            <li>He ApbnBaTe c ycnnne rb6aTa Ha cnywanknTe, Tb KaTo ToBa He Moke Aa 6bAe Bb3CTaHOBeHO.
+                            </li>
+                            <li>3apeAaTe npn npenopHaHoTo HanpeHe, 3a Aa n36erHeTe pNCK OT nonap nopaAn npeHanpekeHne.
+                            </li>
+                            <li>npn AnckoMdopT no Bpeme Ha ynoTpe6a, He3a6aBHO cnpeTe ynoTpe6aTa.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="hungarian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Hogyan hasznaljuk a terméket</div>
+                    <ol class="instructions-list">
+                        <li>Ellenorizze a kulso csomagolast serülesere.</li>
+                        <li>Nyissa ki a csomagolast, es ellenorizze, hogy minden tartozek megvan-e, es a fejhallgató
+                            gombjaiépek-e.</li>
+                        <li>Elso hasznalat elott kerjuk,toltse fel teljesen. Teljes toltés után elvezze a zene
+                            szepségét.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Ovintézkedések</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Fontos biztonsági információk
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Felnottek szamara.Tavol tartando gyermekektol.</li>
+                            <li>Ne huzza erovel a fulltamasz habjat,mert az nem allitható helyre.</li>
+                            <li>Toltés csak az elóirt feszültség mellett, a tulfeszültség okozta tuzveszely elkerülése
+                                erdekében.</li>
+                            <li>Hasznalat kozbeni kellemetlenség esetén azonnal szakitas meg a hasznalatot.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-star"></i> Product Features
+            </div>
+
+            <div class="product-features">
+                <div class="feature">
+                    <h3>Premium Sound Quality</h3>
+                    <p>High-fidelity audio with deep bass and crystal-clear treble</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Wireless Freedom</h3>
+                    <p>Bluetooth connectivity with stable signal and long range</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Long Battery Life</h3>
+                    <p>Up to 30 hours of continuous playback on a single charge</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Comfort Fit</h3>
+                    <p>Ergonomic design with soft ear cushions for extended wear</p>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | All rights reserved</p>
+            <p>Declaration issued in Germany on 2025-05-01 | Compliance Officer: Lucas</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,934 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scented Candle - Declaration of Conformity & User Manual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #9c27b0;
+            --secondary: #ff9800;
+            --accent: #e91e63;
+            --light: #f3e5f5;
+            --dark: #4a148c;
+            --success: #4caf50;
+            --warning: #ffc107;
+            --gray: #7e57c2;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e8eaf6 100%);
+            color: #311b92;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(236, 240, 241, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-family: monospace;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "•";
+            margin-right: 12px;
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+        }
+
+        .declaration-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .declaration-value {
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 25px;
+        }
+
+        .tab {
+            padding: 14px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s;
+            position: relative;
+            background: #f1f8ff;
+        }
+
+        .tab:hover {
+            background-color: #e3f2fd;
+        }
+
+        .tab.active {
+            color: var(--primary);
+            background: #d1e7ff;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .warning-box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+        }
+
+        .warning-title {
+            font-weight: 600;
+            color: #e65100;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-title::before {
+            content: "⚠️";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .instructions-list {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+
+        .instructions-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .instructions-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--gray);
+        }
+
+        .language-section:last-child {
+            border-bottom: none;
+        }
+
+        .language-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .signature div {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .brand-highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .compliance-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--success);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .compliance-badge::before {
+            content: "✓";
+            font-size: 1.2rem;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature::before {
+            content: "★";
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .product-image {
+            max-width: 250px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .product-image {
+                max-width: 100%;
+            }
+        }
+
+        .product-showcase {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-demo {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .demo-image {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .demo-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--dark);
+        }
+
+        .candle-illustration {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .candle-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: flex-end;
+            padding-bottom: 30px;
+        }
+
+        .candle-body {
+            width: 120px;
+            height: 180px;
+            background: linear-gradient(to top, #ffb74d 0%, #ff9800 100%);
+            border-radius: 5px;
+            position: relative;
+            box-shadow: inset 0 -10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .candle-flame {
+            position: absolute;
+            top: -35px;
+            width: 10px;
+            height: 30px;
+            background: linear-gradient(to bottom, #ffff00 0%, #ff9800 50%, #ff5722 100%);
+            border-radius: 50% 50% 20% 20%;
+            box-shadow: 0 0 20px #ff5722;
+            animation: flicker 2s infinite alternate;
+        }
+
+        .candle-wick {
+            position: absolute;
+            top: -3px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 3px;
+            height: 5px;
+            background: #3e2723;
+            border-radius: 0 0 50% 50%;
+        }
+
+        .candle-title {
+            color: white;
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-align: center;
+            margin-top: 15px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+        }
+
+        .sticker {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #e91e63;
+            border-radius: 50%;
+            bottom: 15px;
+            right: 30px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        @keyframes flicker {
+
+            0%,
+            100% {
+                transform: scale(1);
+                opacity: 1;
+            }
+
+            20%,
+            80% {
+                transform: scale(1.05);
+                opacity: 0.95;
+            }
+
+            40%,
+            60% {
+                transform: scale(0.98);
+                opacity: 0.9;
+            }
+        }
+
+        .language-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="compliance-badge">
+                EU Conformity Certified
+            </div>
+            <h1>Scented Candle</h1>
+            <p class="subtitle">EU Declaration of Conformity & User Manual</p>
+            <div class="product-id">Product ID: 8901606911351</div>
+
+            <div class="candle-illustration">
+                <div class="candle-container" style="background: linear-gradient(135deg, #4a148c 0%, #7b1fa2 100%);">
+                    <div class="candle-body">
+                        <div class="candle-wick"></div>
+                        <div class="candle-flame"></div>
+                    </div>
+                    <div class="candle-title">Scented Candle</div>
+                    <div class="sticker">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-file-contract"></i> EU Declaration of Conformity
+            </div>
+
+            <div class="declaration-grid">
+                <div class="declaration-item">
+                    <div class="declaration-label">Product Unique Identification</div>
+                    <div class="declaration-value">8901606911351</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Manufacturer Name and Address</div>
+                    <div class="declaration-value">
+                        Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.<br>
+                        Room C130, Room 504, No.1 Longkou West Road,<br>
+                        Tianhe District, Guangzhou Guangzhou City,<br>
+                        Guangdongshen, 510635
+                    </div>
+                </div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Declaration Issued By</div>
+                <div class="declaration-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Product Name</div>
+                <div class="declaration-value">Scented Candle</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Compliant EU Legislation</div>
+                <div class="declaration-value">● Directive 2001/95/EC (General Product Safety Directive - GPSD)</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Harmonised Standards</div>
+                <div class="declaration-value">● ISO 9001:2015 (Quality Management System, optional for reference)</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Notified Body</div>
+                <div class="declaration-value">Not applicable</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Place and Date of Issue</div>
+                <div class="declaration-value">Germany, 2025-05-01</div>
+            </div>
+
+            <div class="signature">
+                <div>
+                    <div>Signature:</div>
+                    <div class="signature-name">Lucas</div>
+                    <div>Position: Compliance Officer</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i> User Manual
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="english"><i class="fas fa-language language-icon"></i> English</div>
+                <div class="tab" data-tab="romanian"><i class="fas fa-language language-icon"></i> Romanian</div>
+                <div class="tab" data-tab="bulgarian"><i class="fas fa-language language-icon"></i> Bulgarian</div>
+                <div class="tab" data-tab="hungarian"><i class="fas fa-language language-icon"></i> Hungarian</div>
+            </div>
+
+            <div class="tab-content active" id="english-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Purchase Information</div>
+                    <p>Purchase this product only from the official <span class="brand-highlight">TruOrigin</span> store
+                        to ensure authenticity and quality! Other stores cannot guarantee the product's authenticity and
+                        quality.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-fire"></i> How to Use the Candle</div>
+                    <ol class="instructions-list">
+                        <li><strong>Lighting the Candle:</strong> During initial use, allow the candle to burn
+                            continuously
+                            for 1-2 hours until the top wax layer fully melts into a "memory ring," preventing
+                            "tunneling"
+                            (wax residue on the container wall).</li>
+                        <li><strong>Daily Use:</strong> For daily use, limit burning to 2-4 hours. For extended burning,
+                            extinguish every 4 hours, trim the wick, and relight. Avoid drafts to ensure even burning.
+                        </li>
+                        <li><strong>Wick Maintenance:</strong> Regularly trim the wick to about 8mm (too long a wick may
+                            cause high flames and fast burning; too short may suffocate the flame). This reduces soot,
+                            extends burn time, and ensures more even and stable fragrance release.</li>
+                        <li><strong>Extinguishing:</strong> Do not blow out the flame! Airflow can carry incompletely
+                            burned
+                            wax particles, producing soot and compromising the fragrance. Use a wick dipper to submerge
+                            the
+                            wick in wax for quick extinguishing, or cover with the lid to suffocate the flame naturally.
+                        </li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Precautions</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Important Safety Information
+                        </div>
+                        <ol class="instructions-list">
+                            <li>After lighting, place the candle out of reach of children. Children under 6 years old
+                                must
+                                use it only under full adult supervision to prevent burns or accidental tipping.</li>
+                            <li>Store in a cool, dry place away from direct sunlight or high temperatures (to prevent
+                                wax
+                                deformation and fragrance loss). Tightly close the lid when not in use to reduce dust
+                                entry.
+                            </li>
+                            <li>Pregnant individuals, those with sensitive skin or fragrance allergies should consult a
+                                professional before use.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="romanian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Informații de cumpărare</div>
+                    <p>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                        autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si calitatea
+                        produsului.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-fire"></i> Cum s utilizati produsul</div>
+                    <ol class="instructions-list">
+                        <li><strong>Aprinderea luminosarii:</strong> La prima utilizare, lasa lumanarea sǎ arda continuu
+                            timp de 1-2 ore, panǎ cand strutul superior de cearǎ se topeste complet formand un "inel de
+                            memorie", evitand astfel fenomenul de "aderare" (cerǎ ramasa pe peretele borcanului).</li>
+                        <li><strong>Utilizare zilnica:</strong> Pentru arderea zilnica, se recomanda limitarea arderii
+                            la
+                            2-4 ore. Daca doresti ardere prelungita, stinge luminarea la fiecare 4 ore, taie fitilul si
+                            reaprinde-o. Tine lumanarea departe de currentii de aer pentru a evita arderea neuniforma.
+                        </li>
+                        <li><strong>Intretinerea fitilului:</strong> Taie periodic fitilul la aproximativ 8mm (un fitil
+                            prea
+                            lung poate genera flacarǎ mare si ardere rapida, iar unul prea scurt poate stinge
+                            lumanarea).
+                            Acest lucru reduce producerea de funingine, prelungeste durata arderii si elibereazǎ aroma
+                            mai
+                            uniform si stabil.</li>
+                        <li><strong>Stingerea lumanarii:</strong> Nu sufla in flacara! Curentul de aer poate transporta
+                            particule de cearǎ nearsa complet, producand funingine si alterand calitatea aromei.
+                            Recomandam
+                            utilizarea unui "stingator de fitil" pentru a scufunda fitilul in ceara sau acoperirea cu
+                            capacul pentru a stinge prin inabusirea oxigenului.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Precautii</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Informații importante de siguranță
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Dupa aprindere, asezati lumanarea intr-un loc inaccesibil copiilor. Copiii sub 6 ani
+                                trebuie
+                                sa o foloseasca doar sub supravegherea unui adult pentru a preveni arsurile si
+                                rasturnarea.
+                            </li>
+                            <li>Depozitati lumanarea intr-un loc racoros si uscat, ferit de soarele direct sau
+                                temperaturi
+                                inalte (pentru a evita deformarea si evaporarea parfumului). Inchideti capacul cand nu o
+                                folositi, pentru a reduce intrarea prafului.</li>
+                            <li>Femeile gravide, persoanele cu piele sensibila sau alergii la aroma trebuie sa consulte
+                                un
+                                specialist inainte de utilizare.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bulgarian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Информация за покупка</div>
+                    <p>Закунете този продукт само от официалния магазин на TruOrigin, за да гарантирате автентичност и
+                        качество! Други магазини не могат да гарантират автентичността и качеството на продукта.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-fire"></i> Как да използвате продукта</div>
+                    <ol class="instructions-list">
+                        <li><strong>Запалване на свещта:</strong> При първа употреба оставете свещта да гори
+                            непрекъснато за
+                            1-2 часа, докато горният восъчен слой се разтопи напълно, образувайки "мемориален пръстен",
+                            като
+                            по този начин се предотвратява явлението "тунелиране" (оставане на восък по стената на
+                            съда).
+                        </li>
+                        <li><strong>Ежедневна употреба:</strong> За ежедневна употреба се препоръчва ограничаване на
+                            горенето до 2-4 часа. За продължително горене изгасяйте свещта на всеки 4 часа, подрязвайте
+                            фитила и я запалвайте отново. Дръжте свещта далеч от въздушни потоци, за да избегнете
+                            неравномерно горене.</li>
+                        <li><strong>Поддръжка на фитила:</strong> Периодично подрязвайте фитила до около 8 mm (твърде
+                            дълъг
+                            фитил може да причини висок пламък и бързо изгаряне; твърде къс може да удуши пламъка). Това
+                            намалява образуването на сажди, удължава времето на горене и осигурява по-равномерно и
+                            стабилно
+                            отделяне на аромата.</li>
+                        <li><strong>Гасене на свещта:</strong> Не гаси с удар! Въздушният поток може да пренесе частици
+                            от
+                            непълно изгорял восък, произвеждайки сажди и компрометирайки аромата. Използвайте "гасител
+                            за
+                            фитил", за да потапите фитила във восък за бързо гасене, или покрийте с капака, за да
+                            задушите
+                            пламъка естествено.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Предпазни мерки</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Важна информация за безопасност
+                        </div>
+                        <ol class="instructions-list">
+                            <li>След запалване поставете свещта на недостъпно за деца място. Деца под 6 години трябва да
+                                я
+                                използват само под пълно възрастно наблюдение, за да се предотвратят изгаряния или
+                                случайно
+                                преобръщане.</li>
+                            <li>Съхранявайте в хладно, сухо място, далеч от пряка слънчева светлина или високи
+                                температури
+                                (за да предотвратите деформация на восъка и загуба на аромат). Заключвайте плътно
+                                капака,
+                                когато не използвате, за да намалите навлизането на прах.</li>
+                            <li>Бременни жени, хора с чувствителна кожа или алергии към аромати трябва да се консултират
+                                със
+                                специалист преди употреба.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="hungarian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Vásárlási információk</div>
+                    <p>Csak a TruOrigin hivatalos boltjabol vasarolija meg ezt a terméket, hogy biztositsa a
+                        hitelesseget
+                        es a minoséget! Mas boltok nem garantaljak a termék hitelesseget es minoségét.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-fire"></i> Hogyan hasznaljuk a termeket</div>
+                    <ol class="instructions-list">
+                        <li><strong>Gyertya gyujtasa:</strong> Elso hasznalatkor hagyd 1-2 oran at folyamatosan egni,
+                            hogy a
+                            felso viaszreteg teljesen elolvadjon egy "emlekgyurüvé", elkerülve a "peremre maradas"
+                            (edény
+                            falan maradt viasz) jelenséget.</li>
+                        <li><strong>Napi hasznalat:</strong> Napi hasznalatban egésidot max. 2-4 orára korlatozd.
+                            Hosszabb
+                            egéshez oltsd el a gyertyat 4 orankent, vagd short a kanocot, majd gyujtsd ujra. Keruld a
+                            huzatos helyeket az egyenletes eges erdekében.</li>
+                        <li><strong>Kanockarbantartas:</strong> A kanocot rendszeresen vagd le kb.8mm hosszura (a túl
+                            hosszú
+                            kanóc magas langot es gyors egest idéz elo, a tul rovid pedig elelothatja a gyertyat). Ez
+                            csokkenti a koromképzodest, meghosszabbitja az egésidot és egyenletesebb, stabiliabb
+                            illatelengedest biztosit.</li>
+                        <li><strong>Gyertya eloltasa:</strong> Ne fújd el a langot! A legaram magaval viszi a nem
+                            teljesen
+                            elegett viaszrészecskéket, koromképzodest okoz es tonkreteszi az illatot. Hasznalj
+                            kanócmeritot a gyors eloltáshoz, vagy hasznald a fedot az oxigén elzarasava torteno
+                            eloltashoz.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Ovintézkedések</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Fontos biztonsági információk
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Gyujtas utan a gyertyat gyermekek szamara elérhetetlen helyre tegye! 6 ev alatti
+                                gyermekek
+                                csak felnott feligyelete mellett hasznalhatjak, hogy elkerüljek az egesi séruleseket
+                                vagy a
+                                gyertya felborulasat.</li>
+                            <li>Tarolja huvos, száraz helyen, kerülje a kozvetlen napfenyt és magas homérsekletet (a
+                                viasz
+                                alakvaltozas a és az illat gyengulése miatt). Szorosan zárja le a fedot hasznalat utan a
+                                por
+                                bejutasanak csokkentésere.</li>
+                            <li>Varandosoknak, erzekeny borüeknek vagy illatallergiasoknak szakemberrel val
+                                konzultacionavasolt a hasznalat elott.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-star"></i> Product Features
+            </div>
+
+            <div class="product-features">
+                <div class="feature">
+                    <h3>Aromatherapy</h3>
+                    <p>Selected natural plant essential oils provide a relaxing and soothing fragrance experience</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Even Burning</h3>
+                    <p>Professionally designed wick ensures even burning of the candle, avoiding waste</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Eco-friendly Materials</h3>
+                    <p>Made with recyclable containers and natural soy wax</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Multilingual Support</h3>
+                    <p>Instructions available in English, Romanian, Bulgarian and Hungarian</p>
+                </div>
+            </div>
+
+            <div class="product-showcase">
+                <div class="product-demo">
+                    <div class="candle-illustration" style="width: 200px; height: 200px;">
+                        <div class="candle-container"
+                            style="background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);">
+                            <div class="candle-body"
+                                style="background: linear-gradient(to top, #ffcc80 0%, #ff9800 100%);">
+                                <div class="candle-wick"></div>
+                                <div class="candle-flame">
+                                    </极光加速器>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-caption">Scented Candle Example</div>
+                    </div>
+
+                    <div class="product-demo">
+                        <div class="candle-illustration" style="width: 200px; height: 200px;">
+                            <div class="candle-container"
+                                style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
+                                <div class="candle-body"
+                                    style="background: linear-gradient(to top, #a5d6a7 0%, #4caf50 100%);">
+                                    <div class="candle-wick"></div>
+                                    <div class="candle-flame"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="demo-caption">Eco-friendly Soy Wax Composition</div>
+                    </div>
+                </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | All rights reserved</p>
+            <p>Declaration issued in Germany on 2025-05-01 | Compliance Officer: Lucas</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,910 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bluetooth Phone Holder - Declaration of Conformity & User Manual</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2196f3;
+            --secondary: #4caf50;
+            --accent: #ff9800;
+            --light: #e3f2fd;
+            --dark: #0d47a1;
+            --success: #4caf50;
+            --warning: #ffc107;
+            --gray: #78909c;
+            --border-radius: 8px;
+            --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f5f5 0%, #e3f2fd 100%);
+            color: #0d47a1;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--dark) 0%, var(--primary) 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(236, 240, 241, 0.1);
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 10px 20px;
+            border-radius: 50px;
+            display: inline-block;
+            font-family: monospace;
+            letter-spacing: 1px;
+            margin-top: 15px;
+            font-size: 1.1rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+        }
+
+        .section-title::before {
+            content: "•";
+            margin-right: 12px;
+            color: var(--secondary);
+            font-size: 2rem;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+        }
+
+        .declaration-label {
+            font-weight: 600;
+            color: var(--dark);
+            margin-bottom: 8px;
+            font-size: 1.1rem;
+        }
+
+        .declaration-value {
+            padding: 15px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 25px;
+        }
+
+        .tab {
+            padding: 14px 24px;
+            cursor: pointer;
+            font-weight: 600;
+            color: #6c757d;
+            transition: all 0.3s;
+            position: relative;
+            background: #f1f8ff;
+        }
+
+        .tab:hover {
+            background-color: #e3f2fd;
+        }
+
+        .tab.active {
+            color: var(--primary);
+            background: #d1e7ff;
+        }
+
+        .tab.active::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background-color: var(--primary);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 20px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        .warning-box {
+            background-color: #fff8e1;
+            border-left: 4px solid var(--warning);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            margin-top: 25px;
+        }
+
+        .warning-title {
+            font-weight: 600;
+            color: #e65100;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-title::before {
+            content: "⚠️";
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+
+        .instructions-list {
+            padding-left: 25px;
+            margin: 20px 0;
+        }
+
+        .instructions-list li {
+            margin-bottom: 15px;
+            position: relative;
+            padding-left: 30px;
+        }
+
+        .instructions-list li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--success);
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 1px dashed var(--gray);
+        }
+
+        .language-section:last-child {
+            border-bottom: none;
+        }
+
+        .language-title {
+            color: var(--primary);
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 30px;
+            font-style: italic;
+        }
+
+        .signature div {
+            text-align: right;
+            padding-right: 20px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            font-size: 1.2rem;
+            margin-top: 10px;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 30px;
+            color: var(--gray);
+            font-size: 0.95rem;
+            background: var(--light);
+            border-radius: var(--border-radius);
+        }
+
+        .brand-highlight {
+            color: var(--accent);
+            font-weight: bold;
+        }
+
+        .compliance-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-size: 0.8rem;
+            color: var(--success);
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .compliance-badge::before {
+            content: "✓";
+            font-size: 1.2rem;
+        }
+
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .feature {
+            background: var(--light);
+            padding: 20px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            flex: 1;
+            min-width: 200px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
+        }
+
+        .feature:hover {
+            transform: scale(1.05);
+        }
+
+        .feature::before {
+            content: "★";
+            font-size: 2.5rem;
+            color: var(--secondary);
+            margin-bottom: 15px;
+            display: block;
+        }
+
+        .product-image {
+            max-width: 250px;
+            margin: 20px auto;
+            display: block;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+            }
+
+            .section {
+                padding: 20px;
+            }
+
+            .product-image {
+                max-width: 100%;
+            }
+        }
+
+        .product-showcase {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .product-demo {
+            flex: 1;
+            min-width: 250px;
+            text-align: center;
+        }
+
+        .demo-image {
+            max-width: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .demo-caption {
+            margin-top: 10px;
+            font-style: italic;
+            color: var(--dark);
+        }
+
+        .phone-holder-illustration {
+            width: 250px;
+            height: 250px;
+            margin: 20px auto;
+            position: relative;
+        }
+
+        .holder-container {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, #0d47a1 0%, #2196f3 100%);
+        }
+
+        .phone {
+            width: 100px;
+            height: 180px;
+            background: white;
+            border-radius: 12px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .phone-screen {
+            position: absolute;
+            top: 8px;
+            left: 8px;
+            right: 8px;
+            bottom: 8px;
+            background: #e0f7fa;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            color: #2196f3;
+        }
+
+        .holder-clamp {
+            width: 120px;
+            height: 15px;
+            background: #78909c;
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            top: -10px;
+        }
+
+        .holder-legs {
+            display: flex;
+            justify-content: space-around;
+            width: 100%;
+            margin-top: 15px;
+        }
+
+        .leg {
+            width: 10px;
+            height: 60px;
+            background: #ff9800;
+            border-radius: 5px;
+            position: relative;
+            animation: moveLeg 3s infinite;
+        }
+
+        .leg:nth-child(1) {
+            animation-delay: 0s;
+        }
+
+        .leg:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+
+        .leg:nth-child(3) {
+            animation-delay: 1s;
+        }
+
+        .leg:nth-child(4) {
+            animation-delay: 1.5s;
+        }
+
+        @keyframes moveLeg {
+
+            0%,
+            100% {
+                transform: rotate(0deg);
+            }
+
+            25% {
+                transform: rotate(-15deg);
+            }
+
+            50% {
+                transform: rotate(0deg);
+            }
+
+            75% {
+                transform: rotate(15deg);
+            }
+        }
+
+        .bluetooth-icon {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background: #2196f3;
+            border-radius: 50%;
+            bottom: 15px;
+            right: 30px;
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+        }
+
+        .language-icon {
+            margin-right: 10px;
+            font-size: 1.2rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="compliance-badge">
+                EU Conformity Certified
+            </div>
+            <h1>Bluetooth Phone Holder</h1>
+            <p class="subtitle">EU Declaration of Conformity & User Manual</p>
+            <div class="product-id">Product ID: 8901606911375</div>
+
+            <div class="phone-holder-illustration">
+                <div class="holder-container">
+                    <div class="holder-clamp"></div>
+                    <div class="phone">
+                        <div class="phone-screen">
+                            <i class="fas fa-mobile-alt"></i>
+                        </div>
+                    </div>
+                    <div class="holder-legs">
+                        <div class="leg"></div>
+                        <div class="leg"></div>
+                        <div class="leg"></div>
+                        <div class="leg"></div>
+                    </div>
+                    <div class="bluetooth-icon">
+                        <i class="fas fa-bluetooth"></i>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-file-contract"></i> EU Declaration of Conformity
+            </div>
+
+            <div class="declaration-grid">
+                <div class="declaration-item">
+                    <div class="declaration-label">Product Unique Identification</div>
+                    <div class="declaration-value">8901606911375</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">Manufacturer Name and Address</div>
+                    <div class="declaration-value">
+                        Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.<br>
+                        Room C130, Room 504, No.1 Longkou West Road,<br>
+                        Tianhe District, Guangzhou Guangzhou City,<br>
+                        Guangdongshen, 510635
+                    </div>
+                </div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Declaration Issued By</div>
+                <div class="declaration-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Product Name</div>
+                <div class="declaration-value">Bluetooth Phone Holder</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Compliant EU Legislation</div>
+                <div class="declaration-value">● Directive 2001/95/EC (General Product Safety Directive - GPSD)</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Harmonised Standards</div>
+                <div class="declaration-value">● ISO 9001:2015 (Quality Management System, optional for reference)</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Notified Body</div>
+                <div class="declaration-value">Not applicable</div>
+            </div>
+
+            <div class="declaration-item">
+                <div class="declaration-label">Place and Date of Issue</div>
+                <div class="declaration-value">Germany, 2025-05-01</div>
+            </div>
+
+            <div class="signature">
+                <div>
+                    <div>Signature:</div>
+                    <div class="signature-name">Lucas</div>
+                    <div>Position: Compliance Officer</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i> User Manual
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="english"><i class="fas fa-language language-icon"></i> English</div>
+                <div class="tab" data-tab="romanian"><i class="fas fa-language language-icon"></i> Romanian</div>
+                <div class="tab" data-tab="bulgarian"><i class="fas fa-language language-icon"></i> Bulgarian</div>
+                <div class="tab" data-tab="hungarian"><i class="fas fa-language language-icon"></i> Hungarian</div>
+            </div>
+
+            <div class="tab-content active" id="english-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Purchase Information</div>
+                    <p>Purchase this product only from the official <span class="brand-highlight">TruOrigin</span> store
+                        to ensure authenticity and quality! Other stores cannot guarantee the product's authenticity and
+                        quality.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> How to Use the Product</div>
+                    <ol class="instructions-list">
+                        <li>Secure the phone: Pull open the U-clamp, place the phone into the clamp opening, then
+                            release the clamp to lock it in place, ensuring the phone does not slip.</li>
+                        <li>Adjust the legs: Bend the flexible octopus legs according to the scenario and secure them to
+                            the desired surface.</li>
+                        <li>Set the shooting angle: The holder head rotates 360° - adjust it to the desired angle.</li>
+                        <li>Connect the Bluetooth controller: Turn on the phone's Bluetooth, search and pair with the
+                            holder's Bluetooth, then press the controller button to remotely take photos or record
+                            videos.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Precautions</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Important Safety Information
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Bend the stand legs gently - avoid excessive force to prevent cracking.</li>
+                            <li>Phone weight must not exceed the stand's load capacity (within 0.5 KG).</li>
+                            <li>Avoid direct heat and water exposure for the Bluetooth controller to extend its
+                                lifespan.</li>
+                            <li>When not in use, fold the legs gently and store in a dry place to prevent dust or
+                                moisture accumulation.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="romanian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Informații de cumpărare</div>
+                    <p>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                        autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si calitatea
+                        produsului.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Cum s utilizati produsul</div>
+                    <ol class="instructions-list">
+                        <li>Fixarea telefonului: Deschideti clema in forma de U, introduceti telefonul in descrizatura
+                            si eliberati clema pentru a-l fixa, asigurandu-va cǎ telefonul nu alunecă.</li>
+                        <li>Reglarea picioarelor supportului: indoiti picioarele flexibile de octopus in functie de
+                            scenariu si fixati-le unde este necesar.</li>
+                        <li>Reglarea unghiului de filmare: Capul supertului se poate roti 360°- ajustati-la unghiul
+                            dorit.</li>
+                        <li>Conectarea controlerului Bluetooth: Activati Bluetooth pe telefon, cautati si asociati
+                            dispositivul supportului, apoi apaati butonul de pe controler pentru a fotografia sau
+                            inregistra de la distanta.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Precautii</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Informații importante de siguranță
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Indoiti picioarele suportului usor - evitati forta excessiva pentru a preveni craparea.
+                            </li>
+                            <li>Greutatea telefonului nu trebuie sa depaseasca capacitatea supportului (maxim 0,5 kg).
+                            </li>
+                            <li>Evitati expunerea la caldura intensa si apa pentru controllerul Bluetooth pentru a
+                                prelungi durata de viata.</li>
+                            <li>La depositare, strangeti picioarele usor si pastrati intr-un loc uscat pentru a evita
+                                acumularea de praf sau umezealǎ.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bulgarian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Информация за покупка</div>
+                    <p>3akyneTe TO3N npoAyKT CaMO OT ONANHNA Mara3NH Ha TruOrigin, 3a Aa rapaHTNpaTe aBTeHTNHOCT n
+                        KayeCTBO! Apyrn MaraNn He MOraT Aa rapaHTNpaT aBTeHTNHOCTTa n KayeCTBOTO Ha npoAyKTa.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Kak Aa N3non3BaTe npoAyKTa</div>
+                    <ol class="instructions-list">
+                        <li>OTBopeTe U-o6pa3HaTa Knamna, nocTaBeTe TeneoHa B OTBOpa n OTnyCHeTe KnaMnaTa 3a oNKcnpaHe,
+                            KaTo ce yBepNTe,ue TeneOHbT He ce nAb3ra.</li>
+                        <li>PerynmpaHe Ha KpakaTa Ha cTonkaTa: OrbHeTe FbBKaBNTe OKTONOAHN Kpaka cnopeA cueHapNA n rn
+                            3akpeneTe KbM× neHaTa noBbpxHOCT.</li>
+                        <li>PerynmpaHe Ha brbna Ha CHMMaHe:「naBaTa Ha cTonkaTa ce BbpTN Ha 360°-.</li>
+                        <li>CBbpBaHe Ha Bluetooth KoHTponep: BknnoueTe Bluetooth Ha TeneoHa, noTbpceTe n CBbpKeTe
+                            Bluetooth Ha cTonkaTa, cneA KoeTo HaTncHeTe 6yToHa Ha A.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Предпазни мерки</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Важна информация за безопасност
+                        </div>
+                        <ol class="instructions-list">
+                            <li>OrbBaTe KpaKaTa Ha cToKaTa BHNMaTenHO-N36ArBaTe npeKaneHa cuna,3a Aa He ce HanyKaT.</li>
+                            <li>TernoTo Ha TeneoHa He Tpa6Ba Aa HaAbnwaBa ToBaponOAeMHOCTTa Ha cToKaTa(MaKcnMyM 0,5 kg).
+                            </li>
+                            <li>M36arBaTe AnpekTHa TONNHa n BOAa 3a Bluetooth KoHTponepa, 3a Aa yAbnKnTe ekcnnoaTanOHHNa
+                                My XNBOT.</li>
+                            <li>npn cbxpaHeHNe cb6epeTe kpakata BHNMaTenHO n rN cbxpaHaBaTe Ha cyxo MACTO,3a Aa
+                                N36erBaTe npax n Bnara.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="hungarian-content">
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-shopping-cart"></i> Vásárlási információk</div>
+                    <p>Csak a TruOrigin hivatalos boltjabol vasarolja meg ezt a terméket, hogy biztositsa a hitelesseget
+                        es a minoséget! Mas boltok nem garantaljak a termék hitelesseget es minoségét.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-edit"></i> Hogyan hasznaljuk a terméket</div>
+                    <ol class="instructions-list">
+                        <li>Telefon rogzitése: Nyissa ki az U-kapcsot,helyezze be a telefont a nyilasba,majd engedje el
+                            a kapcsot a rogzitéshez-gyózodjon meg,hogy a telefon nem csuszik.</li>
+                        <li>Allvany labainak beallitasa: Hajlitasa a polip labakat a helyzetnek megfeleloen,es rogzitse
+                            a kivant helyen.</li>
+                        <li>Felveteli szog beallitasa: Az allványfej 360°-ban forgatható- allitsa a kivant szogbe.</li>
+                        <li>Bluetooth vezérlo csatlakoztatasa: Kapcsolja be a telefon Bluetooth-jat, keresse megés
+                            parositas az allvány Bluetooth-jat, majd nyomja meg a vezérlo gombjat a tavoli
+                            fényképezéshez vagy videofelvételhez.</li>
+                    </ol>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title"><i class="fas fa-exclamation-triangle"></i> Ovintézkedések</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            Fontos biztonsági információk
+                        </div>
+                        <ol class="instructions-list">
+                            <li>Hajiltsa az allvány labait ovatosan- kerülje a tulzott erot, hogy elkerülje a repedest.
+                            </li>
+                            <li>A telefon súlya nem haladhatja meg az allvány teherbirasat(maximum 0,5 kg).</li>
+                            <li>Kerülje a Bluetooth vezérlo kozvetlen honekés viznek való kitételét azélettartam
+                                novelese erdekében.</li>
+                            <li>Hasznalat után tekerje ossze az allvány labait ovatosan,és száraz helyen tárolja a por
+                                es nedvesseg elkerülése erdekében.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-star"></i> Product Features
+            </div>
+
+            <div class="product-features">
+                <div class="feature">
+                    <h3>Flexible Legs</h3>
+                    <p>Octopus-style flexible legs for secure attachment to various surfaces</p>
+                </div>
+
+                <div class="feature">
+                    <h3>360° Rotation</h3>
+                    <p>Adjustable head for perfect viewing angle in any situation</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Bluetooth Remote</h3>
+                    <p>Wireless remote control for photo and video capture</p>
+                </div>
+
+                <div class="feature">
+                    <h3>Universal Compatibility</h3>
+                    <p>Fits most smartphones with sizes up to 6.5 inches</p>
+                </div>
+            </div>
+
+            <div class="product-showcase">
+                <div class="product-demo">
+                    <div class="phone-holder-illustration" style="width: 200px; height: 200px;">
+                        <div class="holder-container"
+                            style="background: linear-gradient(135deg, #ff9800 0%, #ff5722 100%);">
+                            <div class="holder-clamp"></div>
+                            <div class="phone">
+                                <div class="phone-screen">
+                                    <i class="fas fa-camera"></i>
+                                </div>
+                            </div>
+                            <div class="holder-legs">
+                                <div class="leg"></div>
+                                <div class="leg"></div>
+                                <div class="leg"></div>
+                                <div class="leg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-caption">Flexible Mounting</div>
+                </div>
+
+                <div class="product-demo">
+                    <div class="phone-holder-illustration" style="width: 200px; height: 200px;">
+                        <div class="holder-container"
+                            style="background: linear-gradient(135deg, #4caf50 0%, #2e7d32 100%);">
+                            <div class="holder-clamp"></div>
+                            <div class="phone">
+                                <div class="phone-screen">
+                                    <i class="fas fa-bluetooth"></i>
+                                </div>
+                            </div>
+                            <div class="holder-legs">
+                                <div class="leg"></div>
+                                <div class="leg"></div>
+                                <div class="leg"></div>
+                                <div class="leg"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="demo-caption">Bluetooth Remote Control</div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | All rights reserved</p>
+            <p>Declaration issued in Germany on 2025-05-01 | Compliance Officer: Lucas</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
