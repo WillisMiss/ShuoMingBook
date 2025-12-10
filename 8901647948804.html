@@ -1,0 +1,732 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Socks(Dark brown) - Product Documentation</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary: #2c3e50;
+            --secondary: #8a6d3b;
+            --accent: #d4af37;
+            --light: #f9f5e7;
+            --dark: #2c3e50;
+            --success: #2ecc71;
+            --warning: #f39c12;
+            --gray: #95a5a6;
+            --border-radius: 10px;
+            --box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+            color: #343a40;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, #1a2530 100%);
+            color: white;
+            padding: 40px 30px;
+            border-radius: var(--border-radius);
+            text-align: center;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: -50px;
+            right: -50px;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            background: rgba(138, 109, 59, 0.1);
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: -30px;
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: rgba(212, 175, 55, 0.1);
+        }
+
+        .header-content {
+            position: relative;
+            z-index: 2;
+        }
+
+        h1 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            opacity: 0.9;
+            margin-bottom: 20px;
+        }
+
+        .product-id {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 12px 25px;
+            border-radius: 50px;
+            display: inline-block;
+            font-family: monospace;
+            letter-spacing: 1px;
+            margin-top: 20px;
+            backdrop-filter: blur(5px);
+            font-size: 1.2rem;
+        }
+
+        .section {
+            background: white;
+            border-radius: var(--border-radius);
+            padding: 30px;
+            margin-bottom: 30px;
+            box-shadow: var(--box-shadow);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .section:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-title {
+            color: var(--primary);
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--secondary);
+            display: flex;
+            align-items: center;
+            position: relative;
+        }
+
+        .section-title i {
+            margin-right: 15px;
+            color: var(--secondary);
+            font-size: 1.6rem;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .declaration-item {
+            margin-bottom: 25px;
+        }
+
+        .declaration-label {
+            font-weight: 700;
+            color: var(--dark);
+            margin-bottom: 12px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .declaration-label i {
+            margin-right: 12px;
+            color: var(--secondary);
+            width: 24px;
+            text-align: center;
+        }
+
+        .declaration-value {
+            padding: 18px;
+            background-color: var(--light);
+            border-radius: var(--border-radius);
+            border-left: 4px solid var(--secondary);
+            box-shadow: 0 3px 8px rgba(0, 0, 0, 0.05);
+            font-size: 1.05rem;
+            line-height: 1.7;
+        }
+
+        .tabs {
+            display: flex;
+            flex-wrap: wrap;
+            border-bottom: 2px solid var(--light);
+            margin-bottom: 25px;
+            background: white;
+            border-radius: 50px;
+            padding: 5px;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        }
+
+        .tab {
+            flex: 1;
+            padding: 16px 10px;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--gray);
+            transition: var(--transition);
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50px;
+            text-align: center;
+        }
+
+        .tab i {
+            margin-right: 10px;
+            font-size: 1.1rem;
+        }
+
+        .tab:hover {
+            background: rgba(138, 109, 59, 0.1);
+        }
+
+        .tab.active {
+            color: white;
+            background: var(--secondary);
+            box-shadow: 0 4px 12px rgba(138, 109, 59, 0.3);
+        }
+
+        .tab-content {
+            display: none;
+            padding: 25px;
+            background: var(--light);
+            border-radius: var(--border-radius);
+            animation: fadeIn 0.5s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(15px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .tab-content.active {
+            display: block;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fef9e7 0%, #fcf3cf 100%);
+            border-left: 4px solid var(--warning);
+            padding: 25px;
+            border-radius: var(--border-radius);
+            margin-top: 30px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        }
+
+        .warning-title {
+            font-weight: 700;
+            color: var(--warning);
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            font-size: 1.3rem;
+        }
+
+        .warning-title i {
+            margin-right: 15px;
+            font-size: 1.5rem;
+        }
+
+        .instructions-list {
+            padding-left: 30px;
+            margin: 25px 0;
+        }
+
+        .instructions-list li {
+            margin-bottom: 18px;
+            position: relative;
+            padding-left: 35px;
+            font-size: 1.1rem;
+            line-height: 1.7;
+        }
+
+        .instructions-list li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            width: 24px;
+            height: 24px;
+            background-color: var(--success);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-family: 'Font Awesome 6 Free';
+            content: '\f00c';
+            font-size: 12px;
+        }
+
+        .language-section {
+            margin-bottom: 35px;
+            padding-bottom: 30px;
+            border-bottom: 1px dashed var(--gray);
+        }
+
+        .language-section:last-child {
+            border-bottom: none;
+        }
+
+        .language-title {
+            display: flex;
+            align-items: center;
+            color: var(--primary);
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .language-title::before {
+            content: '';
+            display: inline-block;
+            width: 32px;
+            height: 32px;
+            margin-right: 15px;
+            background-color: var(--secondary);
+            mask: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12.87 15.07l-2.54-2.51.03-.03A17.52 17.52 0 0014.07 6H17V4h-7V2H8v2H1v1.99h11.17C11.5 7.92 10.44 9.75 10 12H3v2h8v5H5v2h14v-2h-6v-5h1.56c.15-.64.32-1.28.56-1.88l-.05.05 2.47 2.45 1.42-1.41L19 13l.01.01 1.42-1.41-3.82-3.8 1.42-1.41 4.78 4.76-1.42 1.41-1.75-1.73-1.46 1.44zM18.5 9c-.83 0-1.5-.67-1.5-1.5S17.67 6 18.5 6s1.5.67 1.5 1.5S19.33 9 18.5 9z"/></svg>');
+            mask-size: contain;
+            mask-repeat: no-repeat;
+            mask-position: center;
+        }
+
+        .signature {
+            display: flex;
+            justify-content: flex-end;
+            margin-top: 40px;
+            font-style: italic;
+            border-top: 2px dashed var(--gray);
+            padding-top: 25px;
+        }
+
+        .signature div {
+            text-align: right;
+            padding-right: 25px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            font-size: 1.4rem;
+            margin-top: 12px;
+            color: var(--primary);
+        }
+
+        .footer {
+            text-align: center;
+            padding: 35px;
+            color: var(--gray);
+            font-size: 1rem;
+            background: white;
+            border-radius: var(--border-radius);
+            box-shadow: var(--box-shadow);
+            margin-top: 20px;
+        }
+
+        .brand-highlight {
+            color: var(--accent);
+            font-weight: bold;
+            position: relative;
+        }
+
+        .brand-highlight::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background: var(--accent);
+        }
+
+        .logo {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-circle {
+            width: 120px;
+            height: 120px;
+            background: linear-gradient(135deg, var(--secondary) 0%, #5d4037 100%);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 2.5rem;
+            font-weight: bold;
+            box-shadow: 0 8px 20px rgba(138, 109, 59, 0.4);
+            border: 3px solid white;
+        }
+
+        .eraser-image {
+            width: 200px;
+            height: 200px;
+            background: linear-gradient(45deg, #8a6d3b, #a0522d, #cd853f);
+            border-radius: 50%;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 3rem;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            header {
+                padding: 30px 20px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tabs {
+                overflow-x: auto;
+                flex-wrap: nowrap;
+                border-radius: 30px;
+            }
+
+            .tab {
+                min-width: 140px;
+                font-size: 0.9rem;
+                padding: 12px 8px;
+            }
+
+            .section {
+                padding: 25px;
+            }
+
+            .logo-circle {
+                width: 90px;
+                height: 90px;
+                font-size: 1.8rem;
+            }
+
+            .eraser-image {
+                width: 150px;
+                height: 150px;
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .declaration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tab i {
+                display: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <div class="logo-circle">Socks</div>
+            </div>
+            <div class="header-content">
+                <h1>Wool blend over-the-knee socks (Dark brown)</h1>
+                <p class="subtitle">EU Declaration of Conformity & User Instructions</p>
+                <div class="product-id">Product ID: 8901647948804</div>
+            </div>
+        </header>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-file-contract"></i> EU Declaration of Conformity
+            </div>
+
+            <div class="declaration-grid">
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-barcode"></i> Product Unique Identification
+                    </div>
+                    <div class="declaration-value">8901647948804</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-industry"></i> Manufacturer Name and Address
+                    </div>
+                    <div class="declaration-value">
+                        Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.<br>
+                        Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou Guangzhou City
+                        Guangdongshen,510635
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-file-signature"></i> Declaration Issued By
+                    </div>
+                    <div class="declaration-value">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-eraser"></i> Product Name
+                    </div>
+                    <div class="declaration-value">Cartoon Eraser</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-check-circle"></i> Compliant EU Legislation
+                    </div>
+                    <div class="declaration-value">● Directive 2001/95/EC (General Product Safety Directive - GPSD)
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-book"></i> Harmonised Standards
+                    </div>
+                    <div class="declaration-value">● ISO 9001:2015 (Quality Management System, optional for reference)
+                    </div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-building"></i> Notified Body
+                    </div>
+                    <div class="declaration-value">Not applicable</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">
+                        <i class="fas fa-calendar-alt"></i> Place and Date of Issue
+                    </div>
+                    <div class="declaration-value">Germany, 2025-05-01</div>
+                </div>
+            </div>
+
+            <div class="signature">
+                <div>
+                    <div>Signature:</div>
+                    <div class="signature-name">Lucas</div>
+                    <div>Function: Compliance Officer</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </div>
+        </section>
+
+        <section class="section">
+            <div class="section-title">
+                <i class="fas fa-book-open"></i> User Instruction Manual
+            </div>
+
+            <div class="tabs">
+                <div class="tab active" data-tab="english">
+                    <i class="fas fa-language"></i> English
+                </div>
+                <div class="tab" data-tab="romanian">
+                    <i class="fas fa-language"></i> Romanian
+                </div>
+                <div class="tab" data-tab="bulgarian">
+                    <i class="fas fa-language"></i> Bulgarian
+                </div>
+                <div class="tab" data-tab="hungarian">
+                    <i class="fas fa-language"></i> Hungarian
+                </div>
+            </div>
+
+            <div class="tab-content active" id="english-content">
+                <div class="language-section">
+                    <div class="language-title">Purchase Information</div>
+                    <p>Purchase this product only from the official <span class="brand-highlight">TruOrigin</span> store
+                        to ensure authenticity and quality! Other stores cannot guarantee the product's authenticity and
+                        quality.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">How to Use the Product</div>
+                    <div class="instructions-list">
+                        <li>Erasing function: Hold the panda eraser's body and gently erase pencil marks.</li>
+                        <li>Display: Decorate desks, shelves, workstations, etc.</li>
+                    </div>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Precautions</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Important Safety Information
+                        </div>
+                        <p>1. Contains small parts. Do not ingest.</p>
+                        <p>2. Not suitable for children under 3 years old. Children under 6 years old should use the
+                            product under adult supervision.</p>
+                        <p>3. Store in a cool, dry place away from direct sunlight and high temperatures.</p>
+                        <p>4. Avoid excessive stretching and dropping from heights.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="romanian-content">
+                <div class="language-section">
+                    <div class="language-title">Informații de cumpărare</div>
+                    <p>Achizitionati acest produs numai din magazineul oficial <span
+                            class="brand-highlight">TruOrigin</span> pentru a vǎ asigura autenticitatea si calitatea!
+                        Alte magazine nu pot garanta autenticitatea si calitatea produsului.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Cum s utilizati produsul</div>
+                    <div class="instructions-list">
+                        <li>Functie de sters: Tineti corpul panda din radiera si stergeti usor urmele de creion.</li>
+                        <li>Afiare: Decorati birouri, rafturi, spatii de lucru etc.</li>
+                    </div>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Precautii</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Informații importante de siguranță
+                        </div>
+                        <p>1. Contine piece mici. Nu ingerati.</p>
+                        <p>2. Nu este potrivit pentru copiii sub 3 ani. Copiii sub 6 ani trebuie sa utilizeze produsul
+                            sub supravegherea unui adult.</p>
+                        <p>3. Pastrati la loc uscat si racoros, ferit de lumina directa a soarelui si de temperatur
+                            ridicate.</p>
+                        <p>4. Evitati intinderea excessiva si caderea de la inaltime.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="bulgarian-content">
+                <div class="language-section">
+                    <div class="language-title">Информация за покупка</div>
+                    <p>3akyneTe TO3N npoAyKT CaMO OT ONNANHA Mara3NH Ha <span class="brand-highlight">TruOrigin</span>,
+                        3a Aa rapaHTNpaTe aBTeHTNHHOCT n KayeCTBO! Apyrn Mara3nHN He MOraT Aa rapaHTNpaT aBTeHTNHOCTTa n
+                        KayeCTBOTO Ha npoAyKTa.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Kak Aa N3non3BaTe npoAyKTa</div>
+                    <div class="instructions-list">
+                        <li>1. CneANTE OT MONNB.</li>
+                        <li>2. YkpaceTe 6opa,paToBe,pa6oTHn mecTa nAp.</li>
+                    </div>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">npeAna3HN mepKN</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Важна информация за безопасност
+                        </div>
+                        <p>1. CbAbpa Mankn yacTN. He npneMaTe BHyTpbWHO.</p>
+                        <p>2. He e Ae A A A 3 Ae A A A. Ae A A A 6 A n3non3BaT npoAykTa noA HaA30p Ha Bb3pacTeH.</p>
+                        <p>3. CbxpaHaaTe Ha xnaAHO N CyXO MACTO, 3aTeHO OT npaKa cJbHeBa CBeTnHa N BNCOKN TeMnepaTypN.
+                        </p>
+                        <p>4. ...</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab-content" id="hungarian-content">
+                <div class="language-section">
+                    <div class="language-title">Vásárlási információk</div>
+                    <p>Csak a <span class="brand-highlight">TruOrigin</span> hivatalos boltjabol vasarolja meg ezt a
+                        terméket, hogy biztositsa a hitelesseget es a minoséget! Mas boltok nem garantaljak a termék
+                        hitelessegetés minoségét.</p>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Hogyan hasznaljuk a terméket</div>
+                    <div class="instructions-list">
+                        <li>Torlo funkcio: Fogia meg a radir panda testet,és ovatosan torolje le a ceruza nyomait.</li>
+                        <li>Kiallitas: Diszitsen iroasztalokat, polcokat, munkahelyeket stb.</li>
+                    </div>
+                </div>
+
+                <div class="language-section">
+                    <div class="language-title">Ovintézkedések</div>
+                    <div class="warning-box">
+                        <div class="warning-title">
+                            <i class="fas fa-exclamation-triangle"></i> Fontos biztonsági információk
+                        </div>
+                        <p>1. Apro alkatrészeket tartalmaz. Ne fogyassza.</p>
+                        <p>2. Nem ajanlott 3 ev alatti gyermekek számara. 6 ev alatti gyermekek csak felnott felügyelete
+                            mellett hasznaljak.</p>
+                        <p>3. Húvos, száraz helyen tarolando, kozvetlen napfénytolés magas hómérséklettol tavol
+                            tartando.</p>
+                        <p>4. Kerülje a tulzo nyujtastés magasbol való ejtést.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="footer">
+            <p>© 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | All rights reserved</p>
+            <p>This documentation is provided for informational purposes only.</p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs
+                    tabs.forEach(t => t.classList.remove('active'));
+
+                    // Add active class to clicked tab
+                    this.classList.add('active');
+
+                    // Hide all tab contents
+                    document.querySelectorAll('.tab-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Show the corresponding tab content
+                    const tabId = this.getAttribute('data-tab');
+                    document.getElementById(`${tabId}-content`).classList.add('active');
+                });
+            });
+        });
+    </script>

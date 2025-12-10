@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Declaration of Conformity and Product Instructions</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Arial, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: #2c3e50;
+            color: white;
+            padding: 30px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 2.2rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0;
+        }
+
+        .declaration-section,
+        .instructions-section {
+            padding: 30px;
+        }
+
+        .declaration-section {
+            flex: 1;
+            min-width: 300px;
+            background: #f8f9fa;
+            border-right: 1px solid #eaeaea;
+        }
+
+        .instructions-section {
+            flex: 2;
+            min-width: 600px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+        }
+
+        .declaration-item strong {
+            display: block;
+            margin-bottom: 5px;
+            color: #2c3e50;
+        }
+
+        .language-tabs {
+            display: flex;
+            border-bottom: 1px solid #ddd;
+            margin-bottom: 20px;
+        }
+
+        .language-tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #f1f1f1;
+            border: none;
+            border-right: 1px solid #ddd;
+            transition: all 0.3s;
+        }
+
+        .language-tab.active {
+            background: #3498db;
+            color: white;
+        }
+
+        .language-content {
+            display: none;
+        }
+
+        .language-content.active {
+            display: block;
+        }
+
+        .instruction-step {
+            margin-bottom: 15px;
+            padding-left: 20px;
+            position: relative;
+        }
+
+        .instruction-step:before {
+            content: counter(step);
+            counter-increment: step;
+            position: absolute;
+            left: 0;
+            top: 0;
+            background: #3498db;
+            color: white;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 24px;
+            font-size: 0.9rem;
+        }
+
+        .precautions {
+            background: #fff9e6;
+            border-left: 4px solid #f39c12;
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .precautions h3 {
+            color: #e67e22;
+            margin-bottom: 10px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #2c3e50;
+            color: white;
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 900px) {
+            .content {
+                flex-direction: column;
+            }
+
+            .declaration-section,
+            .instructions-section {
+                min-width: 100%;
+                border-right: none;
+                border-bottom: 1px solid #eaeaea;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>EU Declaration of Conformity and Product Instructions</h1>
+            <p class="subtitle">Product: Black Socks | Manufacturer: Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.
+            </p>
+        </header>
+
+        <div class="content">
+            <section class="declaration-section">
+                <h2>EU Declaration of Conformity</h2>
+
+                <div class="declaration-item">
+                    <strong>1. Unique Product Identification</strong>
+                    <p>8901647948811</p>
+                </div>
+
+                <div class="declaration-item">
+                    <strong>2. Manufacturer Name and Address</strong>
+                    <p>Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou Guangzhou City
+                        Guangdongshen,510635</p>
+                </div>
+
+                <div class="declaration-item">
+                    <strong>3. Declaration Issued By</strong>
+                    <p>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</p>
+                </div>
+
+                <div class="declaration-item">
+                    <strong>4. Object of the Declaration</strong>
+                    <p>Product Name: Black Socks</p>
+                </div>
+
+                <div class="declaration-item">
+                    <strong>5. Relevant Union Harmonisation Legislation</strong>
+                    <p>● Directive 2001/95/EC (General Product Safety Directive - GPSD)</p>
+                </div>
+
+                <div class="declaration-item">
+                    <strong>6. References to Harmonised Standards</strong>
+                    <p>● ISO 9001:2015 (Quality Management System, optional for reference)</p>
+                </div>
+
+                <div class="declaration-item">
+                    <strong>7. Notified Body</strong>
+                    <p>Not applicable</p>
+                </div>
+
+                <div class="declaration-item">
+                    <strong>8. Additional Information</strong>
+                    <p>Place and Date of Issue: Germany, 2025-05-01</p>
+                    <p>Name: Lucas</p>
+                    <p>Function: Compliance Officer</p>
+                    <p>Signature: Lucas</p>
+                    <p>Signed for and on behalf of: Lucas</p>
+                </div>
+            </section>
+
+            <section class="instructions-section">
+                <h2>Product Instructions</h2>
+
+                <div class="language-tabs">
+                    <button class="language-tab active" data-lang="ro">Romanian</button>
+                    <button class="language-tab" data-lang="bg">Bulgarian</button>
+                    <button class="language-tab" data-lang="hu">Hungarian</button>
+                    <button class="language-tab" data-lang="en">English</button>
+                </div>
+
+                <div class="language-content active" id="ro-content">
+                    <h3>Instructiuni de utilizare</h3>
+                    <p>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                        autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si calitatea
+                        produsului.</p>
+
+                    <h4>Cum s utilizati produsul</h4>
+                    <ol style="counter-reset: step;">
+                        <li class="instruction-step">Pentru prima utilizare, se recomanda spalarea usoara cu apa curata
+                            pentru a indeparta praful rezidual din procesul de productie si pentru a inmuia materialul.
+                        </li>
+                        <li class="instruction-step">Produsul este conceptu pentru purchasea zilnica si este potrivit
+                            pentru activitati generale precum mersul pe jos sau munca de birou.</li>
+                        <li class="instruction-step">Pentru confort si durabilitate maxima,alegeti marimea
+                            corespunzatoare in functie de numarul pantofilor dvs.obisnuit.Se recomanda spalarea la
+                            masina sau manuala la temperaturi sub 40° C,intoarceti-le pe dos si spalati-le separat de
+                            hainele inchise la culoare.Nu folositi inalbitor.Evitati inmuierea prelungita.Uscati-le la
+                            umbra,intr-un loc bine ventilat, feriti de soarele direct si de caldura puternica a
+                            uscatorului, pentru a preveni microrarea, interirea sau pierderea elasticitatii
+                            materialului.</li>
+                    </ol>
+
+                    <div class="precautions">
+                        <h3>Precautii</h3>
+                        <p><strong>1. Pastrati departe de copii:</strong> Contine parti mici(de ex., etichete). Pericol
+                            de inghitire si sufocare.Tineti departe de copiii mici.</p>
+                        <p><strong>2. Siguranta la foc:</strong> Toate textilele sunt inflamabile. Nu purtati in
+                            apropierea flarilor deschise,a surselor de caldura ridicata(de ex.,calorifere,sobe) sau in
+                            timp ce fumati.</p>
+                        <p><strong>3. Atentie la utilizare:</strong> Asigurati-va ca picioarele si unghiile sunt netede
+                            pentru a evita deteriorarea tesaturii. incetati utilizarea imediat daca cusaturile sau
+                            firele libere cauzeazǎ disconfort. Tivul nu are tratament antiderapant. Fiti precaut atunci
+                            cand mergeti pe suprafete netede. Daca apar irritatii cutanate, incetati utilizarea si
+                            consultati un medic.</p>
+                    </div>
+                </div>
+
+                <div class="language-content" id="bg-content">
+                    <h3>MHcTpyKuNN 3a ynoTpe6a</h3>
+                    <p>3akyneTe TO3N npoAyKT CaMO OT ONNANHA Mara3NH Ha TruOrigin, 3a Aa rapaHTNpaTe aBTeHTNHOCT N
+                        KayeCTBO! Apyrn Mara3NHN He MOraT Aa rapaHTNpaT aBTeHTNHOCTTa n KayeCTBOTO Ha npoAyKTa.</p>
+
+                    <h4>Kak Aa N3non3BaTe npoAyKTa</h4>
+                    <ol style="counter-reset: step;">
+                        <li class="instruction-step">NpeAN nbpBa ynOTpe6a ce npenop4Ba neko N3nnaKBaHe C 4NCTa BOAa, 3a
+                            Aa ce npeMaxHe ocTaTbeH npax oT npoN3BOACTBeHNA npouec n Aa ce omekHe Matepnata.</li>
+                        <li class="instruction-step">npoAyKTbT e npeAHa3a eAHeBHa ynOTpe6a n e noAxoAa, 3a o6wn AenHOcTN
+                            KaTO XOAeHe NNN pa6oTa B oonc.</li>
+                        <li class="instruction-step">3a MakcnManeH KOMOOPT N N3APbKNNBOCT N36epeTe noAxoAaAwN pa3Mep
+                            cnopea o6uaHna cn pa3mep Ha o6yBkn. npenopuba ce nepeHe B nepanHa nJn Ha pbka npn
+                            TeMnepaTypn noA 40°C, Ha 06paT n OTAnHO OT TbMHN APeXN. He n3non3BaTe 6ennHa. M36arBaTe
+                            npoAbnntenHO KnBaHe. CyweTe Ha CAHKa, Ha Ao6pe npoBeTpNBO MACTO, Aaneye OT npaka CnbHueBa
+                            CBeTnHa N BNCOKN TeMnepaTypN B CyWNHATa,3a Aa npeAOTBpaTNTe CBNBaHe,BTBbPAABaHe NNN 3ary6a
+                            Ha enacTN4HOCT Ha MaTepnana.</li>
+                    </ol>
+
+                    <div class="precautions">
+                        <h3>npeAna3HN MepKN</h3>
+                        <p><strong>1. AbpkeTe Aaney OT Aea:</strong> CbAbp Ka Mankn 4acTN(Hanp. eTnkeTN). OnacHOCT OT
+                            normwaHe n 3aAywaBaHe. Abpaete Aane4 oT Mankn Aeua.</p>
+                        <p><strong>2. OaPHa 6e3onaCHOCT:</strong> BCMKH TEKCTHNH N3AenNA ca 3ananNMn. He HOCETe B 6n30CT
+                            AO OTKpNT OrbH, BNCOKOTeMnepaTypHN N3TO4HNN(Hanp. HarpeBaTeNN,neukn) nnn AokaTo nywnTe.</p>
+                        <p><strong>3. BHNMaHNe npn ynOTpe6a:</strong> yBepeTe ce,ye cTbnanaTa n HOKTNTe ca rnaAKN, 3a Aa
+                            n36erHeTe yBpeXAaHe Ha TbKaNTa. He3a6aBHO cnpeTe ynoTpe6aTa, aKo WeBOBeTe N3nbKHAN HNWKH
+                            npNHABaT ANCKOMOPT. NOAMeTkaTa HAMa aHTmnpnnmb3awa o6pa6oTka. 5bAeTe npeAnna3nnBn npn
+                            ABnkeHNe Bbpxy rnaAKN noBbpxHOcTN.Npn noaBa Ha KOXHN 06pNBN cnpeTe ynoTpe6aTa n ce
+                            KoHcyNTNpaTe c nekap.</p>
+                    </div>
+                </div>
+
+                <div class="language-content" id="hu-content">
+                    <h3>Használati utasítások</h3>
+                    <p>Csak a TruOrigin hivatalos boltjabol vasarolja meg ezt a terméket, hogy biztosista a hitelességet
+                        es a minoséget! Mas boltok nem garantaljak a termék hitelességétés minoségét.</p>
+
+                    <h4>Hogyan hasznaljuk a terméket</h4>
+                    <ol style="counter-reset: step;">
+                        <li class="instruction-step">Elso hasznalat elott ajanlott tisztan vizzel való ovatos mosas a
+                            gyartasi folyamat maradvanyporanak eltavolitasara es az anyag megpuhitasara.</li>
+                        <li class="instruction-step">A termék mindennapi viselesre tervezett,és alkalmas altalanos
+                            tevekenységekre,mint séta vagy irodai munka.</li>
+                        <li class="instruction-step">A maximalis kényelem es tartossag erdekében válassza a megfelelo
+                            meretet a szokasos cipomerete alapjan. Gépi vagy kézi mosas ajanlott 40°C alatti
+                            homersékleten, fordistas ki des mosja kulon sotet szinú ruhaktol. Ne hasznaljon feheritot.
+                            Kerülje a hosszú aztatast. Szaritsa arnyékos, jol szellozo helyen, kerülje a direkt napfenyt
+                            es a szaritogép magas homérsekletet, hogy megelozze az anyag zsugorodasat,megkeményedését
+                            vagy rugalmassagvesztését.</li>
+                    </ol>
+
+                    <div class="precautions">
+                        <h3>Ovintézkedések</h3>
+                        <p><strong>1. Tavol tartando gyermekektol:</strong> Kis alkatresceket(pl. címkék) tartalmaz.
+                            Veszélyes lenyelés vagy fulladas esetén.Távol tartando kisgyermekektol.</p>
+                        <p><strong>2. Tuzbiztonsag:</strong> Minden textilanyag gyulékony. Ne viseljen nyilt lang, magas
+                            hómérsekletú hoforras(pl.fútotestek, kályha) kozelében vagy dohanyzás kozben.</p>
+                        <p><strong>3. Hasznalati figyelmeztetés:</strong> Gyozodjon meg arrol,hogy a labfej es a korom
+                            sima,hogy elkerülje a szovet karosodasat. Azonnal szuntesse meg a hasznalatot, ha a varrasok
+                            vagy kiallo szalak kellemetlenséget okoznak. A talp nem rendelkezik csuszasgatlo kezelessel.
+                            Legyen ovatos sima felületeken való mozgás kozben. Ha borirritacionép fel, szüntesse meg a
+                            hasznalatot es orvost konzultaljon.</p>
+                    </div>
+                </div>
+
+                <div class="language-content" id="en-content">
+                    <h3>Instructions for Use</h3>
+                    <p>Purchase this product only from the official TruOrigin store to ensure authenticity and quality!
+                        Other stores cannot guarantee the product's authenticity and quality.</p>
+
+                    <h4>How to Use the Product</h4>
+                    <ol style="counter-reset: step;">
+                        <li class="instruction-step">Before first use, gentle washing with clean water is recommended to
+                            remove residual dust from the production process and to soften the material.</li>
+                        <li class="instruction-step">The product is designed for daily wear and is suitable for general
+                            activities such as walking or office work.</li>
+                        <li class="instruction-step">For maximum comfort and durability, choose the correct size
+                            according to your usual shoe size. Machine or hand wash at temperatures below 40°C is
+                            recommended, turn inside out and wash separately from dark-colored garments. Do not use
+                            bleach.Avoid prolonged soaking. Dry in shade, in a well-ventilated place, away from direct
+                            sunlight and high dryer heat to prevent material shrinkage, hardening, or loss of
+                            elasticity.</li>
+                    </ol>
+
+                    <div class="precautions">
+                        <h3>Precautions</h3>
+                        <p><strong>1. Keep away from children:</strong> Contains small parts(e.g., labels). Risk of
+                            swallowing and suffocation. Keep away from young children.</p>
+                        <p><strong>2. Fire safety:</strong> All textiles are flammable. Do not wear near open
+                            flames,high-temperature heat sources(e.g., heaters,stoves), or while smoking.</p>
+                        <p><strong>3. Usage caution:</strong> Ensure feet and toenails are smooth to avoid damaging the
+                            fabric.Stop use immediately if seams or loose threads cause discomfort. The sole has no
+                            anti-slip treatment. Be cautious when walking on smooth surfaces. If skin irritation occurs,
+                            discontinue use and consult a doctor.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <p>© 2025 Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd. | Declaration of Conformity No.: 8901647948811
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.language-tab');
+            const contents = document.querySelectorAll('.language-content');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs and contents
+                    tabs.forEach(t => t.classList.remove('active'));
+                    contents.forEach(c => c.classList.remove('active'));
+
+                    // Add active class to current tab and content
+                    this.classList.add('active');
+                    const lang = this.getAttribute('data-lang');
+                    document.getElementById(lang + '-content').classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
