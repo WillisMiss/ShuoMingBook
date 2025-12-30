@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Declaration of Conformity - Magnetic Tiles Building Set</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            padding: 35px;
+            text-align: center;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c, #f39c12);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .product-id {
+            font-size: 18px;
+            opacity: 0.9;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 35px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "•";
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 30px;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .declaration-label {
+            font-weight: bold;
+            color: #2c3e50;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .declaration-label::before {
+            content: "✓";
+            color: #2ecc71;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .language-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .language-title::before {
+            content: "🌐";
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        ol,
+        ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .warning {
+            background: #fff8f8;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(231, 76, 60, 0.1);
+        }
+
+        .warning-title {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-title::before {
+            content: "⚠";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            text-align: right;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .declaration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+
+        .product-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .product-image img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .magnet-icon {
+            display: inline-block;
+            background: #e74c3c;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .age-warning {
+            background: #ffebee;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="magnet-icon">🧲</span> EU DECLARATION OF CONFORMITY</h1>
+            <div class="product-id">Product ID: 8901660579740</div>
+        </header>
+
+        <div class="content">
+            <section id="declaration">
+                <h2>Declaration Details</h2>
+
+                <div class="declaration-grid">
+                    <div class="declaration-label">1. Unique identification of the product:</div>
+                    <div>8901660579740</div>
+
+                    <div class="declaration-label">2. Name and Address of the Manufacturer:</div>
+                    <div>Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou Guangzhou City
+                        Guangdongshen,510635</div>
+
+                    <div class="declaration-label">3. Issued under the sole responsibility of:</div>
+                    <div>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+
+                    <div class="declaration-label">4. Object of the Declaration:</div>
+                    <div>Product Name: Magnetic Tiles Building Set</div>
+
+                    <div class="declaration-label">5. Conformity with Union harmonisation legislation:</div>
+                    <div>● Directive 2001/95/EC(General Product Safety Directive- GPSD)</div>
+
+                    <div class="declaration-label">6. References to Harmonised Standards:</div>
+                    <div>● ISO 9001:2015(Quality Management System,optional for reference)</div>
+
+                    <div class="declaration-label">7. Notified Body (if applicable):</div>
+                    <div>Not applicable</div>
+                </div>
+
+                <div class="signature">
+                    <div>Place and Date of Issue: Germany, 2025-05-01</div>
+                    <div>Name: Lucas</div>
+                    <div>Function: Compliance Officer</div>
+                    <div class="signature-name">Signature: Lucas</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </section>
+
+            <section id="instructions">
+                <h2>USER INSTRUCTION MANUAL</h2>
+
+                <div class="product-image">
+                    <!-- 这是一个占位图片区域，实际使用时可以替换为真实产品图片 -->
+                    <div
+                        style="width:200px;height:150px;background:#e0e0e0;border-radius:10px;margin:0 auto;display:flex;align-items:center;justify-content:center;color:#777;">
+                        Magnetic Tiles Image
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <div class="language-section">
+                        <div class="language-title">Instructiuni de utilizare (Romanian)</div>
+                        <p><strong>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                                autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si calitatea
+                                produsului.</strong></p>
+
+                        <p><strong>Cum s utilizati produsul</strong></p>
+                        <ol>
+                            <li><span class="step-number">1</span> <strong>Acest produs este potrivit pentru copiii cu
+                                    varsta de 3 ani si peste.</strong> Contine placute magnetice mici. Utilizati DOAR
+                                sub supravegherea directa a unui adult pentru a preveni ingerarea accidentalǎ.</li>
+                            <li><span class="step-number">2</span> <strong>Asambati diverse forme plane sau 3D prin
+                                    atasare magnetica.</strong> Dupa joc,colectati TOATE piesele magnetice in cutia
+                                metalica si inchideti capacul pentru a evita pierderea.</li>
+                            <li><span class="step-number">3</span> <strong>Curatati suprafetele pieselor magnetice cu o
+                                    carpa moale si uscata.</strong> Evitati spalarea cu apa,expunerea la soare puternic
+                                sau apropierea de surse de caldur ridicata, deoarece pot afecta magnetizarea sau pot
+                                provoca deformarea.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Precautii</div>
+                            <ol>
+                                <li><strong>Avertisment privind sufocarea si ingerarea:</strong> Contine piese magnetice
+                                    mici si componente mici. Daca sunt inghiute mai multi magneti, acestia se pot atrage
+                                    reciproc in intestine, provocand perforatii intestinale severe sau blocaje,ce pot
+                                    pune viata in pericol. Cautati imediat ajutor medical. PASTRATI IN MOD OBLIGATORIU
+                                    NAINTEA COPIILOR SUB 3 ANI.</li>
+                                <li><strong>Avertisment privind interferenta magnetica:</strong> Magnetiti puternici pot
+                                    interfera cu dispositive medicale implantate(de ex., stimulatoare cardiace) si pot
+                                    deteriora articole sensible la magnetism, cum ar fi carduri bancare sau ceasuri.
+                                    Pastrati o distanta de siguranta.</li>
+                                <li><strong>Inspectie inainte de utilizare:</strong> inainte de fiecare utilizare si
+                                    periodic, verificati piesele magnetice pentru deteriorari, crapaturi sau magneti
+                                    desprinsi. Daca sunt deteriorate,eliminati-le imediat pentru a preveni accesul
+                                    copiilor la magnetii mici si liberi.Evitati lovirea sau scaparea violenta a cutiei
+                                    metalice.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">NHCTpyKUNN 3a ynoTpe6a (Bulgarian)</div>
+                        <p><strong>3akyneTe TO3N npoAyKT CaMO OT ONHNA HNA Mara3NH Ha TruOrigin, 3a Aa rapaHTnpaTe
+                                aBTeHTnHOCT n KayecTBo! Apyrn Mara3nHN He MoraTAa rapaHTnpaT aBTeHTNHOCTTa n KayeCTBOTO
+                                Ha npoAyKTa.</strong></p>
+
+                        <p><strong>Kak Aa N3non3BaTe npoAyKTa</strong></p>
+                        <ol>
+                            <li><span class="step-number">1</span> <strong>Toan npoAyKT e noAxoAau, 3a AeLa Ha Bb3pacT 3
+                                    roAnHN n HaA.</strong> CbAbpa mankn MarHNTHN nnacTNHKN. N3non3BaTe CAMO noA npaKo
+                                Ha6nnoAeHNe Ha Bb3pacTeH, aa ce npeAOTBpaTN cNyaHO nOrnbWaHe.</li>
+                            <li><span class="step-number">2</span> <strong>Crno6aBaTe pa3nH nnockn nan Tpn3mepHn dopmn
+                                    ype3 MarHNTHa.</strong> CneA urpa, cb6epeTE BCM4KN MarHNTHN 4acTN B MeTanHaTa KyTNAN
+                                3aTBopete Kanaka,3a Aa n36erHeTe 3ary6a.</li>
+                            <li><span class="step-number">3</span> <strong>,,.</strong></li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">peAna3HN MepKN</div>
+                            <ol>
+                                <li><strong>AyeAynpeAeHne 3a AyaBaHe n nornbaue:</strong> CbAbpa Mankn
+                                    MarHNTH.T,ce,KoNTO 3actpawaBaT. oTbpcete He3a6aHa MeANHCKa nomow.3AAbNTEHO
+                                    CbXPAHABATE ANE OT AELA NOA 3 FOAH.</li>
+                                <li><strong>NpeAynpeAeHne 3a MarHNTHN CMyeHNA:</strong> CUnHNTe MarHNTN MOraT Aa
+                                    CMyWaBaT MHNNaHTNpaHN MeANHCKN yCTPOCTBa(Hanp. CbPAe4HN CTNMyNATOPN)Mmorat Aa
+                                    noBpeAAT yBcTBNTenHN KbM MarHeTN3bM npeAmeTN KaTO 6aHKOBN KapTN.Te 6e3onaCHO
+                                    pa3cTOAHNe.</li>
+                                <li><strong>NpoBepka npeAN ynOTpe6a:</strong> NpeAN BCaka ynOTpe6a n nepnoAN4HO,.Ako ca
+                                    noBpeAeHN, He3a6aBHO rN N3XBbpneTe, 3a Aa npeAOTBpaTNTe AOCTbna Ha.MeTanHaTa KyTHA.
+                                </li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">Hasznalati utasitasok (Hungarian)</div>
+                        <p><strong>Csak a TruOrigin hivatalos boltjabol vasarolja meg ezt a terméket, hogy biztositsa a
+                                hitelességetés a minoséget! Mas boltok nem garantaljak a termék hitelességétés
+                                minoségét.</strong></p>
+
+                        <p><strong>Hogyan hasznaljuk a terméket</strong></p>
+                        <ol>
+                            <li><span class="step-number">1</span> <strong>Ez a termék 3éves es annál idosebb gyermekek
+                                    számára megfelelo.</strong> Kis meretu magneses lapokat tartalmaz. Kizarolag felnott
+                                kozvetlen feligyelete mellett hasznalandó a veletlen lenyeles megelozése erdekében.</li>
+                            <li><span class="step-number">2</span> <strong>Kulonbozo sik- vagy térformskat lehet
+                                    osszeilleszteni magneses rogzitéssel.</strong> Jaték utan gyujtse ossze az OSSZES
+                                magneses darabot a femdobozba, es zarja le a fedot,hogy elkerülje elvesztésüket.</li>
+                            <li><span class="step-number">3</span> <strong>A magneses darabok felületet puha, száraz
+                                    ruhaval tisztitsa.</strong> Kerülje a vizzel valómosast, a kozvetlen napfénynek való
+                                kitevést vagy a magas hoforrasok kozelében tartast,mivel ez befolyasolhatja a
+                                magnesezest vagy deformalódast okozhat.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Ovintezkedések</div>
+                            <ol>
+                                <li><strong>Fulladasi es lenyelési figyelmeztetés:</strong> Kis magneses darabokat es
+                                    apro alkatreszeket tartalmaz. Ha tobb magnet nyelnek le, azok a beleken belül
+                                    egymashoz tapadhatnak, eletveszelyes súlyos bélperforaciot vagy elzarodast okozva.
+                                    Azonnal keressen orvosi segitséget. 3 EV ALATTI GYERMEKEKTOL KOTELEZOEN TAVOL
+                                    TARTANDO.</li>
+                                <li><strong>Magneses interferencia figyelmeztetés:</strong> Az eros magnesek zavarhatjak
+                                    a beültetett orvosi eszkozoket(pl. szivritmus-szabalyozot), es karosithatnak a
+                                    magnesezesre ferzekeny tárgyakat, pelddul bankkartyakat vagy orakat. Tartsanak
+                                    biztonsagos tavolsagot.</li>
+                                <li><strong>Hasznalat elotti ellenorzés:</strong> Minden hasznalat elott es rendszeresen
+                                    ellenorizze a magneses darabokat serülésre, repedésekre vagy kiesett magnesekre. Ha
+                                    sérültek,azonnal semmisitse meg, hogy a gyermekek ne ferhessenek hozzá a kis, laza
+                                    magnesekhez. Kerülje a fémdoboz eroteljes utését vagy leejtését.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">Instructions for Use (English)</div>
+                        <p><strong>Purchase this product only from the official TruOrigin store to ensure authenticity
+                                and quality! Other stores cannot guarantee the product's authenticity and
+                                quality.</strong></p>
+
+                        <p><strong>How to Use the Product</strong></p>
+                        <ol>
+                            <li><span class="step-number">1</span> <strong>This product is suitable for children aged 3
+                                    and over.</strong> Contains small magnetic tiles.Use ONLY under the direct
+                                supervision of an adult to prevent accidental ingestion.</li>
+                            <li><span class="step-number">2</span> <strong>Assemble various flat or 3D shapes via
+                                    magnetic attachment.</strong> After play, collect ALL magnetic pieces into the tin
+                                box and close the lid to prevent loss.</li>
+                            <li><span class="step-number">3</span> <strong>Clean the surfaces of the magnetic pieces
+                                    with a soft, dry cloth.</strong> Avoid washing with water,exposure to direct
+                                sunlight, or proximity to high heat sources, as this may affect magnetization or cause
+                                deformation.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Precautions</div>
+                            <ol>
+                                <li><strong>Choking& Ingestion Warning:</strong> Contains small magnetic pieces and
+                                    small parts. If multiple magnets are swallowed, they can attract each other through
+                                    intestinal walls,causing severe perforations or blockages which are
+                                    life-threatening. Seek immediate medical attention. MUST BE KEPT AWAY FROM CHILDREN
+                                    UNDER 3 YEARS OLD.</li>
+                                <li><strong>Magnetic Interference Warning:</strong> Strong magnets can interfere with
+                                    implanted medical devices(e.g., pacemakers) and may damage items sensitive to
+                                    magnetism such as bank cards or watches. Maintain a safe distance.</li>
+                                <li><strong>Pre-use Inspection:</strong> Before each use and periodically, inspect
+                                    magnetic pieces for damage,cracks, or loose magnets. If damaged, discard immediately
+                                    to prevent children's access to small, loose magnets. Avoid violently hitting or
+                                    dropping the tin box.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                <div>Product ID: 8901660579740</div>
+                <div>This declaration of conformity is issued under the sole responsibility of the manufacturer</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

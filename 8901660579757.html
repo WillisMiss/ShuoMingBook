@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Declaration of Conformity - Writing Tablet</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            padding: 35px;
+            text-align: center;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c, #f39c12);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .product-id {
+            font-size: 18px;
+            opacity: 0.9;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 35px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "•";
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 30px;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .declaration-label {
+            font-weight: bold;
+            color: #2c3e50;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .declaration-label::before {
+            content: "✓";
+            color: #2ecc71;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .language-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .language-title::before {
+            content: "🌐";
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        ol,
+        ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .warning {
+            background: #fff8f8;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(231, 76, 60, 0.1);
+        }
+
+        .warning-title {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-title::before {
+            content: "⚠";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            text-align: right;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .declaration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+
+        .product-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .product-image img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tablet-icon {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+
+        .step-number {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            width: 25px;
+            height: 25px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 25px;
+            margin-right: 10px;
+            font-weight: bold;
+        }
+
+        .battery-warning {
+            background: #ffebee;
+            border-left: 4px solid #e74c3c;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="tablet-icon">📝</span> EU DECLARATION OF CONFORMITY</h1>
+            <div class="product-id">Product ID: 8901660579757</div>
+        </header>
+
+        <div class="content">
+            <section id="declaration">
+                <h2>Declaration Details</h2>
+
+                <div class="declaration-grid">
+                    <div class="declaration-label">1. Unique identification of the product:</div>
+                    <div>8901660579757</div>
+
+                    <div class="declaration-label">2. Name and Address of the Manufacturer:</div>
+                    <div>Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou Guangzhou City
+                        Guangdongshen,510635</div>
+
+                    <div class="declaration-label">3. Issued under the sole responsibility of:</div>
+                    <div>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+
+                    <div class="declaration-label">4. Object of the Declaration:</div>
+                    <div>Product Name: Writing Tablet</div>
+
+                    <div class="declaration-label">5. Conformity with Union harmonisation legislation:</div>
+                    <div>● Directive 2001/95/EC(General Product Safety Directive- GPSD)</div>
+
+                    <div class="declaration-label">6. References to Harmonised Standards:</div>
+                    <div>● ISO 9001:2015(Quality Management System,optional for reference)</div>
+
+                    <div class="declaration-label">7. Notified Body (if applicable):</div>
+                    <div>Not applicable</div>
+                </div>
+
+                <div class="signature">
+                    <div>Place and Date of Issue: Germany, 2025-05-01</div>
+                    <div>Name: Lucas</div>
+                    <div>Function: Compliance Officer</div>
+                    <div class="signature-name">Signature: Lucas</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </section>
+
+            <section id="instructions">
+                <h2>USER INSTRUCTION MANUAL</h2>
+
+                <div class="product-image">
+                    <!-- 这是一个占位图片区域，实际使用时可以替换为真实产品图片 -->
+                    <div
+                        style="width:200px;height:150px;background:#e0e0e0;border-radius:10px;margin:0 auto;display:flex;align-items:center;justify-content:center;color:#777;">
+                        Writing Tablet Image
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <div class="language-section">
+                        <div class="language-title">Instructiuni de utilizare (Romanian)</div>
+                        <p><strong>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                                autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si calitatea
+                                produsului.</strong></p>
+
+                        <p><strong>Cum s utilizati produsul</strong></p>
+                        <ol>
+                            <li><span class="step-number">1</span> <strong>Acest produs are un ecran LCD cu
+                                    presiune.</strong> Vǎ rugam sǎ scrieti si sǎ desenati folosind stiloul magnetic
+                                inclus sau alte stilouri cu varf rotund/plat. Nu utilizati obiecte ascutite.</li>
+                            <li><span class="step-number">2</span> <strong>Dupa scriere sau desen, apasati
+                                    butonul,,Stergere" situat sub sau pe partea laterala a ecranului</strong> pentru a
+                                sterge continutul cu o singura apasare.</li>
+                            <li><span class="step-number">3</span> <strong>Pentru a pastra creatiile pe termen lung, vǎ
+                                    rugam sa le fotografiati cu telefonul inainte de stergere.</strong> La inlocuirea
+                                batteriei, utilizati batteria tip buton de modelul specificat.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Precautii</div>
+                            <ol>
+                                <li><strong>Avertisment batterie buton(IMPORTANT):</strong> Acest produs contine o
+                                    batterie tip buton. Inghitirea poate provoca leziuni interne grave sau chiar deces.
+                                    Pastrati produsul in afara reach-ului copiilor. Daca capacul compartimentului
+                                    batterie este slabit, incetati utilizarea imediat si pastrati-l departe de copii.
+                                    Daca banuiti ca o batterie a fost inghitita, cautati imediat assistenta medicala.
+                                </li>
+                                <li><strong>Siguranta pentru utilizarea copiilor:</strong> Acest produs este potrivit
+                                    pentru copiii cu varsta de 3 ani si peste. Se recomanda utilizarea sub supravegherea
+                                    unui adult pentru a preveni inghitirea partilor mici sau manipularea
+                                    necorespunzatoare.</li>
+                                <li><strong>Intretinerea produsului:</strong> Nu expuneti produsul la temperaturi
+                                    ridicate,umiditate sau lumina directa a soarelui. Curatati cu un carpa moale usor
+                                    umezita. Nu utilizati produce chimice si nu scufundati in apa.Eliminati bateriile
+                                    uzate conform reglementarilor locale.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">MHcTpyKuNN 3a ynoTpe6a (Bulgarian)</div>
+                        <p><strong>3akyneTe TO3N npoAyKT CaMO OT ONNANHNa Mara3NH Ha TruOrigin, 3a Aa rapaHTNpaTe
+                                aBTeHTN4HOCT N KayeCTBO! ApyrN Mara3NHN He MOraT Aa rapaHTNpaT aBTeHTNHHOCTTa H
+                                KayeCTBOTO Ha npoAyKTa.</strong></p>
+
+                        <p><strong>Kak Aa N3non3BaTe npoAyKTa</strong></p>
+                        <ol>
+                            <li><span class="step-number">1</span> <strong>.,.</strong></li>
+                            <li><span class="step-number">2</span> <strong>.,",, 3.</strong></li>
+                            <li><span class="step-number">3</span> <strong>.,.,".</strong></li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">NpeAna3HN MepKN</div>
+                            <ol>
+                                <li><strong>(BAKHO):</strong> To..6ae,,,,.</li>
+                                <li><strong>:</strong>., a ce npeAoTBpaTN nornbIaHe Ha Mankn 4acTN nNN HenpaBNNHO
+                                    6opaBeHe.</li>
+                                <li><strong>:</strong>.6aTepn CbrnacHO MecTHnTe pa3nopeA6n.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">Használati utasitasok (Hungarian)</div>
+                        <p><strong>Csak a TruOrigin hivatalos boltjaból vásárolja meg ezt a terméket, hogy biztositsa a
+                                hitelességetés a minoséget! Más boltok nem garantálják a termék hitelességétés
+                                minoségét.</strong></p>
+
+                        <p><strong>Hogyan hasznaljuk a terméket</strong></p>
+                        <ol>
+                            <li><span class="step-number">1</span> <strong>Ez a termék nyomásérzékeny LCD képernyvel
+                                    rendelkezik.</strong> Kérjük, iráshozés rajzoláshoz hasznalja a mellékelt magneses
+                                tollat vagy mas tompa/kerek hegyútollakat. Ne hasznaljonéles targyakat.</li>
+                            <li><span class="step-number">2</span> <strong>írás vagy rajzolás után nyomja meg a képernyó
+                                    alatt vagy oldalán található"Trlés" gombot</strong> a tartalom egy kattintással való
+                                torléséhez.</li>
+                            <li><span class="step-number">3</span> <strong>A muvek hosszú távú megorzéséhez kérjuk,
+                                    fenyképezze le oket telefonjaval a torles elott.</strong> Az elem cseréjekor
+                                hasznalja a megadott tipusu des modelli gombelemet.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Ovintézkedések</div>
+                            <ol>
+                                <li><strong>Gombelem figyelmeztetes(FONTOS):</strong> Ez a termék gombelemet
+                                    tartalmaz.Letélese súlyos belso séruleseket vagy akár halalt okozhat. Tavol tartando
+                                    gyermekektol. Ha az elemtarto fedele meglazul, azonnal szuntesse meg a hasznalatot
+                                    es távol tartando gyermekektol. Ha azt yyanitja, hogy egy element lenyeltek, azonnal
+                                    keressen orvosi segitséget.</li>
+                                <li><strong>Gyermeekek altali hasznalat biztonsaga:</strong> Ez a termek 3 eves es annál
+                                    idsebb gyermekek számára alkalmas. Felnott feligyelete mellett torténo hasznalat
+                                    javasolt,hogy megelozze a kis alkatreszek lenyelését vagy a nem megfelelo kezelest.
+                                </li>
+                                <li><strong>A termék karbantartasa:</strong> Ne tegye ki a terméket magas
+                                    homérsékletnek,nedvessegnek vagy kozvetlen napfenynek. Tisztitson enyhen nedves,
+                                    puha ruhaval. Ne hasznaljon vegyszereket,és ne meritse vizbe. A hasznalt elemeket
+                                    helyi szabályozasok szerint dobja el.</li>
+                            </ol>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">Instructions for Use (English)</div>
+                        <p><strong>Purchase this product only from the official TruOrigin store to ensure authenticity
+                                and quality! Other stores cannot guarantee the product's authenticity and
+                                quality.</strong></p>
+
+                        <p><strong>How to Use the Product</strong></p>
+                        <ol>
+                            <li><span class="step-number">1</span> <strong>This product features a pressure-sensitive
+                                    LCD screen.</strong> Please use the included magnetic stylus or other
+                                round/blunt-tipped pens for writing and drawing. Do not use sharp objects.</li>
+                            <li><span class="step-number">2</span> <strong>After writing or drawing, press the"Clear"
+                                    button located below or on the side of the screen</strong> to erase the content with
+                                one click.</li>
+                            <li><span class="step-number">3</span> <strong>To preserve creations long-term, please
+                                    photograph them with your phone before clearing.</strong> When replacing the
+                                battery, use the specified type and model of button cell battery.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Precautions</div>
+                            <ol>
+                                <li><strong>Button Battery Warning(IMPORTANT):</strong> This product contains a button
+                                    battery.Ingestion can cause severe internal injuries or even death. Keep the product
+                                    out of reach of children. If the battery compartment cover is loose, discontinue use
+                                    immediately and keep it away from children. If you suspect a battery has been
+                                    swallowed, seek immediate medical attention.</li>
+                                <li><strong>Child Use Safety:</strong> This product is suitable for children aged 3 and
+                                    over. Use under adult supervision is recommended to prevent ingestion of small parts
+                                    or improper handling.</li>
+                                <li><strong>Product Maintenance:</strong> Do not expose the product to high
+                                    temperatures, moisture,or direct sunlight. Clean with a slightly damp, soft cloth.
+                                    Do not use chemicals or immerse in water. Dispose of used batteries according to
+                                    local regulations.</li>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                <div>Product ID: 8901660579757</div>
+                <div>This declaration of conformity is issued under the sole responsibility of the manufacturer</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>

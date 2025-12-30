@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EU Declaration of Conformity - Mini Building Blocks Set</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            padding: 35px;
+            text-align: center;
+            position: relative;
+        }
+
+        header::after {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(90deg, #3498db, #2ecc71, #e74c3c, #f39c12);
+        }
+
+        h1 {
+            font-size: 32px;
+            margin-bottom: 10px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .product-id {
+            font-size: 18px;
+            opacity: 0.9;
+            background: rgba(255, 255, 255, 0.1);
+            display: inline-block;
+            padding: 5px 15px;
+            border-radius: 20px;
+            margin-top: 10px;
+        }
+
+        .content {
+            padding: 35px;
+        }
+
+        section {
+            margin-bottom: 40px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 30px;
+        }
+
+        h2 {
+            color: #2c3e50;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #3498db;
+            font-size: 24px;
+            display: flex;
+            align-items: center;
+        }
+
+        h2::before {
+            content: "•";
+            color: #3498db;
+            margin-right: 10px;
+            font-size: 30px;
+        }
+
+        .declaration-grid {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 15px;
+            margin-bottom: 15px;
+        }
+
+        .declaration-label {
+            font-weight: bold;
+            color: #2c3e50;
+            background: #f8f9fa;
+            padding: 10px;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+        }
+
+        .declaration-label::before {
+            content: "✓";
+            color: #2ecc71;
+            margin-right: 8px;
+            font-weight: bold;
+        }
+
+        .instructions {
+            background: #f8f9fa;
+            padding: 25px;
+            border-radius: 10px;
+            margin-top: 20px;
+            border-left: 5px solid #3498db;
+        }
+
+        .language-section {
+            margin-bottom: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s ease;
+        }
+
+        .language-section:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .language-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            padding-bottom: 10px;
+            border-bottom: 1px dashed #ddd;
+        }
+
+        .language-title::before {
+            content: "🌐";
+            margin-right: 10px;
+            font-size: 18px;
+        }
+
+        ol,
+        ul {
+            padding-left: 25px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 10px;
+            padding-left: 5px;
+        }
+
+        .warning {
+            background: #fff8f8;
+            border-left: 4px solid #e74c3c;
+            padding: 20px;
+            margin: 20px 0;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(231, 76, 60, 0.1);
+        }
+
+        .warning-title {
+            font-weight: bold;
+            color: #e74c3c;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+
+        .warning-title::before {
+            content: "⚠";
+            margin-right: 8px;
+            font-size: 18px;
+        }
+
+        .signature {
+            margin-top: 30px;
+            text-align: right;
+            border-top: 1px solid #ddd;
+            padding-top: 20px;
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 8px;
+        }
+
+        .signature-name {
+            font-weight: bold;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 25px;
+            background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
+            color: white;
+            font-size: 14px;
+        }
+
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        .footer-logo {
+            font-weight: bold;
+            font-size: 16px;
+        }
+
+        @media (max-width: 768px) {
+            .declaration-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .content {
+                padding: 20px;
+            }
+
+            .footer-content {
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            h1 {
+                font-size: 26px;
+            }
+        }
+
+        .product-image {
+            text-align: center;
+            margin: 20px 0;
+        }
+
+        .product-image img {
+            max-width: 200px;
+            height: auto;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .building-icon {
+            display: inline-block;
+            background: #3498db;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            font-size: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1><span class="building-icon">🧱</span> EU DECLARATION OF CONFORMITY</h1>
+            <div class="product-id">Product ID: 8901660579726</div>
+        </header>
+
+        <div class="content">
+            <section id="declaration">
+                <h2>Declaration Details</h2>
+
+                <div class="declaration-grid">
+                    <div class="declaration-label">1. Unique identification of the product:</div>
+                    <div>8901660579726</div>
+
+                    <div class="declaration-label">2. Name and Address of the Manufacturer:</div>
+                    <div>Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou Guangzhou City
+                        Guangdongshen,510635</div>
+
+                    <div class="declaration-label">3. Issued under the sole responsibility of:</div>
+                    <div>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+
+                    <div class="declaration-label">4. Object of the Declaration:</div>
+                    <div>Product Name: Mini Building Blocks Set</div>
+
+                    <div class="declaration-label">5. Conformity with Union harmonisation legislation:</div>
+                    <div>● Directive 2001/95/EC(General Product Safety Directive- GPSD)</div>
+
+                    <div class="declaration-label">6. References to Harmonised Standards:</div>
+                    <div>● ISO 9001:2015(Quality Management System,optional for reference)</div>
+
+                    <div class="declaration-label">7. Notified Body (if applicable):</div>
+                    <div>Not applicable</div>
+                </div>
+
+                <div class="signature">
+                    <div>Place and Date of Issue: Germany, 2025-05-01</div>
+                    <div>Name: Lucas</div>
+                    <div>Function: Compliance Officer</div>
+                    <div class="signature-name">Signature: Lucas</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </section>
+
+            <section id="instructions">
+                <h2>USER INSTRUCTION MANUAL</h2>
+
+                <div class="product-image">
+                    <!-- 这是一个占位图片区域，实际使用时可以替换为真实产品图片 -->
+                    <div
+                        style="width:200px;height:150px;background:#e0e0e0;border-radius:10px;margin:0 auto;display:flex;align-items:center;justify-content:center;color:#777;">
+                        Mini Building Blocks Image
+                    </div>
+                </div>
+
+                <div class="instructions">
+                    <div class="language-section">
+                        <div class="language-title">Instructiuni de utilizare (Romanian)</div>
+                        <p><strong>Achizitionati acest produs numai din magazineul oficial TruOrigin pentru a vǎ asigura
+                                autenticitatea si calitatea! Alte magazine nu pot garanta autenticitatea si calitatea
+                                produsului.</strong></p>
+
+                        <p><strong>Cum s utilizati produsul</strong></p>
+                        <ol>
+                            <li><strong>Asamblati cadrul de baza conform instructiunilor</strong>, apoi adaugati treptat
+                                granule pentru a construi structura tridimensional a magazinelor;</li>
+                            <li><strong>Folositi componente precum capacul transparent, axa de rotire etc.</strong>
+                                pentru a realiza detaili mobile(cum ar fi manerul usii sau turnul de bautura);</li>
+                            <li><strong>Sistemul supporta extinderea libera a scenei</strong> - combinati-l cu
+                                accesoriile tematica incluse(precum Sprite, Coca-Cola etc.) pentru a crea o mini strada
+                                comerciala.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Precautii</div>
+                            <p>Potrivit pentru copii de peste 6 ani, de utilizat sub supravegherea unui adult. Contine
+                                particule mici - evitati inghitirea.</p>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">MHCTPyKuNN 3a ynoTpe6a (Bulgarian)</div>
+                        <p><strong>3akyneTe TO3N npoAyKT CaMO OT ONHNA Mara3NH Ha TruOrigin, 3a Aa rapaHTNpaTe
+                                aBTeHTNHOCT n KayeCTBO! Apyrn Mara3nHN He MOraT Aa rapaHTNpaT aBTeHTuHOCTTa n KayeCTBOTO
+                                Ha npoAyKTa.</strong></p>
+
+                        <p><strong>Kak Aa N3non3BaTe npoAyKTa</strong></p>
+                        <ol>
+                            <li><strong>Crno6aBaTe ocHoBHaT paMka cnopeA nHCTpyKuNTe</strong> cTbnka no cTbnka, cneA
+                                KoeTo A06aTe nocreneHHo rpanynn, 3a Aa n3rpANTe o6emHaTa cTpyKTypa Ha Mara3nHa;</li>
+                            <li><strong>3non3BaTe KoMnoHeHTN KaTO npo3payeH Kanak, Bbptawa oc n Ap.</strong>, 3a Aa();
+                            </li>
+                            <li><strong>CncTemata noAAbpa cBo6oAHO pa3wnpaBaHe Ha cueHaTa</strong> - KoM6nHpaTe a c(KaTo
+                                Sprite, Coca-Cola n Ap.), 3a Aa Cb3AaAeTe MMN TbproBcka yNNua.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">NpeAna3HN MepKN</div>
+                            <p>A A 6-, Aa ce A A Aa.-.</p>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">Hasznalati utasitasok (Hungarian)</div>
+                        <p><strong>Csak a TruOrigin hivatalos boltjabol vasarolja meg ezt a terméket, hogy biztositsa a
+                                hitelesseget es a minoséget! Mas boltok nem garantaljak a termék hitelessegetés
+                                minoséget.</strong></p>
+
+                        <p><strong>Hogyan hasznaljuk a terméket</strong></p>
+                        <ol>
+                            <li><strong>Az alapvazat az utmutató lepései szerint szerelje ossze</strong>, majd lepésrol
+                                lepésre epitse fel a haromdimenzios uzlet struktúrajat a granulatumok hozzaadasaval.
+                            </li>
+                            <li><strong>Az atlatsó kupak, forgotengely es egyéb komponensek segitségével</strong>
+                                mozgathatórészleteket hozhat letre(példaul ajtokilincset,ital tornyot).</li>
+                            <li><strong>A rendszer bovitheto</strong> - az mellekelt témajü
+                                kiegészitókkel(pl.Sprite,Coca-Cola stb.)egyedi kis bevasarloutcat teremthet.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Ovintézkedések</div>
+                            <p>6 even felili gyermekek számara ajanlott, felügyelet mellett hasznaland6. Aprod
+                                szemcséket tartalmaz- ne nyelje le!</p>
+                        </div>
+                    </div>
+
+                    <div class="language-section">
+                        <div class="language-title">Instructions for Use (English)</div>
+                        <p><strong>Purchase this product only from the official TruOrigin store to ensure authenticity
+                                and quality! Other stores cannot guarantee the product's authenticity and
+                                quality.</strong></p>
+
+                        <p><strong>How to Use the Product</strong></p>
+                        <ol>
+                            <li><strong>Follow the manual to assemble the base framework</strong>, then layer pieces
+                                step-by-step to construct a 3D store structure.</li>
+                            <li><strong>Use transparent covers,rotating shafts, and other components</strong> to create
+                                movable details(e.g., door handles, drink towers).</li>
+                            <li><strong>Supports free scene expansion</strong>; combine with included themed accessories
+                                like Sprite and Coke bottles to build a mini commercial street.</li>
+                        </ol>
+
+                        <div class="warning">
+                            <div class="warning-title">Precautions</div>
+                            <p>Recommended for children aged 6+ under adult supervision. Contains small parts - do not
+                                swallow.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <footer>
+            <div class="footer-content">
+                <div class="footer-logo">Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                <div>Product ID: 8901660579726</div>
+                <div>This declaration of conformity is issued under the sole responsibility of the manufacturer</div>
+            </div>
+        </footer>
+    </div>
+</body>
+
+</html>
