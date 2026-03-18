@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raspberry Pi Enclosure - EU Declaration & User Manual</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: #f5f7fa;
+            color: #333;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #E74C3C 0%, #C0392B 100%);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+            border-radius: 0 0 10px 10px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .content-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .section {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+            padding: 25px;
+            flex: 1;
+            min-width: 300px;
+        }
+
+        .section-title {
+            color: #E74C3C;
+            border-bottom: 2px solid #eaeaea;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            font-size: 1.5rem;
+        }
+
+        .declaration-item {
+            margin-bottom: 20px;
+        }
+
+        .declaration-label {
+            font-weight: 600;
+            color: #C0392B;
+            margin-bottom: 5px;
+        }
+
+        .language-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+
+        .language-tab {
+            padding: 8px 15px;
+            background: #f0f4f8;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .language-tab.active {
+            background: #E74C3C;
+            color: white;
+        }
+
+        .language-content {
+            display: none;
+        }
+
+        .language-content.active {
+            display: block;
+        }
+
+        .manual-section {
+            margin-bottom: 25px;
+        }
+
+        .manual-title {
+            font-weight: 600;
+            color: #E74C3C;
+            margin-bottom: 10px;
+            font-size: 1.2rem;
+        }
+
+        .manual-list {
+            padding-left: 20px;
+        }
+
+        .manual-list li {
+            margin-bottom: 8px;
+        }
+
+        .warning {
+            background-color: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 0 5px 5px 0;
+        }
+
+        .signature-section {
+            text-align: center;
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 1px dashed #ddd;
+        }
+
+        .signature {
+            font-family: 'Brush Script MT', cursive;
+            font-size: 1.8rem;
+            margin: 15px 0;
+            color: #E74C3C;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+            background: #E74C3C;
+            color: white;
+            border-radius: 10px 10px 0 0;
+        }
+
+        @media (max-width: 768px) {
+            .content-wrapper {
+                flex-direction: column;
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <h1>Raspberry Pi Enclosure</h1>
+            <p class="subtitle">EU Declaration of Conformity & User Manual</p>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="content-wrapper">
+            <div class="section">
+                <h2 class="section-title">EU Declaration of Conformity</h2>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">1. No. (unique identification of the product)</div>
+                    <div>8901700103867</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">2. Name and Address of the Manufacturer:</div>
+                    <div>Room C130, Room 504, No.1 Longkou West Road, Tianhe District, Guangzhou Guangzhou City
+                        Guangdongshen,510635</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">3. This declaration of conformity is issued under the sole
+                        responsibility of the manufacturer:</div>
+                    <div>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">4. Object of the Declaration:</div>
+                    <div>Product Name: Raspberry Pi enclosure</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">5. The object of the declaration described in point 4 is in
+                        conformity with the relevant Union harmonisation legislation:</div>
+                    <div>● Directive 2001/95/EC(General Product Safety Directive- GPSD)</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">6. References to Harmonised Standards:</div>
+                    <div>●ISO 9001:2015(Quality Management System,optional for reference)</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">7. Notified Body(if applicable):</div>
+                    <div>Not applicable</div>
+                </div>
+
+                <div class="declaration-item">
+                    <div class="declaration-label">8. Additional Information:</div>
+                    <div>Place and Date of Issue: Germany,2025-05-01</div>
+                </div>
+
+                <div class="signature-section">
+                    <div>Name: Lucas</div>
+                    <div>Function: Compliance Officer</div>
+                    <div class="signature">Lucas</div>
+                    <div>Signed for and on behalf of: Lucas</div>
+                </div>
+            </div>
+
+            <div class="section">
+                <h2 class="section-title">User Instruction Manual</h2>
+
+                <div class="warning">
+                    Purchase this product only from the official TruOrigin store to ensure authenticity and quality!
+                    Other stores cannot guarantee the product's authenticity and quality.
+                </div>
+
+                <div class="language-tabs">
+                    <div class="language-tab active" data-language="english">English</div>
+                    <div class="language-tab" data-language="romanian">Română</div>
+                    <div class="language-tab" data-language="bulgarian">Български</div>
+                    <div class="language-tab" data-language="hungarian">Magyar</div>
+                </div>
+
+                <!-- English Content -->
+                <div class="language-content active" id="english">
+                    <div class="manual-section">
+                        <div class="manual-title">How to Use the Product</div>
+                        <ol class="manual-list">
+                            <li>Installation steps: First place the Raspberry Pi Zero board into the red base,aligning
+                                the ports with the openings, then cover with the white top lid and gently press the
+                                clips to secure. No tools required, easy to assemble and disassemble.</li>
+                            <li>Port access:The case has openings for MicroSD card slot, Mini
+                                HDMI,USB,GPIO,etc.,allowing cable connection or system card replacement without removing
+                                the case.</li>
+                            <li>Thermal design: The case features cutouts or thin-wall structure, relying on the board's
+                                own heat dissipation, suitable for light-load operation. For high-load scenarios(e.g.,
+                                video encoding, hotspot services), it is recommended to add a heatsink or fan.</li>
+                            <li>Compatible models: Compatible with Raspberry Pi Zero, Zero W, Zero 2W. Not compatible
+                                with Zero WH(with pre-soldered antenna) or versions other than Zero 1.3.</li>
+                        </ol>
+                    </div>
+
+                    <div class="manual-section">
+                        <div class="manual-title">Precautions</div>
+                        <ol class="manual-list">
+                            <li>This case is a physical protection accessory and does not provide active cooling.When
+                                running under high load for extended periods, monitor the temperature to avoid
+                                overheating and throttling.</li>
+                            <li>Do not apply excessive force during installation to avoid damaging the board or case
+                                clips; when disassembling, gently pry from the edges to prevent breakage.</li>
+                            <li>If using wireless functions(Wi-Fi/Bluetooth), keep the antenna area unobstructed to
+                                ensure signal stability.</li>
+                            <li>Do not use in humid, high-temperature, or strong electromagnetic environments to avoid
+                                affecting board performance or case aging.</li>
+                            <li>This product does not include the board, power supply,TF card, or other accessories;
+                                these need to be prepared separately.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Romanian Content -->
+                <div class="language-content" id="romanian">
+                    <div class="manual-section">
+                        <div class="manual-title">Cum să utilizați produsul</div>
+                        <ol class="manual-list">
+                            <li>Paşi de instalare: Introduceţi mai întâi placa Raspberry Pi Zero în baza roşie,aliniind
+                                porturile cu deschiderile, apoi acoperiţi cu capacul superior alb şi apăsaţi uşor
+                                clemele pentru fixare. Nu sunt necesare unelte, asamblarea şi dezasamblarea sunt uşoare.
+                            </li>
+                            <li>Acces la porturi: Carcasa are deschideri pentru slotul MicroSD, Mini HDMI, USB,GPIO
+                                etc., permiţând conectarea cablurilor sau înlocuirea cardului de sistem fără a scoate
+                                carcasa.</li>
+                            <li>Design termic: Carcasa are structuri decupate sau pereţi subţiri,bazându-se pe disiparea
+                                proprie a plăcii, potrivită pentru funcţionare cu sarcină uşoară. Pentru scenarii cu
+                                sarcină mare(de exemplu, codare video, servicii hotspot), se recomandă adăugarea unui
+                                radiator sau ventilator.</li>
+                            <li>Modele compatibile: Compatibil cu Raspberry Pi Zero, Zero W, Zero 2W. Nu este compatibil
+                                cu Zero WH(cu antena presudată) sau versiuni altele decât Zero 1.3.</li>
+                        </ol>
+                    </div>
+
+                    <div class="manual-section">
+                        <div class="manual-title">Precauţii</div>
+                        <ol class="manual-list">
+                            <li>Aceasta carcasă este un accesoriu de protecţie fizică şi nu oferă răcire activă.Când
+                                funcţionaţi sub sarcină mare pentru perioade îndelungate, monitorizaţi temperatura
+                                pentru a evita supraîncălzirea şi reducerea frecvenţei.</li>
+                            <li>Nu aplicaţi forţă excesivă în timpul instalării pentru a evita deteriorarea plăcii sau a
+                                clemelor carcasei; la dezasamblare, scoateţi uşor de pe margini pentru a preveni
+                                ruperea.</li>
+                            <li>Dacă utilizaţi funcţii wireless(Wi-Fi/Bluetooth), menţineţi zona antenei fără obstacole
+                                pentru a asigura stabilitatea semnalului.</li>
+                            <li>Nu utilizaţi în medii umede, cu temperaturi ridicate sau câmpuri electromagnetice
+                                puternice pentru a evita afectarea performanţei plăcii sau îmbătrânirea carcasei.</li>
+                            <li>Acest produs nu include placa,sursa de alimentare,cardul TF sau alte accesorii; acestea
+                                trebuie pregătite separat.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Bulgarian Content -->
+                <div class="language-content" id="bulgarian">
+                    <div class="manual-section">
+                        <div class="manual-title">Как да използвате продукта</div>
+                        <ol class="manual-list">
+                            <li>Стъпки за монтаж: Първо поставете платката Raspberry Pi Zero в червената основа, като
+                                подравните портовете с отворите, след това покрийте с бял горен капак и леко натиснете
+                                скобите за закрепване. Не са необходими инструменти, сглобяването и разглобяването са
+                                лесни.</li>
+                            <li>Достъп до портове: Корпусът има отвори за слот за microSD карта, Mini HDMI, USB, GPIO и
+                                др., позволявайки свързване на кабели или смяна на системната карта без да сваляте
+                                корпуса.</li>
+                            <li>Термичен дизайн: Корпусът има изрязани структури или тънки стени, разчитайки на
+                                собственото разсейване на топлина на платката, подходящ за работа с лек товар. За
+                                сценарии с висок товар(напр. видео кодиране, hotspot услуги) се препоръчва добавяне на
+                                радиатор или вентилатор.</li>
+                            <li>Съвместими модели: Съвместим с Raspberry Pi Zero, Zero W, Zero 2W. Не е съвместим с Zero
+                                WH(с предварително запоена антена) или версии различни от Zero 1.3.</li>
+                        </ol>
+                    </div>
+
+                    <div class="manual-section">
+                        <div class="manual-title">Предпазни мерки</div>
+                        <ol class="manual-list">
+                            <li>Този корпус е аксесоар за физическа защита и не осигурява активно охлаждане. При
+                                продължителна работа с висок товар следете температурата, за да избегнете прегряване и
+                                намаляване на честотата.</li>
+                            <li>Не прилагайте прекомерна сила по време на монтаж, за да избегнете повреда на платката
+                                или скобите на корпуса; при разглобяване внимателно повдигнете от ръбовете, за да
+                                предотвратите счупване.</li>
+                            <li>Ако използвате безжични функции(Wi-Fi/Bluetooth), поддържайте областта на антената без
+                                препятствия, за да осигурите стабилност на сигнала.</li>
+                            <li>Не използвайте във влажна, високотемпературна или силна електромагнитна среда, за да
+                                избегнете влияние върху производителността на платката или стареене на корпуса.</li>
+                            <li>Този продукт не включва платката, захранването, TF карта или други аксесоари; те трябва
+                                да бъдат подготвени отделно.</li>
+                        </ol>
+                    </div>
+                </div>
+
+                <!-- Hungarian Content -->
+                <div class="language-content" id="hungarian">
+                    <div class="manual-section">
+                        <div class="manual-title">Hogyan használjuk a terméket</div>
+                        <ol class="manual-list">
+                            <li>Telepítési lépések: Először helyezze a Raspberry Pi Zero lapot a piros alapba,igazítsa a
+                                csatlakozókat a nyílásokhoz, majd fedje le a fehér felső fedéllel,és enyhén nyomja meg a
+                                kapcsokat a rögzítéshez. Nincs szükség szerszámokra, az össze- és szétszerelés egyszerű.
+                            </li>
+                            <li>Portok hozzáférése: A ház nyílásokkal rendelkezik a MicroSD kártyahely, Mini HDMI, USB,
+                                GPIO stb. számára, lehetővé téve a kábelek csatlakoztatását vagy a rendszerkártya
+                                cseréjét a ház eltávolítása nélkül.</li>
+                            <li>Hőelvezetési kialakítás: A ház kivágásokkal vagy vékony falú szerkezettel rendelkezik, a
+                                lap saját hőelvezetésére támaszkodva, alkalmas könnyű terhelésű működésre. Nagy
+                                terhelésű forgatókönyvekhez(pl. videókódolás, hotspot szolgáltatások) hűtőborda vagy
+                                ventilátor hozzáadása javasolt.</li>
+                            <li>Kompatibilis modellek: Kompatibilis a Raspberry Pi Zero, Zero W, Zero 2W modellekkel.
+                                Nem kompatibilis a Zero WH(előre forrasztott antennával) vagy a Zero 1.3-tól eltérő
+                                verziókkal.</li>
+                        </ol>
+                    </div>
+
+                    <div class="manual-section">
+                        <div class="manual-title">Óvintézkedések</div>
+                        <ol class="manual-list">
+                            <li>Ez a ház fizikai védelmi kiegészítő, és nem biztosít aktív hűtést. Hosszabb ideig tartó
+                                nagy terhelésű működés esetén figyelje a hőmérsékletet a túlmelegedés és a
+                                frekvenciacsökkentés elkerülése érdekében.</li>
+                            <li>Ne alkalmazzon túlzott erőt a telepítés során, hogy elkerülje a lap vagy a ház
+                                kapcsainak sérülését; szétszereléskor óvatosan fesse meg a szélektől a törés megelőzése
+                                érdekében.</li>
+                            <li>Ha vezeték nélküli funkciókat(Wi-Fi/Bluetooth) használ, tartsa az antenna területet
+                                akadálymentesen a jel stabilitásának biztosítása érdekében.</li>
+                            <li>Ne használja nedves, magas hőmérsékletű vagy erős elektromágneses környezetben, hogy
+                                elkerülje a lap teljesítményének befolyásolását vagy a ház öregedését.</li>
+                            <li>Ez a termék nem tartalmazza a lapot, tápegységet, TF kártyát vagy egyéb tartozékokat;
+                                ezeket külön kell beszerezni.</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <p>Guangzhou Tuoyuan Cross-border E-Commerce Co., Ltd.</p>
+            <p>© 2025 Raspberry Pi Enclosure Documentation</p>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const tabs = document.querySelectorAll('.language-tab');
+
+            tabs.forEach(tab => {
+                tab.addEventListener('click', function () {
+                    // Remove active class from all tabs and content
+                    tabs.forEach(t => t.classList.remove('active'));
+                    document.querySelectorAll('.language-content').forEach(content => {
+                        content.classList.remove('active');
+                    });
+
+                    // Add active class to clicked tab and corresponding content
+                    this.classList.add('active');
+                    const language = this.getAttribute('data-language');
+                    document.getElementById(language).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+
+</html>
